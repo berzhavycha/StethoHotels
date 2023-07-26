@@ -9,7 +9,6 @@ export const loader = ({ params }) => {
     return defer({ blog: getItems('blogs', params.blogId) })
 }
 
-
 const BlogSingal = () => {
     const dataPromise = useLoaderData()
 

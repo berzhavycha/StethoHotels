@@ -14,6 +14,7 @@ import Blog from './components/Blog/Blog'
 import BlogSingal, { loader as blogSingalLoader } from './components/BlogSingal/BlogSingal'
 import Login from './components/Login/Login'
 import Register from './components/Register/Register'
+import AuthRequired from './common/AuthRequired/AuthRequired'
 
 const PageLayout = ({ children }) => children;
 
@@ -76,10 +77,12 @@ const router = createBrowserRouter(createRoutesFromElements(
         />
         <Route path='blog' element={<BlogLayout />} loader={blogLayoutLoader}>
           <Route index element={<Blog />} />
-          <Route path=':blogId' element={<BlogSingal />} loader={blogSingalLoader} />
+          <Route path=':blogId' element={<AuthRequired />}>
+            <Route index element={<BlogSingal />} loader={blogSingalLoader} />
+          </Route>
         </Route>
         <Route path='login' element={<Login />} />
-        <Route path='register' element={<Register />}  />
+        <Route path='register' element={<Register />} />
       </Route>
     </Route>
   </Route >

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Form, Link } from 'react-router-dom'
+import { Form, Link, useLocation, useNavigate, useSearchParams } from 'react-router-dom'
 import './Login.css'
 import FormInput from '../../common/FormInput/FormInput'
 import SuccessfulForm from '../../common/SuccessfulForm/SuccessfulForm'
@@ -14,9 +14,12 @@ const Login = () => {
         password: "",
     });
 
-    const { user, setUser } = useUserContext()
     const [isRegistered, setIsRegistered] = useState(false)
     const [error, setError] = useState(false)
+    const [searchParams, setSearchParams] = useSearchParams()
+    const navigate = useNavigate()
+    const location = useLocation()
+    const { user, setUser } = useUserContext()
 
     const inputs = [
         {
@@ -47,6 +50,10 @@ const Login = () => {
                 const user = userCredential.user;
                 setUser(user)
                 setIsRegistered(true)
+
+                if(searchParams.get('path')){
+                    return navigate(`${searchParams.get('path')}`)
+                }
             })
             .catch((error) => {
                 setError(true)
@@ -69,6 +76,7 @@ const Login = () => {
                                 <Form onSubmit={handleSubmit} replace className='sign-form'>
                                     <p>Enter your e-mail and password below to log in to your account and use the benefits of our website.</p>
                                     {error && <div className="error">Email or password is wrong</div>}
+                                    {location.state?.message && <div className="error">{location.state?.message}</div>}
                                     {inputs.map((input) => (
                                         <FormInput
                                             key={input.id}
