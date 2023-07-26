@@ -1,0 +1,193 @@
+footer {
+    background-color: black;
+    color: white;
+    padding: 40px 0 0 0;
+}
+
+.footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding-bottom: 30px;
+}
+
+.footer-title {
+    text-transform: uppercase;
+    font-size: 25px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.footer-text {
+    font-size: 14px;
+    font-weight: 300;
+    color: gray;
+    margin-bottom: 20px;
+}
+
+.footer-inner .left {
+    display: flex;
+    gap: 60px;
+    width: 45%;
+}
+
+.footer-inner .right {
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: space-between;
+}
+
+.footer-inner .left .about-us {
+    width: 50%;
+}
+
+.footer-inner .left .about-us .socials {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.footer-inner .left .about-us .socials i {
+    font-size: 20px;
+    color: white;
+}
+
+.footer-inner .left .navigation {
+    width: 45%;
+}
+
+.footer-inner .left .navigation nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-inner .left .navigation nav a {
+    color: white;
+    font-size: 15px;
+    transition: all .2s linear;
+}
+
+.footer-inner .left .navigation nav a:hover {
+    color: rgb(126, 125, 125);
+}
+
+.footer-inner .posts .posts-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.footer-inner .posts .posts-container .post-item:not(.posts-container .post-item:last-child) {
+    padding-bottom: 10px;
+    border-bottom: 0.5px solid rgb(93, 93, 93);
+}
+
+.footer-inner .posts .posts-container .post-item .text {
+    font-size: 14px;
+    color: white;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.footer-inner .posts .posts-container .post-item .date {
+    font-size: 12px;
+}
+
+.footer-inner .newsletter {
+    width: 45%;
+}
+
+.footer-inner .newsletter input {
+    display: block;
+    width: 100%;
+    color: white;
+    background: transparent;
+    padding: 10px;
+    outline: none;
+    border: 1px solid rgb(93, 93, 93);
+    margin-bottom: 5px;
+}
+
+.footer-inner .newsletter button {
+    padding: 15px;
+    width: 100%;
+    background: var(--btn-color);
+    text-transform: uppercase;
+    color: white;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+
+.footer-inner .newsletter button:hover {
+    background-color: #227d51;
+}
+
+footer .copyright {
+    padding: 20px 0 20px 0;
+    border-top: 1px solid rgb(93, 93, 93);
+    text-align: center;
+    font-size: 14px;
+    font-weight: 300;
+    color: gray;
+}
+
+/* ============================= MEDIA ===============================*/
+
+@media screen and (max-width: 800px) {
+
+    .footer-inner .left,
+    .footer-inner .right {
+        width: 100%;
+    }
+
+    .footer-inner .posts {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+
+    .footer-title {
+        font-size: 20px;
+    }
+
+    .footer-text {
+        font-size: 12px;
+    }
+
+    .footer-inner .left .about-us .socials i {
+        font-size: 16px;
+    }
+
+
+    .footer-inner .left .navigation nav a {
+        font-size: 13px;
+    }
+
+    .footer-inner .posts .posts-container .post-item .text {
+        font-size: 12px;
+    }
+    
+    .footer-inner .posts .posts-container .post-item .date {
+        font-size: 10px;
+    }
+    
+    .footer-inner .newsletter input {
+        font-size: 12px;
+    }
+    
+    .footer-inner .newsletter button {
+        padding: 10px;
+        font-size: 12px;
+    }
+    
+    footer .copyright {
+        font-size: 12px;
+    }
+}

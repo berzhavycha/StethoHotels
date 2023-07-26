@@ -1,0 +1,129 @@
+.download-section {
+    background-color: var(--btn-color);
+    color: white;
+    padding: 80px 0;
+    height: 600px;
+    overflow: hidden;
+}
+
+.download-section-inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.download-section-inner .left p {
+    font-weight: 500;
+}
+
+.download-section-inner .left h1 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.download-section-inner .left .checks {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.download-section-inner .left .checks .check-item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 14px;
+}
+
+.download-section-inner .download-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+
+/* ============================= MEDIA ===============================*/
+
+@media screen and (max-width: 1080px) {
+    .download-section-inner .right img {
+        width: 300px;
+    }
+
+    .download-section-inner .left p {
+        font-size: 14px;
+    }
+
+    .download-section-inner .left h1 {
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+
+    .download-section-inner .left .checks {
+        gap: 8px;
+    }
+
+    .download-section-inner .left .checks .check-item {
+        gap: 8px;
+        font-size: 12px;
+    }
+
+    .download-section-inner .download-links a img {
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .download-section-inner .right img {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .download-section-inner .left p {
+        font-size: 12px;
+    }
+
+    .download-section-inner .left h1 {
+        font-size: 25px;
+        margin-bottom: 12px;
+    }
+
+    .download-section-inner .left .checks {
+        gap: 5px;
+    }
+
+    .download-section-inner .left .checks .check-item {
+        gap: 5px;
+        font-size: 10px;
+    }
+
+    .download-section-inner .download-links a img {
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .download-section-inner .right img {
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .download-section {
+        padding: 40px 0;
+    }
+
+    .download-section-inner {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .download-section-inner .left {
+        width: 100%;
+    }
+
+    .download-section-inner .right img {
+        width: 200px;
+    }
+}

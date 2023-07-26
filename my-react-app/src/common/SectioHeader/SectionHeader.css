@@ -1,0 +1,26 @@
+.header-section {
+    font-size: 36px;
+    letter-spacing: 1px;
+    position: relative;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.header-section::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 2px;
+    background-color: var(--btn-color);
+}
+
+/* ============================= MEDIA ===============================*/
+
+@media screen and (max-width: 1080px) {
+    .header-section{
+        font-size: 30px;
+    }
+}

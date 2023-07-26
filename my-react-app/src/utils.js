@@ -1,0 +1,2 @@
+import { hotels } from "./data"
+

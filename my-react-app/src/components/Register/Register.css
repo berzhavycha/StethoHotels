@@ -1,0 +1,18 @@
+.create-account {
+    width: 100%;
+    background-color: var(--btn-color);
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .2s linear;
+    margin: 10px 0;
+}
+
+.sign-section .sign-form button:hover {
+    background-color: rgb(6, 141, 6);
+}

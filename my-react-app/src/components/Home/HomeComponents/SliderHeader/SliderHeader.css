@@ -1,0 +1,250 @@
+.slider-header {
+    background-image: url('../../../../../public/Images/slider-1.jpg');
+    width: 100%;
+    height: calc(100vh - 220px);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px;
+    position: relative;
+}
+
+.slider-header .slider-btn-shell {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 7px 10px;
+    border-radius: 50%;
+    opacity: 0.5;
+    transition: all .2s linear;
+}
+
+.slider-header .slider-btn-shell:hover {
+    opacity: 1;
+}
+
+.slider-btn-shell .slider-btn {
+    background-color: var(--btn-color);
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    padding: 10px 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider-btn-shell.prev {
+    left: 30px;
+}
+
+.slider-btn-shell.next {
+    right: 30px;
+}
+
+.form-container {
+    width: 600px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: 50px;
+}
+
+.form-container h2 {
+    font-weight: 500;
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+
+.form-container h4 {
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.form-container input,
+select {
+    margin-bottom: 20px;
+}
+
+.input-flex .left input,
+.input-flex .left select,
+.input-flex .right input,
+.input-flex .right select,
+.form-container .row {
+    width: 100%;
+    outline: none;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+}
+
+.form-container .input-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.input-flex .left,
+.right {
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.form-container button {
+    background-color: var(--btn-color);
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+
+.form-container button:hover {
+    background-color: #279f65;
+}
+
+/* ============================= MEDIA ===============================*/
+
+@media screen and (max-width: 980px) {
+    .slider-header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .form-container {
+        margin-left: 0;
+    }
+
+    .form-container h2 {
+        font-size: 24px;
+    }
+
+    .input-flex .left input,
+    .input-flex .left select,
+    .input-flex .right input,
+    .input-flex .right select,
+    .form-container .row,
+    .form-container button {
+        padding: 10px;
+    }
+}
+
+
+@media screen and (max-width: 864px) {
+    .form-container {
+        width: 500px;
+    }
+
+    .input-flex .left,
+    .right {
+        width: 48.9%;
+    }
+
+    .form-container button {
+        font-size: 15px;
+    }
+
+    .slider-header .slider-btn-shell {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .slider-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-container {
+        width: 500px;
+    }
+
+    .input-flex .left,
+    .right {
+        width: 48.9%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .form-container {
+        width: 400px;
+    }
+
+    .input-flex .left,
+    .right {
+        width: 48.5%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .slider-header .slider-btn-shell {
+        padding: 3px 4px;
+    }
+
+    .slider-btn-shell .slider-btn {
+        font-size: 20px;
+        padding: 5px 10px;
+    }
+
+    .slider-btn-shell.prev {
+        left: 20px;
+    }
+
+    .slider-btn-shell.next {
+        right: 20px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .form-container h2 {
+        font-size: 20px;
+    }
+
+    .form-container h4 {
+        font-size: 14px;
+    }
+
+    .input-flex .left,
+    .right {
+        width: 48.5%;
+    }
+
+    .input-flex .left input,
+    .input-flex .left select,
+    .input-flex .right input,
+    .input-flex .right select,
+    .form-container .row,
+    .form-container button {
+        padding: 8px;
+    }
+
+    .form-container input,
+    select {
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .form-container {
+        width: 360px;
+    }
+
+    .input-flex .left,
+    .right {
+        width: 48.3%;
+    }
+
+    .slider-header {
+        height: calc(100vh - 315px);
+    }
+}

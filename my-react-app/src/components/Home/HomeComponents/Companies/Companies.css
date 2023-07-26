@@ -1,0 +1,38 @@
+.companies-section {
+    padding: 40px 0;
+}
+
+.companies-section .photo{
+    width: 50px;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+
+.companies-section .photo img{
+    width: 100%;
+}
+
+.companies-section .photo:hover{
+    transform: scale(1.2);
+}
+
+/* ============================= MEDIA ===============================*/
+
+@media screen and (max-width: 980px) {
+    .companies-section .photo{
+        width: 40px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .companies-section .photo{
+        width: 30px;
+    }
+}
+
+
+@media screen and (max-width: 580px) {
+    .companies-section .photo{
+        width: 10px;
+    }
+}

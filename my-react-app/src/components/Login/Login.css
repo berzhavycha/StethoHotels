@@ -1,0 +1,92 @@
+.sign-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+}
+
+.sign-section .sign-form {
+    width: 35vw;
+    box-shadow: 0 0 10px rgb(127, 126, 126);
+    padding: 30px 30px 20px 30px;
+}
+
+.sign-section .sign-form p {
+    font-size: 14px;
+    color: gray;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+.sign-section .sign-form p:last-child{
+    margin-bottom: 10;
+}
+
+.sign-section .sign-form .form-block input {
+    width: 100%;
+    padding: 15px 10px;
+    margin-bottom: 15px;
+    border: 1px solid rgb(191, 190, 190);
+    outline: none;
+}
+
+.sign-section .sign-form .inline-block {
+    width: 100%;
+    display: flex;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center !important;
+}
+
+.sign-section .sign-form .inline-block .left {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.sign-section .sign-form .inline-block p {
+    color: red;
+}
+
+.sign-section .sign-form button {
+    width: 100%;
+    background-color: var(--btn-color);
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .2s linear;
+    margin-bottom: 15px;
+}
+
+.sign-section .sign-form button:hover {
+    background-color: rgb(6, 141, 6);
+}
+
+.sign-section .sign-form p a {
+    color: blue;
+}
+
+/*=============================== MEDIA ================================*/
+
+@media screen and (max-width: 980px) {
+    .login-section .login-form {
+        width: 50vw;
+        box-shadow: 0 0 10px rgb(127, 126, 126);
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .login-section .login-form {
+        width: 80vw;
+        box-shadow: 0 0 10px rgb(127, 126, 126);
+        padding: 30px;
+    }
+}

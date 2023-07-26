@@ -1,0 +1,143 @@
+.comment-item {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.comment-item .profile-photo img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.comment-item .comment-container {
+    background-color: rgb(243, 243, 243);
+    padding: 20px 20px 0 20px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.comment-container .comment-top {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.comment-top .author {
+    font-weight: 500;
+}
+
+.comment-container p {
+    font-weight: 300;
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 15px;
+}
+
+.comment-container .reply-section button,
+.comment-container .comment-btns button {
+    background-color: var(--btn-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+
+.comment-container .comment-btns button {
+    margin-bottom: 20px;
+    z-index: 11;
+}
+
+.comment-container .comment-btns button:hover,
+.comment-container .reply-section button:hover {
+    background-color: rgb(26, 130, 26);
+}
+
+.comment-container .reply-section {
+    display: none;
+    gap: 10px;
+    align-items: flex-start;
+    transform: translateY(-30px);
+    opacity: 0;
+    padding-bottom: 20px;
+}
+
+.comment-container .reply-section input {
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid gray;
+    outline: none;
+}
+
+.comment-container .reply-section.open {
+    display: flex;
+    transform: translateY(30px);
+    opacity: 1;
+    scale: 1;
+    animation: replyAnimation 0.25s linear forwards;
+}
+
+@keyframes replyAnimation {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+        scale: 0.8;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.nested-comments {
+    padding: 15px 0 0 5%;
+}
+
+
+/* =============================== MEDIA =================================*/
+
+@media screen and (max-width: 1080px) {
+
+    .comment-item .profile-photo img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .comment-container p {
+        font-size: 13px;
+    }
+
+    .comment-container .reply-section button,
+    .comment-container .comment-btns button {
+        font-size: 13px;
+    }
+
+}
+
+@media screen and (max-width: 980px) {
+    .comment-container .comment-top {
+        margin-bottom: 10px;
+    }
+
+    .comment-top .left {
+        font-size: 14px;
+    }
+
+    .comment-container p {
+        font-size: 12px;
+    }
+
+    .comment-container .reply-section button,
+    .comment-container .comment-btns button {
+        font-size: 12px;
+    }
+}
