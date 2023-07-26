@@ -1,0 +1,47 @@
+.help-block {
+    padding: 30px 25px;
+    background-color: var(--btn-color);
+    color: white;
+    margin-bottom: 30px;
+}
+
+.help-block h1 {
+    font-size: 29px;
+    line-height: 1.1;
+}
+
+.help-block p {
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.help-block a {
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    padding: 10px 15px;
+    transition: all .2s linear;
+}
+
+.help-block a:hover {
+    color: white;
+    background-color: black;
+}
+
+/*============================= MEDIA ============================*/
+
+@media screen and (max-width: 840px) {
+    .help-block h1 {
+        font-size: 25px;
+    }
+
+    .help-block p {
+        font-size: 12px;
+    }
+
+    .help-block a {
+        font-size: 12px;
+    }
+}

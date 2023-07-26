@@ -1,0 +1,67 @@
+.accordion h1 {
+    margin-bottom: 20px;
+}
+
+.accordion-item {
+    margin-bottom: 20px;
+}
+
+.accordion-item .accordion-item-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid rgb(211, 211, 211);
+    cursor: pointer;
+}
+
+.accordion-item .accordion-item-top h3 {
+    font-weight: 300;
+    transition: all .2s linear;
+}
+
+.accordion-item .accordion-item-top:hover h3 {
+    color: var(--btn-color);
+}
+
+.accordion-item.open .accordion-item-top h3 {
+    color: var(--btn-color);
+}
+
+.accordion-item .accordion-answer {
+    padding: 15px;
+    border: 1px solid rgb(211, 211, 211);
+    font-weight: 300;
+    font-size: 14px;
+    display: none;
+}
+
+.accordion-item.open .accordion-answer {
+    display: block;
+}
+
+.accordion-item .accordion-answer p:first-child {
+    margin-bottom: 15px;
+}
+
+.accordion-item .accordion-answer p {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+.accordion-item .accordion-answer p i {
+    font-size: 5px;
+}
+
+/* ============================= MEDIA ==============================*/
+
+@media screen and (max-width: 980px) {
+    .accordion-item .accordion-item-top h3 {
+        font-size: 16px;
+    }
+    
+}

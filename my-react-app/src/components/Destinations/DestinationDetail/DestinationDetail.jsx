@@ -3,6 +3,7 @@ import { defer, useLoaderData, Await, Link } from 'react-router-dom'
 import { getSingleCity, delay } from '../../../data'
 import './DestiantionDetail.css'
 import Loading from '../../../common/Loading/Loading'
+import HelpBlock from '../../../common/HelpBlock/HelpBlock'
 
 export const loader = async ({ params }) => {
     return defer({ city: delay(1000).then(() => getSingleCity(params.cityId, 'cities')) })
@@ -38,11 +39,7 @@ const DestinationDetail = () => {
                     </Suspense>
                 </div>
                 <div className="right">
-                    <div className="help-block">
-                        <h1>How can we help you?</h1>
-                        <p>Lorem ipsum dolor sit ametdf consectetur adipiscing elitdgsh ametdf consectetur piscing.</p>
-                        <Link><i className="fa-solid fa-phone"></i> Contact Us</Link>
-                    </div>
+                    <HelpBlock />
                     <div className="text-block">
                         <div className="shell">
                             Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur cipsum dolor sit amet consectetur adipiscing elit amet consect piscing elit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit

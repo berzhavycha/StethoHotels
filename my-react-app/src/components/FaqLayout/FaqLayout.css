@@ -1,0 +1,63 @@
+.faq-layout {
+    padding: 60px 0;
+}
+
+.faq-layout-inner {
+    display: flex;
+    gap: 40px;
+}
+
+.faq-layout-inner .left {
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.faq-layout-inner .right {
+    width: 100%;
+}
+
+.faq-layout-inner .left .faq-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border: 1px solid rgb(211, 211, 211);
+    padding: 30px 20px;
+}
+
+.faq-layout-inner .left .faq-menu a {
+    color: black;
+}
+
+/* ============================= MEDIA ==============================*/
+
+@media screen and (max-width: 1280px) {
+    .faq-layout-inner .left {
+        width: 30vw;
+    }
+}
+
+@media screen and (max-width: 1180px) {
+    .faq-layout-inner .left {
+        width: 35vw;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .faq-layout-inner .left {
+        width: 40vw;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .faq-layout-inner .left {
+        width: 100%;
+    }
+
+    .faq-layout-inner {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+}

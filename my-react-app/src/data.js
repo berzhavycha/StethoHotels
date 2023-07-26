@@ -117,7 +117,7 @@ export const dropdown = [
             },
             {
                 title: 'faq',
-                to: null
+                to: 'faq'
             },
         ]
     }
@@ -383,5 +383,230 @@ export const gallery = [
         id: 6,
         imageUrl: '../public/Images/gallery-6.jpg',
         title: 'Gallery Title'
+    }
+]
+
+export const accordion = [
+    {
+        id: 1,
+        title: 'Booking',
+        questions: [
+            {
+                question: 'Which material types can you work with?',
+                answer: 'Lorem ipsum dolor sitametcoctr elit amet consectur aiscing elit amet adipisg elit adipisg elit amet consectur orem ipsum dolor sitametcoctr adipisg elit amet consectur aiscing elit adipig elit amet consectur aiscing elit amet adipisg elit adipisg elit amet consectur.',
+                clauses: [
+                    'Lorem ipsum dolor sitametcoctr elit amet consectur aiscing elit amet adipisg elit.',
+                    'Ipsum dolor sitametcoctr elit consectur aiscing elit amet adipisg elit.',
+                    'Dolor sitametcoctr aiscing elit amet adipisg elit.',
+                    'Lorem ipsum dolor sitametcoctr elit amet consectur aiscing elit amet adipisg elit.',
+                    'Ipsum dolor sitametcoctr elit consectur aiscing elit amet adipisg elit.',
+                    'Dolor sitametcoctr aiscing elit amet adipisg elit.',
+                ]
+            },
+            {
+                question: 'How long does it takes to receive the answer?',
+                answer: 'Lorem ipsum dolor sitametcoctr elit amet consectur aiscing elit amet adipisg elit adipisg elit amet consectur orem ipsum dolor sitametcoctr adipisg elit amet consectur aiscing elit adipig elit amet consectur aiscing elit amet adipisg elit adipisg elit amet consectur.',
+                clauses: [
+                    'Lorem ipsum dolor sitametcoctr elit amet consectur aiscing elit amet adipisg elit.',
+                    'Ipsum dolor sitametcoctr elit consectur aiscing elit amet adipisg elit.',
+                    'Dolor sitametcoctr aiscing elit amet adipisg elit.',
+                    'Lorem ipsum dolor sitametcoctr elit amet consectur aiscing elit amet adipisg elit.',
+                    'Ipsum dolor sitametcoctr elit consectur aiscing elit amet adipisg elit.',
+                    'Dolor sitametcoctr aiscing elit amet adipisg elit.',
+                ]
+            },
+            {
+                question: 'How to get start with us?',
+                answer: 'Lorem ipsum dolor sitametcoctr elit amet consectur aiscing elit amet adipisg elit adipisg elit amet consectur orem ipsum dolor sitametcoctr adipisg elit amet consectur aiscing elit adipig elit amet consectur aiscing elit amet adipisg elit adipisg elit amet consectur.',
+                clauses: [
+                    'Lorem ipsum dolor sitametcoctr elit amet consectur aiscing elit amet adipisg elit.',
+                    'Ipsum dolor sitametcoctr elit consectur aiscing elit amet adipisg elit.',
+                    'Dolor sitametcoctr aiscing elit amet adipisg elit.',
+                    'Lorem ipsum dolor sitametcoctr elit amet consectur aiscing elit amet adipisg elit.',
+                    'Ipsum dolor sitametcoctr elit consectur aiscing elit amet adipisg elit.',
+                    'Dolor sitametcoctr aiscing elit amet adipisg elit.',
+                ]
+            }
+        ]
+    },
+    {
+        id: 2,
+        title: 'Payment',
+        questions: [
+            {
+                question: 'Are you ISO certified?',
+                answer: 'Lorem ipsum dolor sitametcoctr elit amet consectur aiscing elit amet adipisg elit adipisg elit amet consectur orem ipsum dolor sitametcoctr adipisg elit amet consectur aiscing elit adipig elit amet consectur aiscing elit amet adipisg elit adipisg elit amet consectur.',
+                clauses: [
+                    'Lorem ipsum dolor sitametcoctr elit amet consectur aiscing elit amet adipisg elit.',
+                    'Ipsum dolor sitametcoctr elit consectur aiscing elit amet adipisg elit.',
+                    'Dolor sitametcoctr aiscing elit amet adipisg elit.',
+                    'Lorem ipsum dolor sitametcoctr elit amet consectur aiscing elit amet adipisg elit.',
+                    'Ipsum dolor sitametcoctr elit consectur aiscing elit amet adipisg elit.',
+                    'Dolor sitametcoctr aiscing elit amet adipisg elit.',
+                ]
+            },
+            {
+                question: 'How long does it takes to receive the answer?',
+                answer: 'Lorem ipsum dolor sitametcoctr elit amet consectur aiscing elit amet adipisg elit adipisg elit amet consectur orem ipsum dolor sitametcoctr adipisg elit amet consectur aiscing elit adipig elit amet consectur aiscing elit amet adipisg elit adipisg elit amet consectur.',
+                clauses: [
+                    'Lorem ipsum dolor sitametcoctr elit amet consectur aiscing elit amet adipisg elit.',
+                    'Ipsum dolor sitametcoctr elit consectur aiscing elit amet adipisg elit.',
+                    'Dolor sitametcoctr aiscing elit amet adipisg elit.',
+                    'Lorem ipsum dolor sitametcoctr elit amet consectur aiscing elit amet adipisg elit.',
+                    'Ipsum dolor sitametcoctr elit consectur aiscing elit amet adipisg elit.',
+                    'Dolor sitametcoctr aiscing elit amet adipisg elit.',
+                ]
+            },
+            {
+                question: 'How to get start with us?',
+                answer: 'Lorem ipsum dolor sitametcoctr elit amet consectur aiscing elit amet adipisg elit adipisg elit amet consectur orem ipsum dolor sitametcoctr adipisg elit amet consectur aiscing elit adipig elit amet consectur aiscing elit amet adipisg elit adipisg elit amet consectur.',
+                clauses: [
+                    'Lorem ipsum dolor sitametcoctr elit amet consectur aiscing elit amet adipisg elit.',
+                    'Ipsum dolor sitametcoctr elit consectur aiscing elit amet adipisg elit.',
+                    'Dolor sitametcoctr aiscing elit amet adipisg elit.',
+                    'Lorem ipsum dolor sitametcoctr elit amet consectur aiscing elit amet adipisg elit.',
+                    'Ipsum dolor sitametcoctr elit consectur aiscing elit amet adipisg elit.',
+                    'Dolor sitametcoctr aiscing elit amet adipisg elit.',
+                ]
+            }
+        ]
+    },
+    {
+        id: 3,
+        title: 'Terms & Conditions',
+        questions: [
+            {
+                question: 'Are you ISO certified?',
+                answer: 'Lorem ipsum dolor sitametcoctr elit amet consectur aiscing elit amet adipisg elit adipisg elit amet consectur orem ipsum dolor sitametcoctr adipisg elit amet consectur aiscing elit adipig elit amet consectur aiscing elit amet adipisg elit adipisg elit amet consectur.',
+                clauses: [
+                    'Lorem ipsum dolor sitametcoctr elit amet consectur aiscing elit amet adipisg elit.',
+                    'Ipsum dolor sitametcoctr elit consectur aiscing elit amet adipisg elit.',
+                    'Dolor sitametcoctr aiscing elit amet adipisg elit.',
+                    'Lorem ipsum dolor sitametcoctr elit amet consectur aiscing elit amet adipisg elit.',
+                    'Ipsum dolor sitametcoctr elit consectur aiscing elit amet adipisg elit.',
+                    'Dolor sitametcoctr aiscing elit amet adipisg elit.',
+                ]
+            },
+            {
+                question: 'Which material types can you work with?',
+                answer: 'Lorem ipsum dolor sitametcoctr elit amet consectur aiscing elit amet adipisg elit adipisg elit amet consectur orem ipsum dolor sitametcoctr adipisg elit amet consectur aiscing elit adipig elit amet consectur aiscing elit amet adipisg elit adipisg elit amet consectur.',
+                clauses: [
+                    'Lorem ipsum dolor sitametcoctr elit amet consectur aiscing elit amet adipisg elit.',
+                    'Ipsum dolor sitametcoctr elit consectur aiscing elit amet adipisg elit.',
+                    'Dolor sitametcoctr aiscing elit amet adipisg elit.',
+                    'Lorem ipsum dolor sitametcoctr elit amet consectur aiscing elit amet adipisg elit.',
+                    'Ipsum dolor sitametcoctr elit consectur aiscing elit amet adipisg elit.',
+                    'Dolor sitametcoctr aiscing elit amet adipisg elit.',
+                ]
+            },
+            {
+                question: 'How long does it takes to receive the answer?',
+                answer: 'Lorem ipsum dolor sitametcoctr elit amet consectur aiscing elit amet adipisg elit adipisg elit amet consectur orem ipsum dolor sitametcoctr adipisg elit amet consectur aiscing elit adipig elit amet consectur aiscing elit amet adipisg elit adipisg elit amet consectur.',
+                clauses: [
+                    'Lorem ipsum dolor sitametcoctr elit amet consectur aiscing elit amet adipisg elit.',
+                    'Ipsum dolor sitametcoctr elit consectur aiscing elit amet adipisg elit.',
+                    'Dolor sitametcoctr aiscing elit amet adipisg elit.',
+                    'Lorem ipsum dolor sitametcoctr elit amet consectur aiscing elit amet adipisg elit.',
+                    'Ipsum dolor sitametcoctr elit consectur aiscing elit amet adipisg elit.',
+                    'Dolor sitametcoctr aiscing elit amet adipisg elit.',
+                ]
+            },
+            {
+                question: 'How to get start with us?',
+                answer: 'Lorem ipsum dolor sitametcoctr elit amet consectur aiscing elit amet adipisg elit adipisg elit amet consectur orem ipsum dolor sitametcoctr adipisg elit amet consectur aiscing elit adipig elit amet consectur aiscing elit amet adipisg elit adipisg elit amet consectur.',
+                clauses: [
+                    'Lorem ipsum dolor sitametcoctr elit amet consectur aiscing elit amet adipisg elit.',
+                    'Ipsum dolor sitametcoctr elit consectur aiscing elit amet adipisg elit.',
+                    'Dolor sitametcoctr aiscing elit amet adipisg elit.',
+                    'Lorem ipsum dolor sitametcoctr elit amet consectur aiscing elit amet adipisg elit.',
+                    'Ipsum dolor sitametcoctr elit consectur aiscing elit amet adipisg elit.',
+                    'Dolor sitametcoctr aiscing elit amet adipisg elit.',
+                ]
+            }
+        ]
+    },
+    {
+        id: 4,
+        title: 'Accounts',
+        questions: [
+            {
+                question: 'Are you ISO certified?',
+                answer: 'Lorem ipsum dolor sitametcoctr elit amet consectur aiscing elit amet adipisg elit adipisg elit amet consectur orem ipsum dolor sitametcoctr adipisg elit amet consectur aiscing elit adipig elit amet consectur aiscing elit amet adipisg elit adipisg elit amet consectur.',
+                clauses: [
+                    'Lorem ipsum dolor sitametcoctr elit amet consectur aiscing elit amet adipisg elit.',
+                    'Ipsum dolor sitametcoctr elit consectur aiscing elit amet adipisg elit.',
+                    'Dolor sitametcoctr aiscing elit amet adipisg elit.',
+                    'Lorem ipsum dolor sitametcoctr elit amet consectur aiscing elit amet adipisg elit.',
+                    'Ipsum dolor sitametcoctr elit consectur aiscing elit amet adipisg elit.',
+                    'Dolor sitametcoctr aiscing elit amet adipisg elit.',
+                ]
+            },
+            {
+                question: 'Which material types can you work with?',
+                answer: 'Lorem ipsum dolor sitametcoctr elit amet consectur aiscing elit amet adipisg elit adipisg elit amet consectur orem ipsum dolor sitametcoctr adipisg elit amet consectur aiscing elit adipig elit amet consectur aiscing elit amet adipisg elit adipisg elit amet consectur.',
+                clauses: [
+                    'Lorem ipsum dolor sitametcoctr elit amet consectur aiscing elit amet adipisg elit.',
+                    'Ipsum dolor sitametcoctr elit consectur aiscing elit amet adipisg elit.',
+                    'Dolor sitametcoctr aiscing elit amet adipisg elit.',
+                    'Lorem ipsum dolor sitametcoctr elit amet consectur aiscing elit amet adipisg elit.',
+                    'Ipsum dolor sitametcoctr elit consectur aiscing elit amet adipisg elit.',
+                    'Dolor sitametcoctr aiscing elit amet adipisg elit.',
+                ]
+            },
+            {
+                question: 'How long does it takes to receive the answer?',
+                answer: 'Lorem ipsum dolor sitametcoctr elit amet consectur aiscing elit amet adipisg elit adipisg elit amet consectur orem ipsum dolor sitametcoctr adipisg elit amet consectur aiscing elit adipig elit amet consectur aiscing elit amet adipisg elit adipisg elit amet consectur.',
+                clauses: [
+                    'Lorem ipsum dolor sitametcoctr elit amet consectur aiscing elit amet adipisg elit.',
+                    'Ipsum dolor sitametcoctr elit consectur aiscing elit amet adipisg elit.',
+                    'Dolor sitametcoctr aiscing elit amet adipisg elit.',
+                    'Lorem ipsum dolor sitametcoctr elit amet consectur aiscing elit amet adipisg elit.',
+                    'Ipsum dolor sitametcoctr elit consectur aiscing elit amet adipisg elit.',
+                    'Dolor sitametcoctr aiscing elit amet adipisg elit.',
+                ]
+            },
+        ]
+    },
+    {
+        id: 5,
+        title: 'General Help',
+        questions: [
+            {
+                question: 'Are you ISO certified?',
+                answer: 'Lorem ipsum dolor sitametcoctr elit amet consectur aiscing elit amet adipisg elit adipisg elit amet consectur orem ipsum dolor sitametcoctr adipisg elit amet consectur aiscing elit adipig elit amet consectur aiscing elit amet adipisg elit adipisg elit amet consectur.',
+                clauses: [
+                    'Lorem ipsum dolor sitametcoctr elit amet consectur aiscing elit amet adipisg elit.',
+                    'Ipsum dolor sitametcoctr elit consectur aiscing elit amet adipisg elit.',
+                    'Dolor sitametcoctr aiscing elit amet adipisg elit.',
+                    'Lorem ipsum dolor sitametcoctr elit amet consectur aiscing elit amet adipisg elit.',
+                    'Ipsum dolor sitametcoctr elit consectur aiscing elit amet adipisg elit.',
+                    'Dolor sitametcoctr aiscing elit amet adipisg elit.',
+                ]
+            },
+            {
+                question: 'How long does it takes to receive the answer?',
+                answer: 'Lorem ipsum dolor sitametcoctr elit amet consectur aiscing elit amet adipisg elit adipisg elit amet consectur orem ipsum dolor sitametcoctr adipisg elit amet consectur aiscing elit adipig elit amet consectur aiscing elit amet adipisg elit adipisg elit amet consectur.',
+                clauses: [
+                    'Lorem ipsum dolor sitametcoctr elit amet consectur aiscing elit amet adipisg elit.',
+                    'Ipsum dolor sitametcoctr elit consectur aiscing elit amet adipisg elit.',
+                    'Dolor sitametcoctr aiscing elit amet adipisg elit.',
+                    'Lorem ipsum dolor sitametcoctr elit amet consectur aiscing elit amet adipisg elit.',
+                    'Ipsum dolor sitametcoctr elit consectur aiscing elit amet adipisg elit.',
+                    'Dolor sitametcoctr aiscing elit amet adipisg elit.',
+                ]
+            },
+            {
+                question: 'How to get start with us?',
+                answer: 'Lorem ipsum dolor sitametcoctr elit amet consectur aiscing elit amet adipisg elit adipisg elit amet consectur orem ipsum dolor sitametcoctr adipisg elit amet consectur aiscing elit adipig elit amet consectur aiscing elit amet adipisg elit adipisg elit amet consectur.',
+                clauses: [
+                    'Lorem ipsum dolor sitametcoctr elit amet consectur aiscing elit amet adipisg elit.',
+                    'Ipsum dolor sitametcoctr elit consectur aiscing elit amet adipisg elit.',
+                    'Dolor sitametcoctr aiscing elit amet adipisg elit.',
+                    'Lorem ipsum dolor sitametcoctr elit amet consectur aiscing elit amet adipisg elit.',
+                    'Ipsum dolor sitametcoctr elit consectur aiscing elit amet adipisg elit.',
+                    'Dolor sitametcoctr aiscing elit amet adipisg elit.',
+                ]
+            }
+        ]
     }
 ]
