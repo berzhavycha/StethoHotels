@@ -3,7 +3,6 @@ import TopNavbar from './TopNavbar'
 import './Navbar.css';
 import BottomNavbar from './BottomNavbar';
 import Dropdown from './Dropdown';
-import { useDropdownContext } from '../../context/DropdownProvider';
 
 const Navbar = () => {
     return (

@@ -18,16 +18,49 @@
     margin-bottom: 15px;
 }
 
-.sign-section .sign-form p:last-child{
-    margin-bottom: 10;
+.sign-section .sign-form p:last-child {
+    margin-bottom: 10px;
+}
+
+.sign-section .sign-form .error{
+    color: red;
+    margin: -10px 0 10px 0;
+    font-size: 13px;
+    text-align: center;
+}
+
+.sign-section .sign-form .form-block {
+    margin-bottom: 15px;
+    position: relative;
 }
 
 .sign-section .sign-form .form-block input {
     width: 100%;
     padding: 15px 10px;
-    margin-bottom: 15px;
     border: 1px solid rgb(191, 190, 190);
     outline: none;
+    margin-bottom: 5px;
+}
+
+.sign-section .sign-form .form-block .password-eye {
+    position: absolute;
+    top: 48%;
+    transform: translateY(-50%);
+    right: 15px;
+}
+
+.sign-section .sign-form .form-block input:invalid[focused="true"] {
+    border: 1px solid red;
+}
+
+.sign-section .sign-form .form-block input:invalid[focused="true"]~span {
+    display: block;
+}
+
+.sign-section .sign-form .form-block span {
+    color: red;
+    font-size: 13px;
+    display: none;
 }
 
 .sign-section .sign-form .inline-block {

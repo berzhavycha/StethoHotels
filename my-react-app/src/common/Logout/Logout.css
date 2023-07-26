@@ -1,0 +1,12 @@
+.logout-section {
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgb(188, 187, 187);
+    height: 8vw;
+}
+
+.logout-section h1 a{
+    color: blue;
+}

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import './SliderHeader.css'
 import { slides } from '../../../../data'
-import { useDropdownContext } from '../../../../context/DropdownProvider'
+import { useDropdownContext } from '../../../../context/Dropdown/DropdownProvider'
 
 const SliderHeader = () => {
 

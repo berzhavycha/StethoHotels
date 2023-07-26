@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import './Navbar.css';
 import Dropdown from './Dropdown';
-import { useDropdownContext } from '../../context/DropdownProvider';
+import { useDropdownContext } from '../../context/Dropdown/DropdownProvider';
 
 const TopNavbar = () => {
 

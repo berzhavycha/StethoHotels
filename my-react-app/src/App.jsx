@@ -13,7 +13,7 @@ import BlogLayout, { loader as blogLayoutLoader } from './common/BlogLayout/Blog
 import Blog from './components/Blog/Blog'
 import BlogSingal, { loader as blogSingalLoader } from './components/BlogSingal/BlogSingal'
 import Login from './components/Login/Login'
-import Register, { action as registerAction } from './components/Register/Register'
+import Register from './components/Register/Register'
 
 const PageLayout = ({ children }) => children;
 
@@ -79,7 +79,7 @@ const router = createBrowserRouter(createRoutesFromElements(
           <Route path=':blogId' element={<BlogSingal />} loader={blogSingalLoader} />
         </Route>
         <Route path='login' element={<Login />} />
-        <Route path='register' element={<Register />} action={registerAction} />
+        <Route path='register' element={<Register />}  />
       </Route>
     </Route>
   </Route >

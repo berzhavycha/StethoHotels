@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import { dropdown } from '../../data'
 import { Link } from 'react-router-dom'
-import { useDropdownContext } from '../../context/DropdownProvider'
+import { useDropdownContext } from '../../context/Dropdown/DropdownProvider'
 import './Navbar.css'
 
 const Dropdown = () => {

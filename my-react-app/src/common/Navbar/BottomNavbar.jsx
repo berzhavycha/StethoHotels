@@ -1,5 +1,5 @@
 import React from 'react'
-import { useDropdownContext } from '../../context/DropdownProvider'
+import { useDropdownContext } from '../../context/Dropdown/DropdownProvider'
 import {Link} from 'react-router-dom'
 
 const BottomNavbar = () => {

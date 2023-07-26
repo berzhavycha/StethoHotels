@@ -1,0 +1,16 @@
+.successful-form {
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgb(188, 187, 187);
+    height: 8vw;
+}
+
+.successful-form h1 i{
+    background-color: var(--btn-color);
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
