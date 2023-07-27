@@ -109,7 +109,7 @@
 /*=============================== MEDIA ================================*/
 
 @media screen and (max-width: 980px) {
-    .login-section .login-form {
+    .sign-section .sign-form {
         width: 50vw;
         box-shadow: 0 0 10px rgb(127, 126, 126);
         padding: 30px;
@@ -117,7 +117,7 @@
 }
 
 @media screen and (max-width: 980px) {
-    .login-section .login-form {
+    .sign-section .sign-form {
         width: 80vw;
         box-shadow: 0 0 10px rgb(127, 126, 126);
         padding: 30px;

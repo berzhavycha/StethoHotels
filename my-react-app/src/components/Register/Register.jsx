@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Form } from 'react-router-dom'
+import { Form, useNavigate, useSearchParams } from 'react-router-dom'
 import './Register.css'
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import FormInput from '../../common/FormInput/FormInput';
@@ -17,6 +17,8 @@ const Register = () => {
 
     const { setUser } = useUserContext()
     const [isRegistered, setIsRegistered] = useState(false)
+    const [searchParams, setSearchParams] = useSearchParams()
+    const navigate = useNavigate()
 
     const inputs = [
         {
@@ -66,6 +68,10 @@ const Register = () => {
                 const user = userCredential.user;
                 setUser(user)
                 setIsRegistered(true)
+
+                if (searchParams.get('path')) {
+                    navigate(searchParams.get('path'))
+                }
             })
             .catch((error) => {
                 const errorCode = error.code;

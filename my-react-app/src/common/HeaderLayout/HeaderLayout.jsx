@@ -4,15 +4,15 @@ import './HeaderLayout.css'
 
 const HeaderLayout = () => {
     const location = useLocation()
-    const page = location.state?.page || ''
+    const page = location.pathname.split('/')[1]
 
     return (
         <>
             <header className='header-layout'>
                 <div className="header-layout-shell">
                     <div className="container header-layout-inner">
-                        <h1>{page}</h1>
-                        <span><Link to='/' className='green'>Home</Link> / {page}</span>
+                        <h1>{page[0].toUpperCase() + page.slice(1)}</h1>
+                        <span><Link to='/' className='green'>Home</Link> / {page[0].toUpperCase() + page.slice(1)}</span>
                     </div>
                 </div>
             </header>

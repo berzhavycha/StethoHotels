@@ -12,7 +12,6 @@ export const loader = ({ params }) => {
 const BlogSingal = () => {
     const dataPromise = useLoaderData()
 
-
     return (
         <section className='blog-singal'>
             <Suspense fallback={<Loading />}>
@@ -38,7 +37,6 @@ const BlogSingal = () => {
                             }
 
                             setComments(prevComments => [...prevComments, newComment])
-
                             setCommentText('')
                         }
 

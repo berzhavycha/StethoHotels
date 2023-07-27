@@ -24,6 +24,138 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app)
 export const auth = getAuth(app);
 
+const reviewsS = [
+    {
+        fullName: 'John Doe',
+        text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.',
+        date: '04.07.2023',
+        imageUrl: 'https://raw.githubusercontent.com/berzhavycha/StethoProject/main/profile1.jpg'
+    },
+    {
+        fullName: 'Joe Biden',
+        text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.',
+        date: '01.06.2023',
+        imageUrl: 'https://raw.githubusercontent.com/berzhavycha/StethoProject/main/profile2.jpg'
+    },
+    {
+        fullName: 'Dork Geek',
+        text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.',
+        date: '01.06.2023',
+        imageUrl: 'https://raw.githubusercontent.com/berzhavycha/StethoProject/main/profile3.jpg'
+    }
+]
+
+
+// const rooms = [
+//     {
+//         title: 'Standard Single Room',
+//         price: 240,
+//         capacity: 2,
+//         amenties: [
+//             {
+//                 icon: <i class="fa-solid fa-wifi"></i>,
+//                 text: 'Free Wi-Fi'
+//             },
+//             {
+//                 icon: <i class="fa-solid fa-bed"></i>,
+//                 text: '2 Singal Beads'
+//             },
+//             {
+//                 icon: <i class="fa-solid fa-shower"></i>,
+//                 text: 'Shower and Bathtub'
+//             },
+//             {
+//                 icon: <i class="fa-solid fa-wheelchair"></i>,
+//                 text: 'Wheelchair Friendly'
+//             },
+//         ],
+//         imageUrl: 'https://raw.githubusercontent.com/berzhavycha/StethoProject/main/blog-1.jpg'
+//     },
+//     {
+//         title: 'Deluxe Room',
+//         price: 340,
+//         capacity: 5,
+//         amenties: [
+//             {
+//                 icon: <i class="fa-solid fa-wifi"></i>,
+//                 text: 'Free Wi-Fi'
+//             },
+//             {
+//                 icon: <i class="fa-solid fa-bed"></i>,
+//                 text: '2 Singal Beads'
+//             },
+//             {
+//                 icon: <i class="fa-solid fa-shower"></i>,
+//                 text: 'Shower and Bathtub'
+//             },
+//             {
+//                 icon: <i class="fa-solid fa-wheelchair"></i>,
+//                 text: 'Wheelchair Friendly'
+//             },
+//         ],
+//         imageUrl: 'https://raw.githubusercontent.com/berzhavycha/StethoProject/main/blog-1.jpg'
+//     },
+//     {
+//         title: 'Signature Room',
+//         price: 440,
+//         capacity: 3,
+//         amenties: [
+//             {
+//                 icon: <i class="fa-solid fa-wifi"></i>,
+//                 text: 'Free Wi-Fi'
+//             },
+//             {
+//                 icon: <i class="fa-solid fa-bed"></i>,
+//                 text: '2 Singal Beads'
+//             },
+//             {
+//                 icon: <i class="fa-solid fa-shower"></i>,
+//                 text: 'Shower and Bathtub'
+//             },
+//             {
+//                 icon: <i class="fa-solid fa-wheelchair"></i>,
+//                 text: 'Wheelchair Friendly'
+//             },
+//         ],
+//         imageUrl: 'https://raw.githubusercontent.com/berzhavycha/StethoProject/main/blog-1.jpg'
+//     }
+// ]
+
+// const something = [
+//     {
+//         icon: <i class="fa-solid fa-wifi"></i>,
+//         text: 'Free Wi-Fi'
+//     },
+//     {
+//         icon: <i class="fa-solid fa-bed"></i>,
+//         text: '2 Singal Beads'
+//     },
+//     {
+//         icon: <i class="fa-solid fa-shower"></i>,
+//         text: 'Shower and Bathtub'
+//     },
+//     {
+//         icon: <i class="fa-solid fa-wheelchair"></i>,
+//         text: 'Wheelchair Friendly'
+//     },
+//     {
+//         icon: <i class="fa-solid fa-dumbbell"></i>,
+//         text: 'Fitness Center'
+//     },
+//     {
+//         icon: <i class="fa-solid fa-person-swimming"></i>,
+//         text: 'Swimming Pool'
+//     },
+//     {
+//         icon: <i class="fa-solid fa-camera"></i>,
+//         text: 'Security Cameras'
+//     },
+// ]
+
+
+
+
+
 
 
 // Utils funcitons
@@ -85,39 +217,48 @@ export const dropdown = [
         dropdownLinks: [
             {
                 title: 'hotel listing',
-                to: null
+                to: null,
+                state: 'Hotel Listing'
             },
             {
                 title: 'hotel detail',
-                to: null
+                to: null,
+                state: 'Hotel Detail'
             },
             {
                 title: 'login',
-                to: 'login'
+                to: 'login',
+                state: 'Login'
             },
             {
                 title: 'register',
-                to: 'register'
+                to: 'register',
+                state: 'Register'
             },
             {
                 title: 'team',
-                to: null
+                to: null,
+                state: 'Team'
             },
             {
                 title: 'testimonial',
-                to: null
+                to: null,
+                state: 'Testimonial'
             },
             {
                 title: 'travel information',
-                to: null
+                to: null,
+                state: 'Travel Information'
             },
             {
                 title: 'payment information',
-                to: null
+                to: null,
+                state: 'Payment Information'
             },
             {
                 title: 'faq',
-                to: 'faq'
+                to: 'faq',
+                state: 'Faq'
             },
         ]
     }

@@ -51,7 +51,7 @@ const Login = () => {
                 setUser(user)
                 setIsRegistered(true)
 
-                if(searchParams.get('path')){
+                if (searchParams.get('path')) {
                     return navigate(`${searchParams.get('path')}`)
                 }
             })
@@ -64,34 +64,35 @@ const Login = () => {
         setValues({ ...values, [e.target.name]: e.target.value });
     };
 
+
     return (
         <>
 
             <section className='sign-section'>
                 {
-                        user ?
-                            <Logout />
+                    user ?
+                        <Logout />
+                        :
+                        !isRegistered ?
+                            <Form onSubmit={handleSubmit} replace className='sign-form'>
+                                <p>Enter your e-mail and password below to log in to your account and use the benefits of our website.</p>
+                                {error && <div className="error">Email or password is wrong</div>}
+                                {location.state?.message && <div className="error">{location.state?.message}</div>}
+                                {inputs.map((input) => (
+                                    <FormInput
+                                        key={input.id}
+                                        {...input}
+                                        value={values[input.name]}
+                                        onChange={onChange}
+                                    />
+                                ))}
+                                <button>Sign In</button>
+                                <p>Don`t have an account? <Link to={`/register${searchParams.get('path') && `?path=${searchParams.get('path')}`}`}>Sing Up</Link></p>
+                            </Form>
                             :
-                            !isRegistered ?
-                                <Form onSubmit={handleSubmit} replace className='sign-form'>
-                                    <p>Enter your e-mail and password below to log in to your account and use the benefits of our website.</p>
-                                    {error && <div className="error">Email or password is wrong</div>}
-                                    {location.state?.message && <div className="error">{location.state?.message}</div>}
-                                    {inputs.map((input) => (
-                                        <FormInput
-                                            key={input.id}
-                                            {...input}
-                                            value={values[input.name]}
-                                            onChange={onChange}
-                                        />
-                                    ))}
-                                    <button>Sign In</button>
-                                    <p>Don`t have an account? <Link to='/register'>Sing Up</Link></p>
-                                </Form>
-                                :
-                                <SuccessfulForm text={'You have successfuly signed in!'} />
+                            <SuccessfulForm text={'You have successfuly signed in!'} />
                 }
-            </section>
+            </section >
 
         </>
     )

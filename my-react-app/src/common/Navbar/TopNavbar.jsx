@@ -45,28 +45,24 @@ const TopNavbar = () => {
                     </NavLink>
                     <NavLink
                         to='about'
-                        state={{ page: 'About Us' }}
                         className={({ isActive }) => isActive ? 'active' : ''}
                     >
                         about us
                     </NavLink>
                     <NavLink
                         to='gallery'
-                        state={{ page: 'Gallery' }}
                         className={({ isActive }) => isActive ? 'active' : ''}
                     >
                         gallery
                     </NavLink>
                     <NavLink
                         to='destinations'
-                        state={{ page: 'Destinations' }}
                         className={({ isActive }) => isActive ? 'relative-link active' : 'relative-link'}
                     >
                         destinations
                     </NavLink>
                     <NavLink
                         to='blog'
-                        state={{ page: 'Blog' }}
                         className={({ isActive }) => isActive ? 'active' : ''}
                     >
                         blog
@@ -89,14 +85,12 @@ const TopNavbar = () => {
                     <NavLink
                         to='login'
                         className={({ isActive }) => isActive ? 'active' : ''}
-                        state={{ page: 'Login' }}
                     >
                         Sign In
                     </NavLink>
                     <NavLink
                         to='register'
                         className={({ isActive }) => isActive ? 'active' : ''}
-                        state={{page: 'Register'}}
                     >
                         Register
                     </NavLink>
