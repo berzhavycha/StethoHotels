@@ -75,7 +75,7 @@ const TopNavbar = () => {
                         pages
                     </NavLink>
                     <NavLink
-                        to='contact'
+                        to='contactus'
                         className={({ isActive }) => isActive ? ' active' : ''}
                     >
                         contact us

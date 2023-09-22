@@ -1,0 +1,34 @@
+.hotels-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.hotels-container .pagination-btns {
+    display: flex;
+}
+
+.hotels-container .pagination-btns span {
+    border: 1px solid rgb(212, 210, 210);
+    font-size: 12px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    transition: all .2s linear;
+    cursor: pointer;
+}
+
+.hotels-container .pagination-btns span.active {
+    background-color: var(--btn-color);
+    color: white;
+    border-color: var(--btn-color);
+}
+
+.hotels-container .pagination-btns span:hover {
+    background-color: var(--btn-color);
+    color: white;
+    border-color: var(--btn-color);
+}

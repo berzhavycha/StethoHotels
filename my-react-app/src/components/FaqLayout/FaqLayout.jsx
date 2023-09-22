@@ -16,13 +16,19 @@ const FaqLayout = () => {
                     <div className="faq-menu">
                         {accordion.reduce((acc, item) => {
                             if (!acc.includes(item.title)) {
-                                acc.push({title: item.title, id: item.id})
+                                acc.push({ title: item.title, id: item.id })
                             }
 
                             return acc
                         }, []).map((link, index) => {
-                                return <Link key={index} onClick={() => setCurrentTopic(link.id)}><i class="fa-solid fa-angle-right"></i> {link.title}</Link>
-                            })
+                            return <Link
+                                className={`${currentTopic === link.id && 'active'}`}
+                                key={index} 
+                                onClick={() => setCurrentTopic(link.id)}
+                            >
+                                <i className="fa-solid fa-angle-right"></i> {link.title}
+                            </Link>
+                        })
                         }
                     </div>
                     <HelpBlock />

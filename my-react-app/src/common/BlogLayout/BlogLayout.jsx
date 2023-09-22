@@ -1,26 +1,33 @@
 import React, { Suspense, useState } from 'react'
-import { Outlet, defer, Await, useLoaderData, Link, useSearchParams, Form, useSubmit } from 'react-router-dom'
-import { getItems, getReducedData, delay, getSearchItems } from '../../data'
+import { Outlet, defer, Await, useLoaderData, Link, useSearchParams, Form } from 'react-router-dom'
+import { getReducedData } from '../../data'
 import Loading from '../Loading/Loading'
 import './BlogLayout.css'
 import NotFound from '../NotFound/NotFound'
+// import { setupStore } from '../../app/store'
+import { store } from '../../app/store'
+import { apiSlice } from '../../api/apiSlice'
+import { useEffect } from 'react'
+import { useMemo } from 'react'
 
 
 export const loader = async ({ request }) => {
-    const url = new URL(request.url)
-    const title = url.searchParams.get("title")
+    const response = store.dispatch(apiSlice.endpoints.getBlogs.initiate())
+    return defer({ blogs: response })
 
-    if (title) {
-        return defer({ blogs: getSearchItems('blogs', title) })
-    }
-    return defer({ blogs: getItems('blogs') })
+    // if (title) {
+    //     return defer({ blogs: getSearchItems('blogs', title) })
+    // }
+    // return defer({ blogs: getItems('blogs') })
 }
+
 
 const BlogLayout = () => {
     const blogsPromise = useLoaderData()
     const [searchParams, setSearchParams] = useSearchParams()
     const [emptySearch, setEmptySearch] = useState(false)
-    const submit = useSubmit()
+    const [search, setSearch] = useState('')
+
 
     const genSearchParams = (key, value) => {
         const sp = new URLSearchParams(searchParams)
@@ -33,10 +40,38 @@ const BlogLayout = () => {
         return `?${sp.toString()}`
     }
 
-    const filterArrayByParams = (arr, params) => {
+
+    const filterArrayByParams = (inputEntities, params) => {
         const filterType = searchParams.get(params)
-        return filterType ? arr.filter(item => item.type === filterType) : arr
+        let resultEntities = {}
+
+
+        if (filterType) {
+            for (let [key, value] of Object.entries(inputEntities)) {
+                if (value.type === filterType) {
+                    resultEntities = {
+                        ...resultEntities,
+                        [key]: value
+                    }
+                }
+            }
+        }
+
+        return filterType ? resultEntities : inputEntities
     }
+
+
+    const sortBlogsByDate = (blogs) => {
+        return [...blogs].sort((a, b) => {
+            const date1Parts = a.date.split('.');
+            const date2Parts = b.date.split('.');
+
+            const date1 = new Date(`${date1Parts[2]}-${date1Parts[1]}-${date1Parts[0]}`);
+            const date2 = new Date(`${date2Parts[2]}-${date2Parts[1]}-${date2Parts[0]}`);
+
+            return date2 - date1;
+        }).splice(0, 3);
+    };
 
     return (
         <section className='blog-layout'>
@@ -45,27 +80,34 @@ const BlogLayout = () => {
                     <Await resolve={blogsPromise.blogs}>
                         {(loadedBlogs) => {
 
-                            const categories = getReducedData(loadedBlogs, 'type')
-                            const tags = getReducedData(loadedBlogs, 'tag')
-
-                            const blogCopy = [...loadedBlogs]
-
-                            const recentPost = blogCopy.sort((a, b) => {
-                                const date1Parts = a.date.split('.');
-                                const date2Parts = b.date.split('.');
-
-                                const date1 = new Date(`${date1Parts[2]}-${date1Parts[1]}-${date1Parts[0]}`);
-                                const date2 = new Date(`${date2Parts[2]}-${date2Parts[1]}-${date2Parts[0]}`);
-
-                                return date2 - date1;
-                            }).splice(0, 3);
+                            const categories = getReducedData(Object.values(loadedBlogs.data.entities), 'type')
+                            const tags = getReducedData(Object.values(loadedBlogs.data.entities), 'tag')
+                            const recentPost = sortBlogsByDate(Object.values(loadedBlogs.data.entities))
 
 
-                            let filterPosts = filterArrayByParams(loadedBlogs, 'category')
-                            filterPosts = filterArrayByParams(filterPosts, 'tag')
+                            let filterPosts = useMemo(() => {
 
-                            if (!filterPosts.length) setEmptySearch(true)
-                            else setEmptySearch(false)
+                                const categoryFilter = filterArrayByParams(loadedBlogs.data.entities, 'category')
+                                return filterArrayByParams(categoryFilter, 'tag')
+
+                            }, [searchParams.get('category'), searchParams.get('tag')])
+
+
+                            filterPosts = useMemo(() => {
+                                if (!search) return Object.keys(filterPosts)
+
+                                let idsArr = Object.keys(filterPosts)
+                                    .filter(id => filterPosts[id].title.toLowerCase().startsWith(search.toLowerCase()))
+
+                                return idsArr
+                            }, [search])
+
+
+                            useEffect(() => {
+                                if (!Object.keys(filterPosts).length) setEmptySearch(true)
+                                else setEmptySearch(false)
+                            }, [filterPosts])
+
 
 
                             return (
@@ -74,7 +116,7 @@ const BlogLayout = () => {
                                         {emptySearch ?
                                             <NotFound />
                                             :
-                                            <Outlet context={{ blogs: filterPosts }} />
+                                            <Outlet context={{ blogsIds: filterPosts }} />
                                         }
                                     </div>
                                     <div className="layout-article">
@@ -83,18 +125,30 @@ const BlogLayout = () => {
                                                 name='title'
                                                 placeholder='Search...'
                                                 type="search"
-                                                onChange={e => {
-                                                    submit(e.currentTarget.form)
-                                                }}
+                                                // onChange={e => {
+                                                //     submit(e.currentTarget.form)
+                                                // }}
+                                                onChange={e => setSearch(e.target.value)}
                                             />
                                             <button><i className="fa-solid fa-magnifying-glass"></i></button>
                                         </Form>
                                         <div>
                                             <h1 className='layout-title'>Categories</h1>
                                             <div className="categories">
-                                                <Link state={{ page: 'Blog' }} to={genSearchParams('category', null)}><i class="fa-solid fa-circle-dot"></i> All</Link>
+                                                <Link
+                                                    state={{ page: 'Blog' }}
+                                                    to={genSearchParams('category', null)}
+                                                >
+                                                    <i class="fa-solid fa-circle-dot"></i> All
+                                                </Link>
                                                 {categories.map((item, index) => {
-                                                    return <Link state={{ page: 'Blog' }} to={genSearchParams('category', item)} key={index}><i class="fa-solid fa-circle-dot"></i> {item}</Link>
+                                                    return <Link
+                                                        state={{ page: 'Blog' }}
+                                                        to={genSearchParams('category', item)}
+                                                        key={index}
+                                                    >
+                                                        <i class="fa-solid fa-circle-dot"></i> {item}
+                                                    </Link>
                                                 })}
                                             </div>
                                         </div>
@@ -129,7 +183,6 @@ const BlogLayout = () => {
                         }}
                     </Await>
                 </Suspense>
-
             </div>
         </section>
     )

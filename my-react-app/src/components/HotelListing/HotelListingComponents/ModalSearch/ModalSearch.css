@@ -1,0 +1,94 @@
+.modal-search {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 20;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-search.open {
+    display: flex;
+}
+
+.modal-search .modal-search-inner {
+    background-color: white;
+    border-radius: 10px;
+    width: 50vw;
+    transform: translateY(-200%);
+}
+
+.modal-search.open .modal-search-inner {
+    animation: modalSearch .25s ease-in forwards;
+}
+
+@keyframes modalSearch {
+    from {
+        transform: translateY(-200%);
+    }
+
+    to {
+        transform: translateY(0px);
+    }
+}
+
+.modal-search .modal-search-inner .modal-search-top {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(210, 208, 208);
+}
+
+.modal-search .modal-search-inner .modal-search-top button {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: gray;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.modal-search .modal-search-inner .search-inputs {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.modal-search-inner .search-inputs .search-input-block {
+    width: 31%;
+}
+
+.search-inputs .search-input-block input,
+.search-input-block select {
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid rgb(210, 208, 208);
+    margin-bottom: 0;
+}
+
+.search-input-block select {
+    color: gray;
+}
+
+.search-inputs button {
+    width: 100%;
+    padding: 10px;
+    background: var(--btn-color);
+    color: white;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+
+.search-inputs button:hover {
+    background-color: rgb(21, 154, 21);
+}

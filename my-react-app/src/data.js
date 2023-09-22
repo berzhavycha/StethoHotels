@@ -1,215 +1,121 @@
-import { initializeApp } from "firebase/app";
-import {
-    getFirestore,
-    collection,
-    doc,
-    getDocs,
-    getDoc,
-    query,
-    where
-} from "firebase/firestore/lite"
-import { getAuth } from "firebase/auth";
-
-const firebaseConfig = {
-    apiKey: "AIzaSyBlJbVX9XjOFurgCwC24Uvg485CUPbJDr8",
-    authDomain: "stetho-74c61.firebaseapp.com",
-    databaseURL: "https://stetho-74c61-default-rtdb.firebaseio.com",
-    projectId: "stetho-74c61",
-    storageBucket: "stetho-74c61.appspot.com",
-    messagingSenderId: "491292677753",
-    appId: "1:491292677753:web:9feeb55e67bdd4be5266a8"
-};
-
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app)
-export const auth = getAuth(app);
-
-const reviewsS = [
-    {
-        fullName: 'John Doe',
-        text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.',
-        date: '04.07.2023',
-        imageUrl: 'https://raw.githubusercontent.com/berzhavycha/StethoProject/main/profile1.jpg'
-    },
-    {
-        fullName: 'Joe Biden',
-        text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.',
-        date: '01.06.2023',
-        imageUrl: 'https://raw.githubusercontent.com/berzhavycha/StethoProject/main/profile2.jpg'
-    },
-    {
-        fullName: 'Dork Geek',
-        text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.',
-        date: '01.06.2023',
-        imageUrl: 'https://raw.githubusercontent.com/berzhavycha/StethoProject/main/profile3.jpg'
-    }
-]
-
-
-// const rooms = [
-//     {
-//         title: 'Standard Single Room',
-//         price: 240,
-//         capacity: 2,
-//         amenties: [
-//             {
-//                 icon: <i class="fa-solid fa-wifi"></i>,
-//                 text: 'Free Wi-Fi'
-//             },
-//             {
-//                 icon: <i class="fa-solid fa-bed"></i>,
-//                 text: '2 Singal Beads'
-//             },
-//             {
-//                 icon: <i class="fa-solid fa-shower"></i>,
-//                 text: 'Shower and Bathtub'
-//             },
-//             {
-//                 icon: <i class="fa-solid fa-wheelchair"></i>,
-//                 text: 'Wheelchair Friendly'
-//             },
-//         ],
-//         imageUrl: 'https://raw.githubusercontent.com/berzhavycha/StethoProject/main/blog-1.jpg'
-//     },
-//     {
-//         title: 'Deluxe Room',
-//         price: 340,
-//         capacity: 5,
-//         amenties: [
-//             {
-//                 icon: <i class="fa-solid fa-wifi"></i>,
-//                 text: 'Free Wi-Fi'
-//             },
-//             {
-//                 icon: <i class="fa-solid fa-bed"></i>,
-//                 text: '2 Singal Beads'
-//             },
-//             {
-//                 icon: <i class="fa-solid fa-shower"></i>,
-//                 text: 'Shower and Bathtub'
-//             },
-//             {
-//                 icon: <i class="fa-solid fa-wheelchair"></i>,
-//                 text: 'Wheelchair Friendly'
-//             },
-//         ],
-//         imageUrl: 'https://raw.githubusercontent.com/berzhavycha/StethoProject/main/blog-1.jpg'
-//     },
-//     {
-//         title: 'Signature Room',
-//         price: 440,
-//         capacity: 3,
-//         amenties: [
-//             {
-//                 icon: <i class="fa-solid fa-wifi"></i>,
-//                 text: 'Free Wi-Fi'
-//             },
-//             {
-//                 icon: <i class="fa-solid fa-bed"></i>,
-//                 text: '2 Singal Beads'
-//             },
-//             {
-//                 icon: <i class="fa-solid fa-shower"></i>,
-//                 text: 'Shower and Bathtub'
-//             },
-//             {
-//                 icon: <i class="fa-solid fa-wheelchair"></i>,
-//                 text: 'Wheelchair Friendly'
-//             },
-//         ],
-//         imageUrl: 'https://raw.githubusercontent.com/berzhavycha/StethoProject/main/blog-1.jpg'
-//     }
-// ]
-
-// const something = [
-//     {
-//         icon: <i class="fa-solid fa-wifi"></i>,
-//         text: 'Free Wi-Fi'
-//     },
-//     {
-//         icon: <i class="fa-solid fa-bed"></i>,
-//         text: '2 Singal Beads'
-//     },
-//     {
-//         icon: <i class="fa-solid fa-shower"></i>,
-//         text: 'Shower and Bathtub'
-//     },
-//     {
-//         icon: <i class="fa-solid fa-wheelchair"></i>,
-//         text: 'Wheelchair Friendly'
-//     },
-//     {
-//         icon: <i class="fa-solid fa-dumbbell"></i>,
-//         text: 'Fitness Center'
-//     },
-//     {
-//         icon: <i class="fa-solid fa-person-swimming"></i>,
-//         text: 'Swimming Pool'
-//     },
-//     {
-//         icon: <i class="fa-solid fa-camera"></i>,
-//         text: 'Security Cameras'
-//     },
-// ]
-
-
-
-
-
-
 
 // Utils funcitons
 
 // get all items from firestore by its collection name
 export const getItems = async (collectionName, id) => {
-    const querySnapshot = await getDocs(collection(db, collectionName))
-    const dataArr = querySnapshot.docs.map(doc => ({
-        ...doc.data(),
-        id: doc.id
-    }))
-    return id ? dataArr.find(item => item.id == id) : dataArr
+    try {
+        const querySnapshot = await getDocs(collection(db, collectionName))
+        const dataArr = querySnapshot.docs.map(doc => ({
+            ...doc.data(),
+            id: doc.id
+        }))
+        return id ? dataArr.find(item => item.id == id) : dataArr
+    } catch (error) {
+        console.log(error)
+        throw error
+    }
 }
 
 // search for items that i typed into input
 export const getSearchItems = async (collectionName, title) => {
-    const querySnapshot = await getDocs(collection(db, collectionName))
-    const dataArr = querySnapshot.docs.map(doc => ({
-        ...doc.data(),
-        id: doc.id
-    }))
-    return dataArr.filter(item => item.title.toLowerCase().startsWith(title.toLowerCase()))
+    try {
+        const querySnapshot = await getDocs(collection(db, collectionName));
+        const dataArr = querySnapshot.docs.map(doc => ({
+            ...doc.data(),
+            id: doc.id
+        }));
+
+        const filteredItems = dataArr.filter(item => item.title.toLowerCase().startsWith(title.toLowerCase()));
+
+        return filteredItems;
+    } catch (error) {
+        console.error("An error occurred:", error);
+        throw error;
+    }
 }
 
 
-// delay function to show react spinner
-export function delay(time) {
-    return new Promise(resolve => setTimeout(resolve, time));
-}
 
 // get item from firestore by its id and collection name
 export const getSingleCity = async (id, collectionName) => {
-    const docRef = doc(db, collectionName, id)
-    const citySnapshot = await getDoc(docRef)
-    return {
-        ...citySnapshot.data(),
-        id: citySnapshot.id
+    try {
+        const docRef = doc(db, collectionName, id);
+        const citySnapshot = await getDoc(docRef);
+
+        if (citySnapshot.exists()) {
+            return {
+                ...citySnapshot.data(),
+                id: citySnapshot.id
+            };
+        } else {
+            throw new Error(`City with ID ${id} not found in collection ${collectionName}`);
+        }
+    } catch (error) {
+        throw error;
     }
 }
 
 // get item from firestore by its id and collection name
 export const getReducedData = (arr, prop) => {
-    return arr.reduce((acc, item) => {
-        if (!acc.includes(item[prop])) {
-            acc.push(item[prop])
+    if (!Array.isArray(arr)) {
+        throw new Error('The first argument must be an array.');
+    }
+
+    if (!prop && typeof prop !== 'string') {
+        throw new Error('The second argument must be a string representing a property name.');
+    }
+
+    return arr?.reduce((acc, item) => {
+        if (prop in item) {
+            if (!acc.includes(item[prop])) {
+                acc.push(item[prop])
+            }
+        } else {
+            console.error(`Item is missing property "${prop}" or is not an object:`)
         }
 
         return acc
     }, [])
 }
 
+export const changeDateForm = (string) => {
+    const splitDate = string.split('.')
+
+    if (splitDate.length !== 3) {
+        throw new Error('Invalid input format. Expected "dd.mm.yyyy"')
+    }
+
+    const day = splitDate[0]
+    const month = splitDate[1]
+    const year = splitDate[2]
+
+    const isNanDate = [day, month, year].some(isNaN)
+
+    if (isNanDate) {
+        throw new Error('Invalid date components. Day, month, and year must be numeric.')
+    }
+
+    const isPositive = [day, month, year].every(num => num > 0)
+
+    if (!isPositive) {
+        throw new Error('Invalid date components. Day, month, and year must be positive.')
+    }
+
+    return `${year}-${month}-${day}`
+}
+
+// delay function to show react spinner
+export function delay(time) {
+    return new Promise(resolve => setTimeout(resolve, time));
+}
+
 // Other data
 
 export const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'November', 'December']
+
+export const areas = ['Resort (2)', 'West (3)', 'Downtown (2)', 'South (4)']
+
+export const availableCities = ['Paris', 'Gauravaddo', 'Miami', 'LA', 'Mexico']
 
 export const dropdown = [
     {
@@ -217,48 +123,19 @@ export const dropdown = [
         dropdownLinks: [
             {
                 title: 'hotel listing',
-                to: null,
-                state: 'Hotel Listing'
-            },
-            {
-                title: 'hotel detail',
-                to: null,
-                state: 'Hotel Detail'
+                to: 'hotels',
             },
             {
                 title: 'login',
                 to: 'login',
-                state: 'Login'
             },
             {
                 title: 'register',
                 to: 'register',
-                state: 'Register'
-            },
-            {
-                title: 'team',
-                to: null,
-                state: 'Team'
-            },
-            {
-                title: 'testimonial',
-                to: null,
-                state: 'Testimonial'
-            },
-            {
-                title: 'travel information',
-                to: null,
-                state: 'Travel Information'
-            },
-            {
-                title: 'payment information',
-                to: null,
-                state: 'Payment Information'
             },
             {
                 title: 'faq',
                 to: 'faq',
-                state: 'Faq'
             },
         ]
     }
@@ -386,7 +263,7 @@ export const reviews = [
 
 export const news = [
     {
-        id: '1',
+        id: 1,
         imageUrl: '../public/Images/singlepage/blog-1.jpg',
         date: '15.04.2023',
         type: 'business',
@@ -395,7 +272,7 @@ export const news = [
         to: 'blog/1'
     },
     {
-        id: '2',
+        id: 2,
         imageUrl: '../public/Images/singlepage/blog-2.jpg',
         date: '25.05.2023',
         type: 'business',
@@ -404,7 +281,7 @@ export const news = [
         to: 'blog/2'
     },
     {
-        id: '3',
+        id: 3,
         imageUrl: '../public/Images/singlepage/blog-3.jpg',
         date: '20.06.2023',
         type: 'business',

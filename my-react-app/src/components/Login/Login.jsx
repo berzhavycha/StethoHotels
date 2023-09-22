@@ -1,12 +1,12 @@
-import React, { useState } from 'react'
+import React, { useMemo, useState } from 'react'
 import { Form, Link, useLocation, useNavigate, useSearchParams } from 'react-router-dom'
 import './Login.css'
 import FormInput from '../../common/FormInput/FormInput'
 import SuccessfulForm from '../../common/SuccessfulForm/SuccessfulForm'
-import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from '../../data'
 import useUserContext from '../../context/User/UserProvider'
 import Logout from '../../common/Logout/Logout'
+import { useGetUsersQuery } from '../../features/userSlice'
+
 
 const Login = () => {
     const [values, setValues] = useState({
@@ -14,12 +14,13 @@ const Login = () => {
         password: "",
     });
 
-    const [isRegistered, setIsRegistered] = useState(false)
     const [error, setError] = useState(false)
     const [searchParams, setSearchParams] = useSearchParams()
     const navigate = useNavigate()
     const location = useLocation()
-    const { user, setUser } = useUserContext()
+    const { user, logInUser } = useUserContext()
+    const { data: users } = useGetUsersQuery()
+
 
     const inputs = [
         {
@@ -45,52 +46,50 @@ const Login = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        signInWithEmailAndPassword(auth, values.email, values.password)
-            .then((userCredential) => {
-                const user = userCredential.user;
-                setUser(user)
-                setIsRegistered(true)
+        const userId = users.ids.find(id => users.entities[id].password === values.password && users.entities[id].email === values.email)
+              
+        if (!user) {
+            setError(true)
+        }
 
-                if (searchParams.get('path')) {
-                    return navigate(`${searchParams.get('path')}`)
-                }
-            })
-            .catch((error) => {
-                setError(true)
-            });
+        logInUser(users.entities[userId])
+
+        if (searchParams.get('path')) {
+            return navigate(`${searchParams.get('path')}`)
+        }
+
+        setValues({email: '', password: ''})
+
     };
 
     const onChange = (e) => {
         setValues({ ...values, [e.target.name]: e.target.value });
     };
 
-
     return (
         <>
 
             <section className='sign-section'>
                 {
-                    user ?
+                    user.fullName ?
                         <Logout />
                         :
-                        !isRegistered ?
-                            <Form onSubmit={handleSubmit} replace className='sign-form'>
-                                <p>Enter your e-mail and password below to log in to your account and use the benefits of our website.</p>
-                                {error && <div className="error">Email or password is wrong</div>}
-                                {location.state?.message && <div className="error">{location.state?.message}</div>}
-                                {inputs.map((input) => (
-                                    <FormInput
-                                        key={input.id}
-                                        {...input}
-                                        value={values[input.name]}
-                                        onChange={onChange}
-                                    />
-                                ))}
-                                <button>Sign In</button>
-                                <p>Don`t have an account? <Link to={`/register${searchParams.get('path') && `?path=${searchParams.get('path')}`}`}>Sing Up</Link></p>
-                            </Form>
-                            :
-                            <SuccessfulForm text={'You have successfuly signed in!'} />
+                        <Form onSubmit={handleSubmit} replace className='sign-form'>
+                            <p>Enter your e-mail and password below to log in to your account and use the benefits of our website.</p>
+                            {error && <div className="error">Email or password is wrong</div>}
+                            {location.state?.message && <div className="error">{location.state?.message}</div>}
+                            {searchParams.get('message') && <div className='error'>{searchParams.get('message')}</div>}
+                            {inputs.map((input) => (
+                                <FormInput
+                                    key={input.id}
+                                    {...input}
+                                    value={values[input.name]}
+                                    onChange={onChange}
+                                />
+                            ))}
+                            <button>Sign In</button>
+                            <p>Don`t have an account? <Link to={`/register${searchParams.get('path') ? `?path=${searchParams.get('path')}` : ''}`}>Sing Up</Link></p>
+                        </Form>
                 }
             </section >
 

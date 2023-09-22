@@ -1,0 +1,27 @@
+.reaction-buttons {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.reaction-buttons button{
+    background: transparent;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.reaction-buttons button:hover{
+    background: transparent;
+}
+
+.reaction-buttons button img{
+    width: 16px;
+}
+
+.reaction-buttons button span{
+    font-size: 14px;
+}

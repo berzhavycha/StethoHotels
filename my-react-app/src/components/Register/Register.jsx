@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
 import { Form, useNavigate, useSearchParams } from 'react-router-dom'
 import './Register.css'
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import FormInput from '../../common/FormInput/FormInput';
-import { auth } from '../../data'
 import SuccessfulForm from '../../common/SuccessfulForm/SuccessfulForm';
 import useUserContext from '../../context/User/UserProvider';
+import { useAddUserMutation } from '../../features/userSlice';
+import Logout from '../../common/Logout/Logout';
+import { nanoid } from '@reduxjs/toolkit';
 
 const Register = () => {
     const [values, setValues] = useState({
@@ -15,10 +17,12 @@ const Register = () => {
         confirmPassword: "",
     });
 
-    const { setUser } = useUserContext()
+    const { user, signUpUser } = useUserContext()
     const [isRegistered, setIsRegistered] = useState(false)
     const [searchParams, setSearchParams] = useSearchParams()
     const navigate = useNavigate()
+
+    const [addUser] = useAddUserMutation()
 
     const inputs = [
         {
@@ -63,20 +67,24 @@ const Register = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        createUserWithEmailAndPassword(auth, values.email, values.password)
-            .then((userCredential) => {
-                const user = userCredential.user;
-                setUser(user)
-                setIsRegistered(true)
+        addUser({
+            fullName: values.fullname,
+            email: values.email,
+            imageUrl: '../../../public/Images/profile/profile1.jpg',
+            password: values.password,
+            id: nanoid()
+        })
+        signUpUser({
+            fullName: values.fullname,
+            email: values.email,
+            imageUrl: '../../../public/Images/profile/profile1.jpg',
+            id: nanoid()
+        })
+        setIsRegistered(true)
 
-                if (searchParams.get('path')) {
-                    navigate(searchParams.get('path'))
-                }
-            })
-            .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-            });
+        if (searchParams.get('path')) {
+            return navigate(`${searchParams.get('path')}`)
+        }
     };
 
     const onChange = (e) => {
@@ -85,21 +93,24 @@ const Register = () => {
 
     return (
         <section className='sign-section'>
-            {!isRegistered ?
-                <Form onSubmit={handleSubmit} className='sign-form'>
-                    <p>Don't have an account? Create your account, it takes less than a minute.</p>
-                    {inputs.map((input) => (
-                        <FormInput
-                            key={input.id}
-                            {...input}
-                            value={values[input.name]}
-                            onChange={onChange}
-                        />
-                    ))}
-                    <button className='create-account'>Create an Account</button>
-                </Form>
+            {user.fullName ?
+                <Logout />
                 :
-                <SuccessfulForm text={'Your account has been successfuly registered'} />
+                !isRegistered ?
+                    <Form onSubmit={handleSubmit} className='sign-form'>
+                        <p>Don't have an account? Create your account, it takes less than a minute.</p>
+                        {inputs.map((input) => (
+                            <FormInput
+                                key={input.id}
+                                {...input}
+                                value={values[input.name]}
+                                onChange={onChange}
+                            />
+                        ))}
+                        <button className='create-account'>Create an Account</button>
+                    </Form>
+                    :
+                    <SuccessfulForm text={'Your account has been successfuly registered'} />
             }
         </section>
     )

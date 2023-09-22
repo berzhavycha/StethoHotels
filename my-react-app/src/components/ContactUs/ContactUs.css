@@ -1,0 +1,235 @@
+.contact-section {
+    padding: 60px 0;
+}
+
+.contact-section-inner {
+    display: flex;
+    gap: 30px;
+}
+
+.contact-section-inner .left {
+    width: 100%;
+}
+
+.contact-section-inner .right {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-section-inner .right iframe {
+    width: 120%;
+    height: 300px;
+    margin-right: 20px;
+}
+
+.contact-section-inner .right .right-text-section h3 {
+    margin-bottom: 5px;
+}
+
+.contact-section-inner .right .right-text-section p {
+    font-weight: 300;
+    color: gray;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+}
+
+.contact-section-inner .right .right-text-section .icons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.contact-section-inner .right .right-text-section .icons i {
+    font-size: 20px;
+    color: gray;
+    transition: all .2s linear;
+    cursor: pointer;
+}
+
+.contact-section-inner .right .right-text-section .icons i:hover {
+    color: var(--btn-color);
+}
+
+.contact-section-inner .left p {
+    font-weight: 300;
+    color: gray;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.contact-section-inner .left form .form-inputs {
+    display: flex;
+    gap: 10px 25px;
+    flex-wrap: wrap;
+}
+
+.contact-section-inner .left form .form-block {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contact-section-inner .left form .form-block label {
+    color: gray;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.contact-section-inner .left form .form-block label .red {
+    color: red;
+}
+
+.contact-section-inner .left form .form-block span {
+    color: red;
+    font-size: 14px;
+}
+
+.contact-section-inner .left form .form-block input {
+    padding: 15px;
+    border: 1px solid rgb(208, 208, 208);
+    outline: none;
+}
+
+.contact-section-inner .left form .text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.contact-section-inner .left form .text label {
+    color: gray;
+    font-weight: 300;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.contact-section-inner .left form .text label .red {
+    color: red;
+}
+
+.contact-section-inner .left form .text .red{
+    color: red;
+    font-size: 14px;
+}
+
+.contact-section-inner .left form .text textarea {
+    min-width: 53vw;
+    height: 100px;
+    padding: 15px;
+    border: 1px solid rgb(208, 208, 208);
+    outline: none;
+}
+
+.contact-section-inner .left form button {
+    padding: 15px 30px;
+    background-color: var(--btn-color);
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+
+.contact-section-inner .left form button:hover {
+    background-color: black;
+}
+
+/*=========================== MEDIA ==========================*/
+
+@media screen and (max-width: 980px) {
+    .contact-section-inner .left form .form-block {
+        width: 46%;
+    }
+
+    .contact-section-inner .right iframe {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .contact-section {
+        padding: 50px 0;
+    }
+
+    .contact-section-inner {
+        flex-direction: column;
+    }
+
+    .contact-section-inner .left {
+        width: 100%;
+    }
+
+    .contact-section-inner .left form .form-block {
+        width: 48%;
+    }
+
+    .contact-section-inner .right {
+        width: 100%;
+    }
+
+    .contact-section-inner .right iframe {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .contact-section-inner .left form .form-block {
+        width: 47%;
+    }
+
+    .contact-section-inner .left h2{
+        font-size: 22px;
+    }
+
+    .contact-section-inner .left p{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .contact-section {
+        padding: 40px 0;
+    }
+
+    .contact-section-inner .left form .form-block {
+        width: 47%;
+    }
+
+    .contact-section-inner .left form .form-block label {
+        font-size: 13px;
+    }
+
+    .contact-section-inner .left form .text label {
+        font-size: 13px;
+    }
+
+    .contact-section-inner .left form .form-block span {
+        font-size: 12px;
+    }
+
+    .contact-section-inner .left form .form-block input {
+        padding: 10px;
+    }
+
+    .contact-section-inner .left form .text textarea {
+        width: 85vw;
+        height: 70px;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .contact-section-inner .left form .form-inputs {
+        gap: 10px 20px;
+    }
+
+    .contact-section-inner .left form .form-block {
+        width: 46%;
+    }
+}

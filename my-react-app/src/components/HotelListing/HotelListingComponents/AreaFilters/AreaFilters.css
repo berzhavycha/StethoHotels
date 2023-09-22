@@ -1,0 +1,15 @@
+.filter-item .areas{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+.filter-item .areas .area-block{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-item .areas .area-block p{
+    padding-top: 8px;
+}

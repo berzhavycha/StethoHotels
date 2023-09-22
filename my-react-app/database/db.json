@@ -1,0 +1,672 @@
+{
+  "blogs": [
+    {
+      "id": "1",
+      "column1": "Lorem ipsum dolor sit amet consectetur ipiscing elit amet conse amet consectetur ipiscing elit amet consectetur piscing elit consectetur adipiscing elit sed et eletum varius dolor fermum sit amet.",
+      "column2": "Lorem ipsum dolor sit amet consectetur ipiscing elit amet conse amet consectetur ipiscing elit amet consectetur piscing elit consectetur adipiscing elit sed et eletum varius dolor fermum sit amet.",
+      "date": "15.07.2023",
+      "description": "Lorem ipsum dolor sit amet consectetur ipiscing elit amet consectetur piscing elit consectetur adipiscing elit sed et eletum. orem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.  Lorem ipsum dolor sit amet consectetur ipiscing elit amet consectetur piscing elit consectetur adipiscing elit sed et eletum. orem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.",
+      "imageUrl": "https://raw.githubusercontent.com/aberzhavych/StethoProject/main/blog-1.jpg",
+      "tag": "Business",
+      "text": "Lorem ipsum dolor sit amet consectetur ipiscing elit amet consectetur piscing elit consectetur adipiscing elit sed et eletum.",
+      "title": "The Most Advanced Business Plan",
+      "Two Column": "Two Column Text Sample",
+      "type": "Business",
+      "comments": [
+        {
+          "id": 1,
+          "imageUrl": "https://raw.githubusercontent.com/aberzhavych/StethoProject/main/profile6.jpg",
+          "text": "Lorem ipsum dolor sit amet consectetur ipiscing elit amet consectetur piscing elitsada consectetur adipiscing elit sed et eletum. orem ipsum dolor sit amet consecteturdfhdg adipiscing elit amet consectetur piscing elit amet consectetur.",
+          "author": 5,
+          "date": "01.02.2023",
+          "stars": 5,
+          "parentId": null,
+          "reactions": {
+            "thumbsUp": 5,
+            "dislike": 7,
+            "angry": 3,
+            "fire": 1,
+            "coffee": 4
+          }
+        },
+        {
+          "id": 2,
+          "imageUrl": "https://raw.githubusercontent.com/aberzhavych/StethoProject/main/profile4.jpg",
+          "text": "Lorem ipsum dolor sit amet consectetur ipiscing elit amet consectetur piscing elitsada consectetur adipiscing elit sed et eletum. orem ipsum dolor sit amet consecteturdfhdg adipiscing elit amet consectetur piscing elit amet consectetur.",
+          "author": 5,
+          "date": "01.02.2023",
+          "stars": 5,
+          "parentId": 1,
+          "reactions": {
+            "thumbsUp": 0,
+            "dislike": 5,
+            "angry": 1,
+            "fire": 0,
+            "coffee": 2
+          }
+        },
+        {
+          "id": 3,
+          "imageUrl": "https://raw.githubusercontent.com/aberzhavych/StethoProject/main/profile5.jpg",
+          "text": "Lorem ipsum dolor sit amet consectetur ipiscing elit amet consectetur piscing elitsada consectetur adipiscing elit sed et eletum. orem ipsum dolor sit amet consecteturdfhdg adipiscing elit amet consectetur piscing elit amet consectetur.",
+          "author": 5,
+          "date": "01.02.2023",
+          "stars": 2,
+          "parentId": null,
+          "reactions": {
+            "thumbsUp": 1,
+            "dislike": 1,
+            "angry": 1,
+            "fire": 0,
+            "coffee": 0
+          }
+        },
+        {
+          "text": "e",
+          "author": 1,
+          "date": "22.09.2023",
+          "stars": 4,
+          "parentId": null,
+          "id": "MeJHpYZ7qjbXUFWoUSyFQ",
+          "reactions": {
+            "thumbsUp": 0,
+            "dislike": 0,
+            "angry": 0,
+            "fire": 0,
+            "coffee": 0
+          }
+        },
+        {
+          "text": "broo",
+          "author": 1,
+          "date": "22.09.2023",
+          "stars": 4,
+          "parentId": null,
+          "id": "aGu7sgdVnc9jDWfRadPkk",
+          "reactions": {
+            "thumbsUp": 0,
+            "dislike": 0,
+            "angry": 0,
+            "fire": 0,
+            "coffee": 0
+          }
+        }
+      ],
+      "postDate": 1689379200000
+    },
+    {
+      "id": "2",
+      "column1": "Lorem ipsum dolor sit amet consectetur ipiscing elit amet conse amet consectetur ipiscing elit amet consectetur piscing elit consectetur adipiscing elit sed et eletum varius dolor fermum sit amet.",
+      "column2": "Lorem ipsum dolor sit amet consectetur ipiscing elit amet conse amet consectetur ipiscing elit amet consectetur piscing elit consectetur adipiscing elit sed et eletum varius dolor fermum sit amet.",
+      "date": "20.07.2023",
+      "description": "Lorem ipsum dolor sit amet consectetur ipiscing elit amet consectetur piscing elit consectetur adipiscing elit sed et eletum. orem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.  Lorem ipsum dolor sit amet consectetur ipiscing elit amet consectetur piscing elit consectetur adipiscing elit sed et eletum. orem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.",
+      "imageUrl": "https://raw.githubusercontent.com/aberzhavych/StethoProject/main/blog-2.jpg",
+      "tag": "Travelling",
+      "text": "Lorem ipsum dolor sit amet consectetur ipiscing elit amet consectetur piscing elit consectetur adipiscing elit sed et eletum.",
+      "title": "Beautiful Home Page",
+      "Two Column": "Two Column Text Sample",
+      "type": "Travelling",
+      "comments": [
+        {
+          "id": 1,
+          "imageUrl": "https://raw.githubusercontent.com/aberzhavych/StethoProject/main/profile6.jpg",
+          "text": "Lorem ipsum dolor sit amet consectetur ipiscing elit amet consectetur piscing elitsada consectetur adipiscing elit sed et eletum. orem ipsum dolor sit amet consecteturdfhdg adipiscing elit amet consectetur piscing elit amet consectetur.",
+          "author": 5,
+          "date": "01.02.2023",
+          "stars": 5,
+          "parentId": null,
+          "reactions": {
+            "thumbsUp": 5,
+            "dislike": 7,
+            "angry": 3,
+            "fire": 1,
+            "coffee": 4
+          }
+        },
+        {
+          "id": 2,
+          "imageUrl": "https://raw.githubusercontent.com/aberzhavych/StethoProject/main/profile4.jpg",
+          "text": "Lorem ipsum dolor sit amet consectetur ipiscing elit amet consectetur piscing elitsada consectetur adipiscing elit sed et eletum. orem ipsum dolor sit amet consecteturdfhdg adipiscing elit amet consectetur piscing elit amet consectetur.",
+          "author": 5,
+          "date": "01.02.2023",
+          "stars": 5,
+          "parentId": 1,
+          "reactions": {
+            "thumbsUp": 0,
+            "dislike": 4,
+            "angry": 0,
+            "fire": 0,
+            "coffee": 2
+          }
+        },
+        {
+          "id": 3,
+          "imageUrl": "https://raw.githubusercontent.com/aberzhavych/StethoProject/main/profile5.jpg",
+          "text": "Lorem ipsum dolor sit amet consectetur ipiscing elit amet consectetur piscing elitsada consectetur adipiscing elit sed et eletum. orem ipsum dolor sit amet consecteturdfhdg adipiscing elit amet consectetur piscing elit amet consectetur.",
+          "author": 5,
+          "date": "01.02.2023",
+          "stars": 2,
+          "parentId": null,
+          "reactions": {
+            "thumbsUp": 1,
+            "dislike": 1,
+            "angry": 1,
+            "fire": 0,
+            "coffee": 0
+          }
+        }
+      ],
+      "postDate": 1689811200000
+    },
+    {
+      "id": "3",
+      "column1": "Lorem ipsum dolor sit amet consectetur ipiscing elit amet conse amet consectetur ipiscing elit amet consectetur piscing elit consectetur adipiscing elit sed et eletum varius dolor fermum sit amet.",
+      "column2": "Lorem ipsum dolor sit amet consectetur ipiscing elit amet conse amet consectetur ipiscing elit amet consectetur piscing elit consectetur adipiscing elit sed et eletum varius dolor fermum sit amet.",
+      "date": "19.06.2023",
+      "description": "Lorem ipsum dolor sit amet consectetur ipiscing elit amet consectetur piscing elit consectetur adipiscing elit sed et eletum. orem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.  Lorem ipsum dolor sit amet consectetur ipiscing elit amet consectetur piscing elit consectetur adipiscing elit sed et eletum. orem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.",
+      "imageUrl": "https://raw.githubusercontent.com/aberzhavych/StethoProject/main/blog-3.jpg",
+      "tag": "Development",
+      "text": "Lorem ipsum dolor sit amet consectetur ipiscing elit amet consectetur piscing elit consectetur adipiscing elit sed et eletum.",
+      "title": "Modern Design Concept",
+      "Two Column": "Two Column Text Sample",
+      "type": "Development",
+      "comments": [
+        {
+          "id": 1,
+          "imageUrl": "https://raw.githubusercontent.com/aberzhavych/StethoProject/main/profile6.jpg",
+          "text": "Lorem ipsum dolor sit amet consectetur ipiscing elit amet consectetur piscing elitsada consectetur adipiscing elit sed et eletum. orem ipsum dolor sit amet consecteturdfhdg adipiscing elit amet consectetur piscing elit amet consectetur.",
+          "author": 5,
+          "date": "01.02.2023",
+          "stars": 5,
+          "parentId": null,
+          "reactions": {
+            "thumbsUp": 5,
+            "dislike": 7,
+            "angry": 3,
+            "fire": 1,
+            "coffee": 4
+          }
+        },
+        {
+          "id": 2,
+          "imageUrl": "https://raw.githubusercontent.com/aberzhavych/StethoProject/main/profile4.jpg",
+          "text": "Lorem ipsum dolor sit amet consectetur ipiscing elit amet consectetur piscing elitsada consectetur adipiscing elit sed et eletum. orem ipsum dolor sit amet consecteturdfhdg adipiscing elit amet consectetur piscing elit amet consectetur.",
+          "author": 5,
+          "date": "01.02.2023",
+          "stars": 5,
+          "parentId": 1,
+          "reactions": {
+            "thumbsUp": 0,
+            "dislike": 4,
+            "angry": 0,
+            "fire": 0,
+            "coffee": 2
+          }
+        },
+        {
+          "id": 3,
+          "imageUrl": "https://raw.githubusercontent.com/aberzhavych/StethoProject/main/profile5.jpg",
+          "text": "Lorem ipsum dolor sit amet consectetur ipiscing elit amet consectetur piscing elitsada consectetur adipiscing elit sed et eletum. orem ipsum dolor sit amet consecteturdfhdg adipiscing elit amet consectetur piscing elit amet consectetur.",
+          "author": 5,
+          "date": "01.02.2023",
+          "stars": 2,
+          "parentId": null,
+          "reactions": {
+            "thumbsUp": 1,
+            "dislike": 1,
+            "angry": 1,
+            "fire": 0,
+            "coffee": 0
+          }
+        }
+      ],
+      "postDate": 1689811200000
+    },
+    {
+      "id": "4",
+      "column1": "Lorem ipsum dolor sit amet consectetur ipiscing elit amet conse amet consectetur ipiscing elit amet consectetur piscing elit consectetur adipiscing elit sed et eletum varius dolor fermum sit amet.",
+      "column2": "Lorem ipsum dolor sit amet consectetur ipiscing elit amet conse amet consectetur ipiscing elit amet consectetur piscing elit consectetur adipiscing elit sed et eletum varius dolor fermum sit amet.",
+      "date": "10.07.2023",
+      "description": "Lorem ipsum dolor sit amet consectetur ipiscing elit amet consectetur piscing elit consectetur adipiscing elit sed et eletum. orem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.  Lorem ipsum dolor sit amet consectetur ipiscing elit amet consectetur piscing elit consectetur adipiscing elit sed et eletum. orem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.",
+      "imageUrl": "https://raw.githubusercontent.com/aberzhavych/StethoProject/main/blog-4.jpg",
+      "tag": "Motion",
+      "text": "Lorem ipsum dolor sit amet consectetur ipiscing elit amet consectetur piscing elit consectetur adipiscing elit sed et eletum.",
+      "title": "Smart Flexible Visitin Card",
+      "Two Column": "Two Column Text Sample",
+      "type": "Motion Designer",
+      "comments": [
+        {
+          "id": 1,
+          "imageUrl": "https://raw.githubusercontent.com/aberzhavych/StethoProject/main/profile6.jpg",
+          "text": "Lorem ipsum dolor sit amet consectetur ipiscing elit amet consectetur piscing elitsada consectetur adipiscing elit sed et eletum. orem ipsum dolor sit amet consecteturdfhdg adipiscing elit amet consectetur piscing elit amet consectetur.",
+          "author": 5,
+          "date": "01.02.2023",
+          "stars": 5,
+          "parentId": null,
+          "reactions": {
+            "thumbsUp": 5,
+            "dislike": 7,
+            "angry": 3,
+            "fire": 1,
+            "coffee": 4
+          }
+        },
+        {
+          "id": 2,
+          "imageUrl": "https://raw.githubusercontent.com/aberzhavych/StethoProject/main/profile4.jpg",
+          "text": "Lorem ipsum dolor sit amet consectetur ipiscing elit amet consectetur piscing elitsada consectetur adipiscing elit sed et eletum. orem ipsum dolor sit amet consecteturdfhdg adipiscing elit amet consectetur piscing elit amet consectetur.",
+          "author": 5,
+          "date": "01.02.2023",
+          "stars": 5,
+          "parentId": 1,
+          "reactions": {
+            "thumbsUp": 0,
+            "dislike": 4,
+            "angry": 0,
+            "fire": 0,
+            "coffee": 2
+          }
+        },
+        {
+          "id": 3,
+          "imageUrl": "https://raw.githubusercontent.com/aberzhavych/StethoProject/main/profile5.jpg",
+          "text": "Lorem ipsum dolor sit amet consectetur ipiscing elit amet consectetur piscing elitsada consectetur adipiscing elit sed et eletum. orem ipsum dolor sit amet consecteturdfhdg adipiscing elit amet consectetur piscing elit amet consectetur.",
+          "author": 5,
+          "date": "01.02.2023",
+          "stars": 2,
+          "parentId": null,
+          "reactions": {
+            "thumbsUp": 1,
+            "dislike": 1,
+            "angry": 1,
+            "fire": 0,
+            "coffee": 0
+          }
+        }
+      ],
+      "postDate": 1689811200000
+    },
+    {
+      "id": "5",
+      "column1": "Lorem ipsum dolor sit amet consectetur ipiscing elit amet conse amet consectetur ipiscing elit amet consectetur piscing elit consectetur adipiscing elit sed et eletum varius dolor fermum sit amet.",
+      "column2": "Lorem ipsum dolor sit amet consectetur ipiscing elit amet conse amet consectetur ipiscing elit amet consectetur piscing elit consectetur adipiscing elit sed et eletum varius dolor fermum sit amet.",
+      "date": "13.05.2023",
+      "description": "Lorem ipsum dolor sit amet consectetur ipiscing elit amet consectetur piscing elit consectetur adipiscing elit sed et eletum. orem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.  Lorem ipsum dolor sit amet consectetur ipiscing elit amet consectetur piscing elit consectetur adipiscing elit sed et eletum. orem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.",
+      "imageUrl": "https://raw.githubusercontent.com/aberzhavych/StethoProject/main/blog-5.jpg",
+      "tag": "Strategy",
+      "text": "Lorem ipsum dolor sit amet consectetur ipiscing elit amet consectetur piscing elit consectetur adipiscing elit sed et eletum.",
+      "title": "Investment Planing",
+      "Two Column": "Two Column Text Sample",
+      "type": "Business Strategy",
+      "comments": [
+        {
+          "id": 1,
+          "imageUrl": "https://raw.githubusercontent.com/aberzhavych/StethoProject/main/profile6.jpg",
+          "text": "Lorem ipsum dolor sit amet consectetur ipiscing elit amet consectetur piscing elitsada consectetur adipiscing elit sed et eletum. orem ipsum dolor sit amet consecteturdfhdg adipiscing elit amet consectetur piscing elit amet consectetur.",
+          "author": 5,
+          "date": "01.02.2023",
+          "stars": 5,
+          "parentId": null,
+          "reactions": {
+            "thumbsUp": 5,
+            "dislike": 7,
+            "angry": 3,
+            "fire": 1,
+            "coffee": 4
+          }
+        },
+        {
+          "id": 2,
+          "imageUrl": "https://raw.githubusercontent.com/aberzhavych/StethoProject/main/profile4.jpg",
+          "text": "Lorem ipsum dolor sit amet consectetur ipiscing elit amet consectetur piscing elitsada consectetur adipiscing elit sed et eletum. orem ipsum dolor sit amet consecteturdfhdg adipiscing elit amet consectetur piscing elit amet consectetur.",
+          "author": 5,
+          "date": "01.02.2023",
+          "stars": 5,
+          "parentId": 1,
+          "reactions": {
+            "thumbsUp": 0,
+            "dislike": 4,
+            "angry": 0,
+            "fire": 0,
+            "coffee": 2
+          }
+        },
+        {
+          "id": 3,
+          "imageUrl": "https://raw.githubusercontent.com/aberzhavych/StethoProject/main/profile5.jpg",
+          "text": "Lorem ipsum dolor sit amet consectetur ipiscing elit amet consectetur piscing elitsada consectetur adipiscing elit sed et eletum. orem ipsum dolor sit amet consecteturdfhdg adipiscing elit amet consectetur piscing elit amet consectetur.",
+          "author": 5,
+          "date": "01.02.2023",
+          "stars": 2,
+          "parentId": null,
+          "reactions": {
+            "thumbsUp": 1,
+            "dislike": 1,
+            "angry": 1,
+            "fire": 0,
+            "coffee": 0
+          }
+        }
+      ],
+      "postDate": 1689811200000
+    },
+    {
+      "id": "6",
+      "column1": "Lorem ipsum dolor sit amet consectetur ipiscing elit amet conse amet consectetur ipiscing elit amet consectetur piscing elit consectetur adipiscing elit sed et eletum varius dolor fermum sit amet.",
+      "column2": "Lorem ipsum dolor sit amet consectetur ipiscing elit amet conse amet consectetur ipiscing elit amet consectetur piscing elit consectetur adipiscing elit sed et eletum varius dolor fermum sit amet.",
+      "date": "15.08.2023",
+      "description": "Lorem ipsum dolor sit amet consectetur ipiscing elit amet consectetur piscing elit consectetur adipiscing elit sed et eletum. orem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.  Lorem ipsum dolor sit amet consectetur ipiscing elit amet consectetur piscing elit consectetur adipiscing elit sed et eletum. orem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.",
+      "imageUrl": "https://raw.githubusercontent.com/aberzhavych/StethoProject/main/blog-6.jpg",
+      "tag": "Managment",
+      "text": "Lorem ipsum dolor sit amet consectetur ipiscing elit amet consectetur piscing elit consectetur adipiscing elit sed et eletum.",
+      "title": "Why You Should Always First",
+      "Two Column": "Two Column Text Sample",
+      "type": "Risk Managment",
+      "comments": [
+        {
+          "id": 1,
+          "imageUrl": "https://raw.githubusercontent.com/aberzhavych/StethoProject/main/profile6.jpg",
+          "text": "Lorem ipsum dolor sit amet consectetur ipiscing elit amet consectetur piscing elitsada consectetur adipiscing elit sed et eletum. orem ipsum dolor sit amet consecteturdfhdg adipiscing elit amet consectetur piscing elit amet consectetur.",
+          "author": 5,
+          "date": "01.02.2023",
+          "stars": 5,
+          "parentId": null,
+          "reactions": {
+            "thumbsUp": 5,
+            "dislike": 7,
+            "angry": 3,
+            "fire": 1,
+            "coffee": 4
+          }
+        },
+        {
+          "id": 2,
+          "imageUrl": "https://raw.githubusercontent.com/aberzhavych/StethoProject/main/profile4.jpg",
+          "text": "Lorem ipsum dolor sit amet consectetur ipiscing elit amet consectetur piscing elitsada consectetur adipiscing elit sed et eletum. orem ipsum dolor sit amet consecteturdfhdg adipiscing elit amet consectetur piscing elit amet consectetur.",
+          "author": 5,
+          "date": "01.02.2023",
+          "stars": 5,
+          "parentId": 1,
+          "reactions": {
+            "thumbsUp": 0,
+            "dislike": 4,
+            "angry": 0,
+            "fire": 0,
+            "coffee": 2
+          }
+        },
+        {
+          "id": 3,
+          "imageUrl": "https://raw.githubusercontent.com/aberzhavych/StethoProject/main/profile5.jpg",
+          "text": "Lorem ipsum dolor sit amet consectetur ipiscing elit amet consectetur piscing elitsada consectetur adipiscing elit sed et eletum. orem ipsum dolor sit amet consecteturdfhdg adipiscing elit amet consectetur piscing elit amet consectetur.",
+          "author": 5,
+          "date": "01.02.2023",
+          "stars": 2,
+          "parentId": null,
+          "reactions": {
+            "thumbsUp": 1,
+            "dislike": 1,
+            "angry": 1,
+            "fire": 0,
+            "coffee": 0
+          }
+        }
+      ],
+      "postDate": 1689638400000,
+      "stars": 4
+    }
+  ],
+  "users": [
+    {
+      "fullName": "Kevin Martyn",
+      "email": "kevin@gmail.com",
+      "imageUrl": "../../../public/Images/profile/profile1.jpg",
+      "password": "bombamoscow1!",
+      "id": 5
+    },
+    {
+      "fullName": "andrew",
+      "email": "a@gmail.com",
+      "imageUrl": "../../../public/Images/profile/profile1.jpg",
+      "password": "bombamoscow1!",
+      "id": 1
+    }
+  ],
+  "hotels": [
+    {
+      "id": "1",
+      "amenties": "[   {\"icon\": \"fa-wifi\",     \"text\": \"Free Wi-Fi\"   },   {     \"icon\": \"fa-bed\",     \"text\": \"2 Singal Beads\"   },   {     \"icon\": \"fa-shower\",     \"text\": \"Shower and Bathtub\"   },   {     \"icon\": \"fa-wheelchair\",     \"text\": \"Wheelchair Friendly\"   },   {     \"icon\": \"fa-dumbbell\",     \"text\": \"Fitness Center\"   },   {     \"icon\": \"fa-person-swimming\",     \"text\": \"Swimming Pool\"   },   {     \"icon\": \"fa-camera\",     \"text\": \"Security Cameras\"   } ]",
+      "images": [
+        "https://raw.githubusercontent.com/berzhavycha/StethoHotels/main/my-react-app/public/Images/room-01.jpg",
+        "https://raw.githubusercontent.com/berzhavycha/StethoHotels/main/my-react-app/public/Images/room-02.jpg",
+        "https://raw.githubusercontent.com/berzhavycha/StethoHotels/main/my-react-app/public/Images/room-03.jpg"
+      ],
+      "name": "Hilton Miami Downtown",
+      "overview": "Lorem ipsum dolor sit amet consectetur adipiscing dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.  Lorem ipsum dolor sit amet consectetur adipiscing dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.",
+      "price": "240",
+      "reviews": "[   {     \"id\": 1,     \"fullName\": \"John Doe\",     \"text\": \"Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.\",     \"date\": \"04.07.2023\",     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/profile1.jpg\",     \"nestedReviews\": [       {         \"id\": 4,         \"fullName\": \"Donald Trump\",         \"text\": \"Lorem adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.\",         \"date\": \"05.07.2023\",         \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/profile3.jpg\",         \"reactions\": {           \"thumbsUp\": 0,           \"wow\": 0,           \"heart\": 0,           \"rocket\": 0,           \"coffee\": 0         },         \"nestedReviews\": []       }     ]   },   {     \"id\": 2,     \"fullName\": \"Joe Biden\",     \"text\": \"Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.\",     \"date\": \"01.06.2023\",     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/profile2.jpg\",     \"nestedReviews\": []   },   {     \"id\": 3,     \"fullName\": \"Dork Geek\",     \"text\": \"Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.\",     \"date\": \"01.06.2023\",     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/profile3.jpg\",     \"nestedReviews\": []   } ]",
+      "rooms": "[   {     \"title\": \"Standard Single Room\",     \"price\": 240,     \"capacity\": 2,     \"amenties\": [       {         \"icon\": \"fa-wifi\",         \"text\": \"Free Wi-Fi\"       },       {         \"icon\": \"fa-bed\",         \"text\": \"2 Singal Beads\"       },       {         \"icon\": \"fa-shower\",         \"text\": \"Shower and Bathtub\"       },       {         \"icon\": \"fa-wheelchair\",         \"text\": \"Wheelchair Friendly\"       }     ],     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/blog-1.jpg\"   },   {     \"title\": \"Deluxe Room\",     \"price\": 340,     \"capacity\": 5,     \"amenties\": [       {         \"icon\": \"fa-wifi\",         \"text\": \"Free Wi-Fi\"       },       {         \"icon\": \"fa-bed\",         \"text\": \"2 Singal Beads\"       },       {         \"icon\": \"fa-shower\",         \"text\": \"Shower and Bathtub\"       },       {         \"icon\": \"fa-wheelchair\",         \"text\": \"Wheelchair Friendly\"       }     ],     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/blog-1.jpg\"   },   {     \"title\": \"Signature Room\",     \"price\": 440,     \"capacity\": 3,     \"amenties\": [       {         \"icon\": \"fa-wifi\",         \"text\": \"Free Wi-Fi\"       },       {         \"icon\": \"fa-bed\",         \"text\": \"2 Singal Beads\"       },       {         \"icon\": \"fa-shower\",         \"text\": \"Shower and Bathtub\"       },       {         \"icon\": \"fa-wheelchair\",         \"text\": \"Wheelchair Friendly\"       }     ],     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/blog-1.jpg\"   } ]",
+      "stars": 5,
+      "location": "United States",
+      "area": "resort"
+    },
+    {
+      "id": "2",
+      "amenties": "[   {     \"icon\": \"fa-wifi\",     \"text\": \"Free Wi-Fi\"   },   {     \"icon\": \"fa-bed\",     \"text\": \"2 Singal Beads\"   },   {     \"icon\": \"fa-shower\",     \"text\": \"Shower and Bathtub\"   },   {     \"icon\": \"fa-wheelchair\",     \"text\": \"Wheelchair Friendly\"   },   {     \"icon\": \"fa-dumbbell\",     \"text\": \"Fitness Center\"   },   {     \"icon\": \"fa-person-swimming\",     \"text\": \"Swimming Pool\"   },   {     \"icon\": \"fa-camera\",     \"text\": \"Security Cameras\"   } ]",
+      "images": [
+        "https://raw.githubusercontent.com/berzhavycha/StethoHotels/main/my-react-app/public/Images/room-11.jpg",
+        "https://raw.githubusercontent.com/berzhavycha/StethoHotels/main/my-react-app/public/Images/room-12.jpg"
+      ],
+      "name": "Resort Terra Paraiso",
+      "overview": "Lorem ipsum dolor sit amet consectetur adipiscing dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.  Lorem ipsum dolor sit amet consectetur adipiscing dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.",
+      "price": "340",
+      "reviews": "[   {     \"id\": 1,     \"fullName\": \"John Doe\",     \"text\": \"Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.\",     \"date\": \"04.07.2023\",     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/profile1.jpg\",     \"nestedReviews\": [       {         \"id\": 4,         \"fullName\": \"Donald Trump\",         \"text\": \"Lorem adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.\",         \"date\": \"05.07.2023\",         \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/profile3.jpg\",         \"reactions\": {           \"thumbsUp\": 0,           \"wow\": 0,           \"heart\": 0,           \"rocket\": 0,           \"coffee\": 0         },         \"nestedReviews\": []       }     ]   },   {     \"id\": 2,     \"fullName\": \"Joe Biden\",     \"text\": \"Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.\",     \"date\": \"01.06.2023\",     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/profile2.jpg\",     \"nestedReviews\": []   },   {     \"id\": 3,     \"fullName\": \"Dork Geek\",     \"text\": \"Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.\",     \"date\": \"01.06.2023\",     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/profile3.jpg\",     \"nestedReviews\": []   } ]",
+      "rooms": "[   {     \"title\": \"Standard Single Room\",     \"price\": 240,     \"capacity\": 2,     \"amenties\": [       {         \"icon\": \"fa-wifi\",         \"text\": \"Free Wi-Fi\"       },       {         \"icon\": \"fa-bed\",         \"text\": \"2 Singal Beads\"       },       {         \"icon\": \"fa-shower\",         \"text\": \"Shower and Bathtub\"       },       {         \"icon\": \"fa-wheelchair\",         \"text\": \"Wheelchair Friendly\"       }     ],     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/blog-1.jpg\"   },   {     \"title\": \"Deluxe Room\",     \"price\": 340,     \"capacity\": 5,     \"amenties\": [       {         \"icon\": \"fa-wifi\",         \"text\": \"Free Wi-Fi\"       },       {         \"icon\": \"fa-bed\",         \"text\": \"2 Singal Beads\"       },       {         \"icon\": \"fa-shower\",         \"text\": \"Shower and Bathtub\"       },       {         \"icon\": \"fa-wheelchair\",         \"text\": \"Wheelchair Friendly\"       }     ],     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/blog-1.jpg\"   },   {     \"title\": \"Signature Room\",     \"price\": 440,     \"capacity\": 3,     \"amenties\": [       {         \"icon\": \"fa-wifi\",         \"text\": \"Free Wi-Fi\"       },       {         \"icon\": \"fa-bed\",         \"text\": \"2 Singal Beads\"       },       {         \"icon\": \"fa-shower\",         \"text\": \"Shower and Bathtub\"       },       {         \"icon\": \"fa-wheelchair\",         \"text\": \"Wheelchair Friendly\"       }     ],     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/blog-1.jpg\"   } ]",
+      "stars": "3",
+      "location": "Gauravaddo, USA",
+      "area": "downtown"
+    },
+    {
+      "id": "3",
+      "amenties": "[   {     \"icon\": \"fa-wifi\",     \"text\": \"Free Wi-Fi\"   },   {     \"icon\": \"fa-bed\",     \"text\": \"2 Singal Beads\"   },   {     \"icon\": \"fa-shower\",     \"text\": \"Shower and Bathtub\"   },   {     \"icon\": \"fa-wheelchair\",     \"text\": \"Wheelchair Friendly\"   },   {     \"icon\": \"fa-dumbbell\",     \"text\": \"Fitness Center\"   },   {     \"icon\": \"fa-person-swimming\",     \"text\": \"Swimming Pool\"   },   {     \"icon\": \"fa-camera\",     \"text\": \"Security Cameras\"   } ]",
+      "images": [
+        "https://raw.githubusercontent.com/berzhavycha/StethoHotels/main/my-react-app/public/Images/room-21.jpg",
+        "https://raw.githubusercontent.com/berzhavycha/StethoHotels/main/my-react-app/public/Images/room-22.jpg"
+      ],
+      "name": "Hotel Sunstar Grand",
+      "overview": "Lorem ipsum dolor sit amet consectetur adipiscing dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.  Lorem ipsum dolor sit amet consectetur adipiscing dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.",
+      "price": "440",
+      "reviews": "[   {     \"id\": 1,     \"fullName\": \"John Doe\",     \"text\": \"Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.\",     \"date\": \"04.07.2023\",     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/profile1.jpg\",     \"nestedReviews\": [       {         \"id\": 4,         \"fullName\": \"Donald Trump\",         \"text\": \"Lorem adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.\",         \"date\": \"05.07.2023\",         \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/profile3.jpg\",         \"reactions\": {           \"thumbsUp\": 0,           \"wow\": 0,           \"heart\": 0,           \"rocket\": 0,           \"coffee\": 0         },         \"nestedReviews\": []       }     ]   },   {     \"id\": 2,     \"fullName\": \"Joe Biden\",     \"text\": \"Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.\",     \"date\": \"01.06.2023\",     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/profile2.jpg\",     \"nestedReviews\": []   },   {     \"id\": 3,     \"fullName\": \"Dork Geek\",     \"text\": \"Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.\",     \"date\": \"01.06.2023\",     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/profile3.jpg\",     \"nestedReviews\": []   } ]",
+      "rooms": "[   {     \"title\": \"Standard Single Room\",     \"price\": 240,     \"capacity\": 2,     \"amenties\": [       {         \"icon\": \"fa-wifi\",         \"text\": \"Free Wi-Fi\"       },       {         \"icon\": \"fa-bed\",         \"text\": \"2 Singal Beads\"       },       {         \"icon\": \"fa-shower\",         \"text\": \"Shower and Bathtub\"       },       {         \"icon\": \"fa-wheelchair\",         \"text\": \"Wheelchair Friendly\"       }     ],     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/blog-1.jpg\"   },   {     \"title\": \"Deluxe Room\",     \"price\": 340,     \"capacity\": 5,     \"amenties\": [       {         \"icon\": \"fa-wifi\",         \"text\": \"Free Wi-Fi\"       },       {         \"icon\": \"fa-bed\",         \"text\": \"2 Singal Beads\"       },       {         \"icon\": \"fa-shower\",         \"text\": \"Shower and Bathtub\"       },       {         \"icon\": \"fa-wheelchair\",         \"text\": \"Wheelchair Friendly\"       }     ],     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/blog-1.jpg\"   },   {     \"title\": \"Signature Room\",     \"price\": 440,     \"capacity\": 3,     \"amenties\": [       {         \"icon\": \"fa-wifi\",         \"text\": \"Free Wi-Fi\"       },       {         \"icon\": \"fa-bed\",         \"text\": \"2 Singal Beads\"       },       {         \"icon\": \"fa-shower\",         \"text\": \"Shower and Bathtub\"       },       {         \"icon\": \"fa-wheelchair\",         \"text\": \"Wheelchair Friendly\"       }     ],     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/blog-1.jpg\"   } ]",
+      "stars": "4",
+      "location": "LA, California, USA",
+      "area": "west"
+    },
+    {
+      "id": "4",
+      "amenties": "[   {     \"icon\": \"fa-wifi\",     \"text\": \"Free Wi-Fi\"   },   {     \"icon\": \"fa-bed\",     \"text\": \"2 Singal Beads\"   },   {     \"icon\": \"fa-shower\",     \"text\": \"Shower and Bathtub\"   },   {     \"icon\": \"fa-wheelchair\",     \"text\": \"Wheelchair Friendly\"   },   {     \"icon\": \"fa-dumbbell\",     \"text\": \"Fitness Center\"   },   {     \"icon\": \"fa-person-swimming\",     \"text\": \"Swimming Pool\"   },   {     \"icon\": \"fa-camera\",     \"text\": \"Security Cameras\"   } ]",
+      "images": [
+        "https://raw.githubusercontent.com/berzhavycha/StethoHotels/main/my-react-app/public/Images/room-31.jpg",
+        "https://raw.githubusercontent.com/berzhavycha/StethoHotels/main/my-react-app/public/Images/room-32.jpg"
+      ],
+      "name": "Treebo Natraj Yes Please",
+      "overview": "Lorem ipsum dolor sit amet consectetur adipiscing dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.  Lorem ipsum dolor sit amet consectetur adipiscing dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.",
+      "price": "540",
+      "reviews": "[   {     \"id\": 1,     \"fullName\": \"John Doe\",     \"text\": \"Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.\",     \"date\": \"04.07.2023\",     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/profile1.jpg\",     \"nestedReviews\": [       {         \"id\": 4,         \"fullName\": \"Donald Trump\",         \"text\": \"Lorem adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.\",         \"date\": \"05.07.2023\",         \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/profile3.jpg\",         \"reactions\": {           \"thumbsUp\": 0,           \"wow\": 0,           \"heart\": 0,           \"rocket\": 0,           \"coffee\": 0         },         \"nestedReviews\": []       }     ]   },   {     \"id\": 2,     \"fullName\": \"Joe Biden\",     \"text\": \"Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.\",     \"date\": \"01.06.2023\",     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/profile2.jpg\",     \"nestedReviews\": []   },   {     \"id\": 3,     \"fullName\": \"Dork Geek\",     \"text\": \"Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.\",     \"date\": \"01.06.2023\",     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/profile3.jpg\",     \"nestedReviews\": []   } ]",
+      "rooms": "[   {     \"title\": \"Standard Single Room\",     \"price\": 240,     \"capacity\": 2,     \"amenties\": [       {         \"icon\": \"fa-wifi\",         \"text\": \"Free Wi-Fi\"       },       {         \"icon\": \"fa-bed\",         \"text\": \"2 Singal Beads\"       },       {         \"icon\": \"fa-shower\",         \"text\": \"Shower and Bathtub\"       },       {         \"icon\": \"fa-wheelchair\",         \"text\": \"Wheelchair Friendly\"       }     ],     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/blog-1.jpg\"   },   {     \"title\": \"Deluxe Room\",     \"price\": 340,     \"capacity\": 5,     \"amenties\": [       {         \"icon\": \"fa-wifi\",         \"text\": \"Free Wi-Fi\"       },       {         \"icon\": \"fa-bed\",         \"text\": \"2 Singal Beads\"       },       {         \"icon\": \"fa-shower\",         \"text\": \"Shower and Bathtub\"       },       {         \"icon\": \"fa-wheelchair\",         \"text\": \"Wheelchair Friendly\"       }     ],     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/blog-1.jpg\"   },   {     \"title\": \"Signature Room\",     \"price\": 440,     \"capacity\": 3,     \"amenties\": [       {         \"icon\": \"fa-wifi\",         \"text\": \"Free Wi-Fi\"       },       {         \"icon\": \"fa-bed\",         \"text\": \"2 Singal Beads\"       },       {         \"icon\": \"fa-shower\",         \"text\": \"Shower and Bathtub\"       },       {         \"icon\": \"fa-wheelchair\",         \"text\": \"Wheelchair Friendly\"       }     ],     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/blog-1.jpg\"   } ]",
+      "stars": "5",
+      "location": "Miami, Florida, USA",
+      "area": "resort"
+    },
+    {
+      "id": "5",
+      "amenties": "[   {     \"icon\": \"fa-wifi\",     \"text\": \"Free Wi-Fi\"   },   {     \"icon\": \"fa-bed\",     \"text\": \"2 Singal Beads\"   },   {     \"icon\": \"fa-shower\",     \"text\": \"Shower and Bathtub\"   },   {     \"icon\": \"fa-wheelchair\",     \"text\": \"Wheelchair Friendly\"   },   {     \"icon\": \"fa-dumbbell\",     \"text\": \"Fitness Center\"   },   {     \"icon\": \"fa-person-swimming\",     \"text\": \"Swimming Pool\"   },   {     \"icon\": \"fa-camera\",     \"text\": \"Security Cameras\"   } ]",
+      "images": [
+        "https://raw.githubusercontent.com/berzhavycha/StethoHotels/main/my-react-app/public/Images/room-41.jpg",
+        "https://raw.githubusercontent.com/berzhavycha/StethoHotels/main/my-react-app/public/Images/room-32.jpg"
+      ],
+      "name": "Wood Castle Ground",
+      "overview": "Lorem ipsum dolor sit amet consectetur adipiscing dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.  Lorem ipsum dolor sit amet consectetur adipiscing dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.",
+      "price": "340",
+      "reviews": "[   {     \"id\": 1,     \"fullName\": \"John Doe\",     \"text\": \"Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.\",     \"date\": \"04.07.2023\",     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/profile1.jpg\",     \"nestedReviews\": [       {         \"id\": 4,         \"fullName\": \"Donald Trump\",         \"text\": \"Lorem adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.\",         \"date\": \"05.07.2023\",         \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/profile3.jpg\",         \"reactions\": {           \"thumbsUp\": 0,           \"wow\": 0,           \"heart\": 0,           \"rocket\": 0,           \"coffee\": 0         },         \"nestedReviews\": []       }     ]   },   {     \"id\": 2,     \"fullName\": \"Joe Biden\",     \"text\": \"Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.\",     \"date\": \"01.06.2023\",     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/profile2.jpg\",     \"nestedReviews\": []   },   {     \"id\": 3,     \"fullName\": \"Dork Geek\",     \"text\": \"Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.\",     \"date\": \"01.06.2023\",     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/profile3.jpg\",     \"nestedReviews\": []   } ]",
+      "rooms": "[   {     \"title\": \"Standard Single Room\",     \"price\": 240,     \"capacity\": 2,     \"amenties\": [       {         \"icon\": \"fa-wifi\",         \"text\": \"Free Wi-Fi\"       },       {         \"icon\": \"fa-bed\",         \"text\": \"2 Singal Beads\"       },       {         \"icon\": \"fa-shower\",         \"text\": \"Shower and Bathtub\"       },       {         \"icon\": \"fa-wheelchair\",         \"text\": \"Wheelchair Friendly\"       }     ],     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/blog-1.jpg\"   },   {     \"title\": \"Deluxe Room\",     \"price\": 340,     \"capacity\": 5,     \"amenties\": [       {         \"icon\": \"fa-wifi\",         \"text\": \"Free Wi-Fi\"       },       {         \"icon\": \"fa-bed\",         \"text\": \"2 Singal Beads\"       },       {         \"icon\": \"fa-shower\",         \"text\": \"Shower and Bathtub\"       },       {         \"icon\": \"fa-wheelchair\",         \"text\": \"Wheelchair Friendly\"       }     ],     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/blog-1.jpg\"   },   {     \"title\": \"Signature Room\",     \"price\": 440,     \"capacity\": 3,     \"amenties\": [       {         \"icon\": \"fa-wifi\",         \"text\": \"Free Wi-Fi\"       },       {         \"icon\": \"fa-bed\",         \"text\": \"2 Singal Beads\"       },       {         \"icon\": \"fa-shower\",         \"text\": \"Shower and Bathtub\"       },       {         \"icon\": \"fa-wheelchair\",         \"text\": \"Wheelchair Friendly\"       }     ],     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/blog-1.jpg\"   } ]",
+      "stars": "3",
+      "location": "Paris, France",
+      "area": "resort"
+    },
+    {
+      "id": "6",
+      "amenties": "[   {     \"icon\": \"fa-wifi\",     \"text\": \"Free Wi-Fi\"   },   {     \"icon\": \"fa-bed\",     \"text\": \"2 Singal Beads\"   },   {     \"icon\": \"fa-shower\",     \"text\": \"Shower and Bathtub\"   },   {     \"icon\": \"fa-wheelchair\",     \"text\": \"Wheelchair Friendly\"   },   {     \"icon\": \"fa-dumbbell\",     \"text\": \"Fitness Center\"   },   {     \"icon\": \"fa-person-swimming\",     \"text\": \"Swimming Pool\"   },   {     \"icon\": \"fa-camera\",     \"text\": \"Security Cameras\"   } ]",
+      "images": [
+        "https://raw.githubusercontent.com/berzhavycha/StethoHotels/main/my-react-app/public/Images/popular2.jpg",
+        "https://raw.githubusercontent.com/berzhavycha/StethoHotels/main/my-react-app/public/Images/room-41.jpg"
+      ],
+      "name": "Flawly Towers",
+      "overview": "Lorem ipsum dolor sit amet consectetur adipiscing dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.  Lorem ipsum dolor sit amet consectetur adipiscing dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.",
+      "price": "200",
+      "reviews": "[   {     \"id\": 1,     \"fullName\": \"John Doe\",     \"text\": \"Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.\",     \"date\": \"04.07.2023\",     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/profile1.jpg\",     \"nestedReviews\": [       {         \"id\": 4,         \"fullName\": \"Donald Trump\",         \"text\": \"Lorem adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.\",         \"date\": \"05.07.2023\",         \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/profile3.jpg\",         \"reactions\": {           \"thumbsUp\": 0,           \"wow\": 0,           \"heart\": 0,           \"rocket\": 0,           \"coffee\": 0         },         \"nestedReviews\": []       }     ]   },   {     \"id\": 2,     \"fullName\": \"Joe Biden\",     \"text\": \"Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.\",     \"date\": \"01.06.2023\",     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/profile2.jpg\",     \"nestedReviews\": []   },   {     \"id\": 3,     \"fullName\": \"Dork Geek\",     \"text\": \"Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.\",     \"date\": \"01.06.2023\",     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/profile3.jpg\",     \"nestedReviews\": []   } ]",
+      "rooms": "[   {     \"title\": \"Standard Single Room\",     \"price\": 240,     \"capacity\": 2,     \"amenties\": [       {         \"icon\": \"fa-wifi\",         \"text\": \"Free Wi-Fi\"       },       {         \"icon\": \"fa-bed\",         \"text\": \"2 Singal Beads\"       },       {         \"icon\": \"fa-shower\",         \"text\": \"Shower and Bathtub\"       },       {         \"icon\": \"fa-wheelchair\",         \"text\": \"Wheelchair Friendly\"       }     ],     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/blog-1.jpg\"   },   {     \"title\": \"Deluxe Room\",     \"price\": 340,     \"capacity\": 5,     \"amenties\": [       {         \"icon\": \"fa-wifi\",         \"text\": \"Free Wi-Fi\"       },       {         \"icon\": \"fa-bed\",         \"text\": \"2 Singal Beads\"       },       {         \"icon\": \"fa-shower\",         \"text\": \"Shower and Bathtub\"       },       {         \"icon\": \"fa-wheelchair\",         \"text\": \"Wheelchair Friendly\"       }     ],     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/blog-1.jpg\"   },   {     \"title\": \"Signature Room\",     \"price\": 440,     \"capacity\": 3,     \"amenties\": [       {         \"icon\": \"fa-wifi\",         \"text\": \"Free Wi-Fi\"       },       {         \"icon\": \"fa-bed\",         \"text\": \"2 Singal Beads\"       },       {         \"icon\": \"fa-shower\",         \"text\": \"Shower and Bathtub\"       },       {         \"icon\": \"fa-wheelchair\",         \"text\": \"Wheelchair Friendly\"       }     ],     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/blog-1.jpg\"   } ]",
+      "stars": "4",
+      "location": "Vietnam",
+      "area": "west"
+    },
+    {
+      "id": "7",
+      "amenties": "[   {     \"icon\": \"fa-wifi\",     \"text\": \"Free Wi-Fi\"   },   {     \"icon\": \"fa-bed\",     \"text\": \"2 Singal Beads\"   },   {     \"icon\": \"fa-shower\",     \"text\": \"Shower and Bathtub\"   },   {     \"icon\": \"fa-wheelchair\",     \"text\": \"Wheelchair Friendly\"   },   {     \"icon\": \"fa-dumbbell\",     \"text\": \"Fitness Center\"   },   {     \"icon\": \"fa-person-swimming\",     \"text\": \"Swimming Pool\"   },   {     \"icon\": \"fa-camera\",     \"text\": \"Security Cameras\"   } ]",
+      "images": [
+        "https://raw.githubusercontent.com/berzhavycha/StethoHotels/main/my-react-app/public/Images/popular3.jpg",
+        "https://raw.githubusercontent.com/berzhavycha/StethoHotels/main/my-react-app/public/Images/room-21.jpg"
+      ],
+      "name": "Hotel Valle",
+      "overview": "Lorem ipsum dolor sit amet consectetur adipiscing dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.  Lorem ipsum dolor sit amet consectetur adipiscing dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.",
+      "price": "300",
+      "reviews": "[   {     \"id\": 1,     \"fullName\": \"John Doe\",     \"text\": \"Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.\",     \"date\": \"04.07.2023\",     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/profile1.jpg\",     \"nestedReviews\": [       {         \"id\": 4,         \"fullName\": \"Donald Trump\",         \"text\": \"Lorem adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.\",         \"date\": \"05.07.2023\",         \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/profile3.jpg\",         \"reactions\": {           \"thumbsUp\": 0,           \"wow\": 0,           \"heart\": 0,           \"rocket\": 0,           \"coffee\": 0         },         \"nestedReviews\": []       }     ]   },   {     \"id\": 2,     \"fullName\": \"Joe Biden\",     \"text\": \"Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.\",     \"date\": \"01.06.2023\",     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/profile2.jpg\",     \"nestedReviews\": []   },   {     \"id\": 3,     \"fullName\": \"Dork Geek\",     \"text\": \"Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.\",     \"date\": \"01.06.2023\",     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/profile3.jpg\",     \"nestedReviews\": []   } ]",
+      "rooms": "[   {     \"title\": \"Standard Single Room\",     \"price\": 240,     \"capacity\": 2,     \"amenties\": [       {         \"icon\": \"fa-wifi\",         \"text\": \"Free Wi-Fi\"       },       {         \"icon\": \"fa-bed\",         \"text\": \"2 Singal Beads\"       },       {         \"icon\": \"fa-shower\",         \"text\": \"Shower and Bathtub\"       },       {         \"icon\": \"fa-wheelchair\",         \"text\": \"Wheelchair Friendly\"       }     ],     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/blog-1.jpg\"   },   {     \"title\": \"Deluxe Room\",     \"price\": 340,     \"capacity\": 5,     \"amenties\": [       {         \"icon\": \"fa-wifi\",         \"text\": \"Free Wi-Fi\"       },       {         \"icon\": \"fa-bed\",         \"text\": \"2 Singal Beads\"       },       {         \"icon\": \"fa-shower\",         \"text\": \"Shower and Bathtub\"       },       {         \"icon\": \"fa-wheelchair\",         \"text\": \"Wheelchair Friendly\"       }     ],     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/blog-1.jpg\"   },   {     \"title\": \"Signature Room\",     \"price\": 440,     \"capacity\": 3,     \"amenties\": [       {         \"icon\": \"fa-wifi\",         \"text\": \"Free Wi-Fi\"       },       {         \"icon\": \"fa-bed\",         \"text\": \"2 Singal Beads\"       },       {         \"icon\": \"fa-shower\",         \"text\": \"Shower and Bathtub\"       },       {         \"icon\": \"fa-wheelchair\",         \"text\": \"Wheelchair Friendly\"       }     ],     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/blog-1.jpg\"   } ]",
+      "stars": "3",
+      "location": "Italy",
+      "area": "west"
+    },
+    {
+      "id": "8",
+      "amenties": "[   {     \"icon\": \"fa-wifi\",     \"text\": \"Free Wi-Fi\"   },   {     \"icon\": \"fa-bed\",     \"text\": \"2 Singal Beads\"   },   {     \"icon\": \"fa-shower\",     \"text\": \"Shower and Bathtub\"   },   {     \"icon\": \"fa-wheelchair\",     \"text\": \"Wheelchair Friendly\"   },   {     \"icon\": \"fa-dumbbell\",     \"text\": \"Fitness Center\"   },   {     \"icon\": \"fa-person-swimming\",     \"text\": \"Swimming Pool\"   },   {     \"icon\": \"fa-camera\",     \"text\": \"Security Cameras\"   } ]",
+      "images": [
+        "https://raw.githubusercontent.com/berzhavycha/StethoHotels/main/my-react-app/public/Images/popular4.jpg",
+        "https://raw.githubusercontent.com/berzhavycha/StethoHotels/main/my-react-app/public/Images/room-22.jpg"
+      ],
+      "name": "Hotel Las Trojes",
+      "overview": "Lorem ipsum dolor sit amet consectetur adipiscing dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.  Lorem ipsum dolor sit amet consectetur adipiscing dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.",
+      "price": "400",
+      "reviews": "[   {     \"id\": 1,     \"fullName\": \"John Doe\",     \"text\": \"Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.\",     \"date\": \"04.07.2023\",     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/profile1.jpg\",     \"nestedReviews\": [       {         \"id\": 4,         \"fullName\": \"Donald Trump\",         \"text\": \"Lorem adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.\",         \"date\": \"05.07.2023\",         \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/profile3.jpg\",         \"reactions\": {           \"thumbsUp\": 0,           \"wow\": 0,           \"heart\": 0,           \"rocket\": 0,           \"coffee\": 0         },         \"nestedReviews\": []       }     ]   },   {     \"id\": 2,     \"fullName\": \"Joe Biden\",     \"text\": \"Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.\",     \"date\": \"01.06.2023\",     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/profile2.jpg\",     \"nestedReviews\": []   },   {     \"id\": 3,     \"fullName\": \"Dork Geek\",     \"text\": \"Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.\",     \"date\": \"01.06.2023\",     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/profile3.jpg\",     \"nestedReviews\": []   } ]",
+      "rooms": "[   {     \"title\": \"Standard Single Room\",     \"price\": 240,     \"capacity\": 2,     \"amenties\": [       {         \"icon\": \"fa-wifi\",         \"text\": \"Free Wi-Fi\"       },       {         \"icon\": \"fa-bed\",         \"text\": \"2 Singal Beads\"       },       {         \"icon\": \"fa-shower\",         \"text\": \"Shower and Bathtub\"       },       {         \"icon\": \"fa-wheelchair\",         \"text\": \"Wheelchair Friendly\"       }     ],     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/blog-1.jpg\"   },   {     \"title\": \"Deluxe Room\",     \"price\": 340,     \"capacity\": 5,     \"amenties\": [       {         \"icon\": \"fa-wifi\",         \"text\": \"Free Wi-Fi\"       },       {         \"icon\": \"fa-bed\",         \"text\": \"2 Singal Beads\"       },       {         \"icon\": \"fa-shower\",         \"text\": \"Shower and Bathtub\"       },       {         \"icon\": \"fa-wheelchair\",         \"text\": \"Wheelchair Friendly\"       }     ],     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/blog-1.jpg\"   },   {     \"title\": \"Signature Room\",     \"price\": 440,     \"capacity\": 3,     \"amenties\": [       {         \"icon\": \"fa-wifi\",         \"text\": \"Free Wi-Fi\"       },       {         \"icon\": \"fa-bed\",         \"text\": \"2 Singal Beads\"       },       {         \"icon\": \"fa-shower\",         \"text\": \"Shower and Bathtub\"       },       {         \"icon\": \"fa-wheelchair\",         \"text\": \"Wheelchair Friendly\"       }     ],     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/blog-1.jpg\"   } ]",
+      "stars": "4",
+      "location": "Mexico",
+      "area": "downtown"
+    },
+    {
+      "id": "9",
+      "amenties": "[   {     \"icon\": \"fa-wifi\",     \"text\": \"Free Wi-Fi\"   },   {     \"icon\": \"fa-bed\",     \"text\": \"2 Singal Beads\"   },   {     \"icon\": \"fa-shower\",     \"text\": \"Shower and Bathtub\"   },   {     \"icon\": \"fa-wheelchair\",     \"text\": \"Wheelchair Friendly\"   },   {     \"icon\": \"fa-dumbbell\",     \"text\": \"Fitness Center\"   },   {     \"icon\": \"fa-person-swimming\",     \"text\": \"Swimming Pool\"   },   {     \"icon\": \"fa-camera\",     \"text\": \"Security Cameras\"   } ]",
+      "images": [
+        "https://raw.githubusercontent.com/berzhavycha/StethoHotels/main/my-react-app/public/Images/popular5.jpg",
+        "https://raw.githubusercontent.com/berzhavycha/StethoHotels/main/my-react-app/public/Images/room-21.jpg"
+      ],
+      "name": "Rosen Shingle Creek",
+      "overview": "Lorem ipsum dolor sit amet consectetur adipiscing dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.  Lorem ipsum dolor sit amet consectetur adipiscing dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.",
+      "price": "500",
+      "reviews": "[   {     \"id\": 1,     \"fullName\": \"John Doe\",     \"text\": \"Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.\",     \"date\": \"04.07.2023\",     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/profile1.jpg\",     \"nestedReviews\": [       {         \"id\": 4,         \"fullName\": \"Donald Trump\",         \"text\": \"Lorem adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.\",         \"date\": \"05.07.2023\",         \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/profile3.jpg\",         \"reactions\": {           \"thumbsUp\": 0,           \"wow\": 0,           \"heart\": 0,           \"rocket\": 0,           \"coffee\": 0         },         \"nestedReviews\": []       }     ]   },   {     \"id\": 2,     \"fullName\": \"Joe Biden\",     \"text\": \"Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.\",     \"date\": \"01.06.2023\",     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/profile2.jpg\",     \"nestedReviews\": []   },   {     \"id\": 3,     \"fullName\": \"Dork Geek\",     \"text\": \"Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.\",     \"date\": \"01.06.2023\",     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/profile3.jpg\",     \"nestedReviews\": []   } ]",
+      "rooms": "[   {     \"title\": \"Standard Single Room\",     \"price\": 240,     \"capacity\": 2,     \"amenties\": [       {         \"icon\": \"fa-wifi\",         \"text\": \"Free Wi-Fi\"       },       {         \"icon\": \"fa-bed\",         \"text\": \"2 Singal Beads\"       },       {         \"icon\": \"fa-shower\",         \"text\": \"Shower and Bathtub\"       },       {         \"icon\": \"fa-wheelchair\",         \"text\": \"Wheelchair Friendly\"       }     ],     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/blog-1.jpg\"   },   {     \"title\": \"Deluxe Room\",     \"price\": 340,     \"capacity\": 5,     \"amenties\": [       {         \"icon\": \"fa-wifi\",         \"text\": \"Free Wi-Fi\"       },       {         \"icon\": \"fa-bed\",         \"text\": \"2 Singal Beads\"       },       {         \"icon\": \"fa-shower\",         \"text\": \"Shower and Bathtub\"       },       {         \"icon\": \"fa-wheelchair\",         \"text\": \"Wheelchair Friendly\"       }     ],     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/blog-1.jpg\"   },   {     \"title\": \"Signature Room\",     \"price\": 440,     \"capacity\": 3,     \"amenties\": [       {         \"icon\": \"fa-wifi\",         \"text\": \"Free Wi-Fi\"       },       {         \"icon\": \"fa-bed\",         \"text\": \"2 Singal Beads\"       },       {         \"icon\": \"fa-shower\",         \"text\": \"Shower and Bathtub\"       },       {         \"icon\": \"fa-wheelchair\",         \"text\": \"Wheelchair Friendly\"       }     ],     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/blog-1.jpg\"   } ]",
+      "stars": "4",
+      "location": "United States",
+      "area": "south"
+    },
+    {
+      "id": "10",
+      "amenties": "[   {     \"icon\": \"fa-wifi\",     \"text\": \"Free Wi-Fi\"   },   {     \"icon\": \"fa-bed\",     \"text\": \"2 Singal Beads\"   },   {     \"icon\": \"fa-shower\",     \"text\": \"Shower and Bathtub\"   },   {     \"icon\": \"fa-wheelchair\",     \"text\": \"Wheelchair Friendly\"   },   {     \"icon\": \"fa-dumbbell\",     \"text\": \"Fitness Center\"   },   {     \"icon\": \"fa-person-swimming\",     \"text\": \"Swimming Pool\"   },   {     \"icon\": \"fa-camera\",     \"text\": \"Security Cameras\"   } ]",
+      "images": [
+        "https://raw.githubusercontent.com/berzhavycha/StethoHotels/main/my-react-app/public/Images/popular1.jpg",
+        "https://raw.githubusercontent.com/berzhavycha/StethoHotels/main/my-react-app/public/Images/room-11.jpg"
+      ],
+      "name": "Ansan Hotel",
+      "overview": "Lorem ipsum dolor sit amet consectetur adipiscing dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.  Lorem ipsum dolor sit amet consectetur adipiscing dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.",
+      "price": "100",
+      "reviews": "[   {     \"id\": 1,     \"fullName\": \"John Doe\",     \"text\": \"Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.\",     \"date\": \"04.07.2023\",     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/profile1.jpg\",     \"nestedReviews\": [       {         \"id\": 4,         \"fullName\": \"Donald Trump\",         \"text\": \"Lorem adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.\",         \"date\": \"05.07.2023\",         \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/profile3.jpg\",         \"reactions\": {           \"thumbsUp\": 0,           \"wow\": 0,           \"heart\": 0,           \"rocket\": 0,           \"coffee\": 0         },         \"nestedReviews\": []       }     ]   },   {     \"id\": 2,     \"fullName\": \"Joe Biden\",     \"text\": \"Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.\",     \"date\": \"01.06.2023\",     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/profile2.jpg\",     \"nestedReviews\": []   },   {     \"id\": 3,     \"fullName\": \"Dork Geek\",     \"text\": \"Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.\",     \"date\": \"01.06.2023\",     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/profile3.jpg\",     \"nestedReviews\": []   } ]",
+      "rooms": "[   {     \"title\": \"Standard Single Room\",     \"price\": 240,     \"capacity\": 2,     \"amenties\": [       {         \"icon\": \"fa-wifi\",         \"text\": \"Free Wi-Fi\"       },       {         \"icon\": \"fa-bed\",         \"text\": \"2 Singal Beads\"       },       {         \"icon\": \"fa-shower\",         \"text\": \"Shower and Bathtub\"       },       {         \"icon\": \"fa-wheelchair\",         \"text\": \"Wheelchair Friendly\"       }     ],     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/blog-1.jpg\"   },   {     \"title\": \"Deluxe Room\",     \"price\": 340,     \"capacity\": 5,     \"amenties\": [       {         \"icon\": \"fa-wifi\",         \"text\": \"Free Wi-Fi\"       },       {         \"icon\": \"fa-bed\",         \"text\": \"2 Singal Beads\"       },       {         \"icon\": \"fa-shower\",         \"text\": \"Shower and Bathtub\"       },       {         \"icon\": \"fa-wheelchair\",         \"text\": \"Wheelchair Friendly\"       }     ],     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/blog-1.jpg\"   },   {     \"title\": \"Signature Room\",     \"price\": 440,     \"capacity\": 3,     \"amenties\": [       {         \"icon\": \"fa-wifi\",         \"text\": \"Free Wi-Fi\"       },       {         \"icon\": \"fa-bed\",         \"text\": \"2 Singal Beads\"       },       {         \"icon\": \"fa-shower\",         \"text\": \"Shower and Bathtub\"       },       {         \"icon\": \"fa-wheelchair\",         \"text\": \"Wheelchair Friendly\"       }     ],     \"imageUrl\": \"https://raw.githubusercontent.com/berzhavycha/StethoProject/main/blog-1.jpg\"   } ]",
+      "stars": "2",
+      "location": "Thailand",
+      "area": "south"
+    }
+  ],
+  "cities": [
+    {
+      "id": 1,
+      "afterImg": "Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet orem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.",
+      "beforeImg": "Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet orem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.",
+      "images": [
+        "https://raw.githubusercontent.com/aberzhavych/StethoProject/main/single-1.jpg",
+        "https://raw.githubusercontent.com/aberzhavych/StethoProject/main/single-2.jpg"
+      ],
+      "mainImg": "https://raw.githubusercontent.com/aberzhavych/StethoProject/main/dest-1.jpg",
+      "name": "Orlando",
+      "text": "Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius. dolor fermum sit amet orem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.  Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet orem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet."
+    },
+    {
+      "id": 2,
+      "afterImg": "Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet orem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.",
+      "beforeImg": "Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet orem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.",
+      "images": [
+        "https://raw.githubusercontent.com/aberzhavych/StethoProject/main/single-1.jpg",
+        "https://raw.githubusercontent.com/aberzhavych/StethoProject/main/single-2.jpg"
+      ],
+      "mainImg": "https://raw.githubusercontent.com/aberzhavych/StethoProject/main/dest-2.jpg",
+      "name": "Miami",
+      "text": "Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius. dolor fermum sit amet orem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.  Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet orem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet."
+    },
+    {
+      "id": 3,
+      "afterImg": "Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet orem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.",
+      "beforeImg": "Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet orem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.",
+      "images": [
+        "https://raw.githubusercontent.com/aberzhavych/StethoProject/main/single-1.jpg",
+        "https://raw.githubusercontent.com/aberzhavych/StethoProject/main/single-2.jpg"
+      ],
+      "mainImg": "https://raw.githubusercontent.com/aberzhavych/StethoProject/main/dest-3.jpg",
+      "name": "Los Angeles",
+      "text": "Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius. dolor fermum sit amet orem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.  Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet orem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet."
+    },
+    {
+      "id": 4,
+      "afterImg": "Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet orem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.",
+      "beforeImg": "Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet orem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.",
+      "images": [
+        "https://raw.githubusercontent.com/aberzhavych/StethoProject/main/single-1.jpg",
+        "https://raw.githubusercontent.com/aberzhavych/StethoProject/main/single-2.jpg"
+      ],
+      "mainImg": "https://raw.githubusercontent.com/aberzhavych/StethoProject/main/dest-4.jpg",
+      "name": "San Diego",
+      "text": "Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius. dolor fermum sit amet orem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.  Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet orem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet."
+    },
+    {
+      "id": 5,
+      "afterImg": "Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet orem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.",
+      "beforeImg": "Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet orem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.",
+      "images": [
+        "https://raw.githubusercontent.com/aberzhavych/StethoProject/main/single-1.jpg",
+        "https://raw.githubusercontent.com/aberzhavych/StethoProject/main/single-2.jpg"
+      ],
+      "mainImg": "https://raw.githubusercontent.com/aberzhavych/StethoProject/main/dest-5.jpg",
+      "name": "Houston",
+      "text": "Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius. dolor fermum sit amet orem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.  Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet orem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet."
+    },
+    {
+      "id": 6,
+      "afterImg": "Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet orem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.",
+      "beforeImg": "Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet orem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.",
+      "images": [
+        "https://raw.githubusercontent.com/aberzhavych/StethoProject/main/single-1.jpg",
+        "https://raw.githubusercontent.com/aberzhavych/StethoProject/main/single-2.jpg"
+      ],
+      "mainImg": "https://raw.githubusercontent.com/aberzhavych/StethoProject/main/dest-6.jpg",
+      "name": "New York",
+      "text": "Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius. dolor fermum sit amet orem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.  Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet orem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet."
+    }
+  ]
+}

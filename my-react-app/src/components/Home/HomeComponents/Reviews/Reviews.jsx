@@ -2,8 +2,9 @@ import React from 'react'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import './Reviews.css'
+
 import { reviews } from '../../../../data';
+import './Reviews.css'
 
 const settings = {
     infinite: true,
@@ -39,9 +40,9 @@ const Reviews = () => {
                 <div className="container">
                     <div className="reviews-container">
                         <Slider {...settings}>
-                            {reviews.map(item => {
+                            {reviews.map((item, index) => {
                                 return (
-                                    <div className="reviews-item">
+                                    <div className="reviews-item" key={index}>
                                         <div className="reviews-item-inner">
                                             <p className="text">{item.text}</p>
                                             <div className="reviewer-info">

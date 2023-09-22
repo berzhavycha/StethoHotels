@@ -4,7 +4,10 @@ import './HeaderLayout.css'
 
 const HeaderLayout = () => {
     const location = useLocation()
-    const page = location.pathname.split('/')[1]
+    let page = location.pathname.split('/')[1]
+
+    if(page === 'hotels') page = 'Hotel Listing'
+    else if(page === 'contactus') page = 'Contact Us'
 
     return (
         <>

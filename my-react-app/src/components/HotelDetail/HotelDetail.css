@@ -1,0 +1,436 @@
+.hotel-detail {
+    padding: 60px 0;
+}
+
+.hotel-detail-inner {
+    display: flex;
+    gap: 30px;
+}
+
+.hotel-detail-inner .left {
+    width: 70%;
+}
+
+.hotel-detail-inner .right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.hotel-detail-inner .left h1 {
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: 1.1px;
+    margin-bottom: 5px;
+}
+
+.hotel-detail-inner .left p {
+    color: gray;
+    margin-bottom: 15px;
+}
+
+.hotel-detail-inner .left .hotel-images-slider {
+    width: 100%;
+    height: 30vw;
+}
+
+.hotel-detail-inner .left .hotel-images-slider img {
+    height: 28vw;
+    width: 100%;
+    object-fit: cover;
+}
+
+.hotel-detail-inner .slick-prev,
+.hotel-detail-inner .slick-next {
+    top: 50%;
+    transform: translateY(-100%);
+}
+
+.hotel-detail-inner .slick-next {
+    right: 1.1%;
+}
+
+.hotel-detail-inner .slick-prev {
+    left: 0%;
+    z-index: 10;
+}
+
+.slick-next:before,
+.slick-prev:before {
+    content: "" !important;
+}
+
+.hotel-next-arrow,
+.hotel-prev-arrow {
+    color: white;
+    font-size: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 15px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .2s linear;
+}
+
+.hotel-next-arrow:hover,
+.hotel-prev-arrow:hover {
+    color: var(--btn-color);
+    background-color: black;
+}
+
+.hotel-detail-inner .left .hotel-details-info {
+    border: 2px solid rgb(218, 218, 218);
+}
+
+.hotel-detail-inner .left .hotel-details-info .hotel-details-navbar {
+    display: flex;
+    width: 100%;
+}
+
+.hotel-details-info .hotel-details-navbar button {
+    width: 25%;
+    text-align: center;
+    padding: 10px 0;
+    border: none;
+    border-right: 2px solid white;
+    background-color: rgb(218, 218, 218);
+    color: black;
+    font-size: 15px;
+    outline: none;
+    cursor: pointer;
+}
+
+.hotel-details-info .hotel-details-navbar button:last-child {
+    border-right: none;
+}
+
+.hotel-details-info .hotel-details-navbar button.active {
+    background-color: var(--btn-color);
+    color: white;
+}
+
+.hotel-overview,
+.hotel-amenties,
+.hotel-rooms {
+    padding: 15px 15px 10px;
+}
+
+.hotel-overview h2,
+.hotel-amenties h2,
+.hotel-rooms h2 {
+    margin-bottom: 10px;
+}
+
+.hotel-overview p {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.hotel-amenties .amenties-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.hotel-amenties .amenties-container .amenties-block {
+    width: 32%;
+    display: flex;
+    gap: 5px;
+    align-items: baseline;
+    font-size: 14px;
+}
+
+.hotel-amenties .amenties-container .amenties-block i {
+    font-size: 12px;
+    color: var(--btn-color);
+}
+
+.hotel-rooms .hotel-rooms-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.hotel-rooms .hotel-rooms-container .hotel-room-item {
+    display: flex;
+    gap: 10px;
+    border: 0.5px solid rgb(226, 225, 225);
+    height: 245px;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+
+.hotel-rooms .hotel-rooms-container .hotel-room-item:hover {
+    border-color: var(--btn-color);
+}
+
+.hotel-rooms-container .hotel-room-item .room-image {
+    width: 40%;
+    height: 100%;
+}
+
+.hotel-rooms-container .hotel-room-item .room-image img {
+    width: 100%;
+    height: 244px;
+    object-fit: cover;
+}
+
+.hotel-rooms-container .hotel-room-item .room-info {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.hotel-room-item .room-info .price {
+    font-weight: 300;
+    font-size: 14px;
+    margin-top: -10px;
+}
+
+.hotel-room-item .room-info .price .green {
+    color: var(--btn-color);
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.hotel-room-item .room-info p {
+    margin-top: -10px;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.hotel-room-item .room-info .room-amenties {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.hotel-room-item .room-info .room-amenties .amenties-block {
+    display: flex;
+    width: 48%;
+    align-items: baseline;
+    gap: 5px;
+    font-size: 14px;
+}
+
+.hotel-room-item .room-info .room-amenties .amenties-block i {
+    font-size: 12px;
+    color: gray;
+}
+
+.hotel-room-item .room-info button {
+    background-color: var(--btn-color);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    border: 1px solid var(--btn-color);
+    transition: all .2s linear;
+}
+
+.hotel-room-item .room-info button:hover {
+    background-color: white;
+    color: var(--btn-color);
+}
+
+/* ===================================== MEDIA =====================================*/
+
+@media screen and (max-width: 1080px) {
+    .hotel-rooms-container .hotel-room-item .room-image {
+        width: 50%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .hotel-detail-inner {
+        flex-direction: column;
+    }
+
+    .hotel-detail-inner .left {
+        width: 100%;
+    }
+
+    .hotel-detail-inner .right {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .hotel-detail-inner .slick-next {
+        right: 3.5%;
+    }
+
+    .hotel-detail-inner .slick-prev {
+        left: 4.5%;
+        z-index: 10;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .hotel-detail {
+        padding: 50px 0;
+    }
+
+    .hotel-detail-inner .left .hotel-images-slider {
+        height: 40vw;
+    }
+
+    .hotel-detail-inner .left .hotel-images-slider img {
+        height: 38vw;
+    }
+
+    .hotel-rooms-container .hotel-room-item .room-image {
+        width: 60%;
+        height: 100%;
+    }
+
+    .hotel-room-item .room-info h2 {
+        font-size: 22px;
+    }
+
+    .hotel-room-item .room-info .price {
+        font-size: 13px;
+    }
+
+    .hotel-room-item .room-info .price .green {
+        font-size: 20px;
+    }
+
+    .hotel-room-item .room-info p {
+        font-size: 13px;
+    }
+
+    .hotel-room-item .room-info .room-amenties .amenties-block {
+        font-size: 13px;
+    }
+
+    .hotel-room-item .room-info .room-amenties .amenties-block i {
+        font-size: 11px;
+    }
+
+    .hotel-room-item .room-info button {
+        font-size: 14px;
+    }
+
+    .hotel-amenties .amenties-container .amenties-block {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .hotel-detail-inner .left .hotel-images-slider {
+        height: 50vw;
+    }
+
+    .hotel-detail-inner .left .hotel-images-slider img {
+        height: 48vw;
+    }
+
+    .hotel-rooms-container .hotel-room-item {
+        flex-direction: column;
+    }
+
+    .hotel-rooms-container .hotel-room-item .room-image {
+        width: 100%;
+        height: auto;
+        margin-bottom: -15px;
+    }
+
+    .hotel-rooms .hotel-rooms-container .hotel-room-item {
+        height: auto;
+    }
+
+    .hotel-rooms-container .hotel-room-item .room-info {
+        padding: 10px 20px 15px;
+    }
+
+    .hotel-details-info .hotel-details-navbar button {
+        font-size: 14px;
+    }
+
+    .hotel-amenties .amenties-container .amenties-block {
+        width: 48%;
+    }
+
+    .hotel-overview h2,
+    .hotel-amenties h2,
+    .hotel-rooms h2 {
+        font-size: 20px;
+    }
+
+    .hotel-detail-inner .left h1 {
+        font-size: 28px;
+    }
+    
+    .hotel-detail-inner .left p {
+        color: gray;
+        font-size: 14px;
+    }
+    
+}
+
+@media screen and (max-width: 500px) {
+    .hotel-detail {
+        padding: 40px 0;
+    }
+
+    .hotel-detail-inner .left .hotel-images-slider {
+        height: 60vw;
+    }
+
+    .hotel-detail-inner .left .hotel-images-slider img {
+        height: 58vw;
+    }
+
+    .hotel-room-item .room-info h2 {
+        font-size: 20px;
+    }
+
+    .hotel-room-item .room-info .price {
+        font-size: 12px;
+    }
+
+    .hotel-room-item .room-info .price .green {
+        font-size: 16px;
+    }
+
+    .hotel-room-item .room-info p {
+        font-size: 12px;
+    }
+
+    .hotel-room-item .room-info .room-amenties .amenties-block {
+        font-size: 12px;
+    }
+
+    .hotel-room-item .room-info .room-amenties .amenties-block i {
+        font-size: 10px;
+    }
+
+    .hotel-room-item .room-info button {
+        font-size: 13px;
+    }
+
+    .hotel-details-info .hotel-details-navbar button {
+        font-size: 12px;
+    }
+
+    .hotel-amenties .amenties-container .amenties-block {
+        font-size: 12px;
+    }
+
+    .hotel-overview p {
+        font-size: 12px;
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+    .hotel-amenties .amenties-container .amenties-block {
+        font-size: 10px;
+    }
+}

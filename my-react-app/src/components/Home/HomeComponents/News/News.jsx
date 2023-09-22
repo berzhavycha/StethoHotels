@@ -1,17 +1,21 @@
 import React from 'react'
-import './News.css'
-import SectionHeader from '../../../../common/SectioHeader/SectionHeader'
-import { news } from '../../../../data'
-import { Link } from 'react-router-dom'
-import BlogComponent from '../../../../common/BlogComponent/BlogComponent'
+import { useSelector } from 'react-redux'
 
+import SectionHeader from '../../../../common/SectioHeader/SectionHeader'
+import BlogComponent from '../../../../common/BlogComponent/BlogComponent'
+import { selectBlogsIds, useGetBlogsQuery } from '../../../../features/blogsSlice'
+
+import './News.css'
 const News = () => {
+    const { } = useGetBlogsQuery()
+    const blogsIds = useSelector(selectBlogsIds)
+
     return (
         <section className='news-section'>
             <SectionHeader text={'Latest News'} />
             <div className="news-section-inner container">
-                {news.map(item => {
-                    return <BlogComponent item={item} />
+                {blogsIds.slice(0, 3).map(id => {
+                    return <BlogComponent id={id} key={id} />
                 })}
             </div>
         </section>

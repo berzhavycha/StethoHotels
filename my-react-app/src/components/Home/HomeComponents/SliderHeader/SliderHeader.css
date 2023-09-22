@@ -1,7 +1,7 @@
 .slider-header {
     background-image: url('../../../../../public/Images/slider-1.jpg');
     width: 100%;
-    height: calc(100vh - 220px);
+    height: calc(100vh - 210px);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -61,6 +61,67 @@
 .form-container h4 {
     font-weight: 300;
     margin-bottom: 20px;
+}
+
+.form-container form .search-city-input {
+    position: relative;
+}
+
+.form-container form .date-input {
+    position: relative;
+}
+
+.form-container form .date-input input::placeholder{
+    color: black;
+}
+
+.form-container form .date-input .calendar-icon {
+    position: absolute;
+    top: 48%;
+    transform: translateY(-100%);
+    right: 10px;
+    background-color: white;
+    width: 15px;
+    color: gray;
+    cursor: pointer;
+    font-size: 12px;
+    color: black;
+}
+
+
+.form-container form .search-city-input .cities-list {
+    position: absolute;
+    top: 80%;
+    left: 0;
+    background-color: var(--btn-color);
+    width: 100%;
+    border-radius: 5px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: white;
+    z-index: 10;
+}
+
+.form-container form .search-city-input .cities-list p {
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: all .2s linear;
+    font-weight: 300;
+}
+
+.form-container form .search-city-input .cities-list p:first-child{
+    border-radius: 5px 5px 0 0;
+}
+
+.form-container form .search-city-input .cities-list p:last-child{
+    border-radius: 0px 0px 5px 5px;
+}
+
+.form-container form .search-city-input .cities-list p:hover{
+    background-color: white;
+    color: black;
 }
 
 .form-container input,

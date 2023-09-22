@@ -1,0 +1,7 @@
+.filter-item-content select {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: -10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}

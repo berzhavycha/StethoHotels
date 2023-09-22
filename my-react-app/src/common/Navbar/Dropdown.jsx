@@ -11,7 +11,7 @@ const Dropdown = () => {
 
     useEffect(() => {
         dropdownRef.current.style.left = location.x + 'px'
-        dropdownRef.current.style.top = isMenuOpen ? location.y + 'px' : location.y + 55 + 'px'
+        dropdownRef.current.style.top = isMenuOpen ? location.y + 'px' : location.y + 50 + 'px'
     }, [location])
 
     return (

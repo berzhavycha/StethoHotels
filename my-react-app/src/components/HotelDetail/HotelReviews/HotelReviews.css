@@ -1,0 +1,220 @@
+.hotel-reviews {
+    padding: 20px;
+}
+
+.hotel-reviews h2 {
+    margin-bottom: 10px;
+}
+
+.hotel-reviews .hotel-reviews-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.review-item .review-item-inner {
+    border-radius: 10px;
+    display: flex;
+    gap: 20px;
+    background-color: rgb(242, 242, 242);
+    padding: 10px;
+}
+
+.review-item .review-content-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.review-item .review-content-top .review-top-right {
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+    color: var(--btn-color);
+}
+
+.review-item .review-content-top .review-top-right p {
+    color: var(--btn-color);
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.review-item .review-content-top .review-top-right button {
+    padding: 0;
+    margin: 0;
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    color: var(--btn-color);
+    font-weight: 600;
+    cursor: pointer;
+    font-style: italic;
+    padding-right: 10px;
+}
+
+.review-item .review-content {
+    width: 100%;
+}
+
+.review-item .review-content p {
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.review-item .review-content .reaction-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.review-item .review-content .reaction-buttons button {
+    font-size: 15px;
+    background-color: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+
+.review-item .review-content .reaction-buttons button:hover {
+    scale: 1.1;
+}
+
+.review-item .reply-section {
+    display: none;
+    gap: 10px;
+    margin: 10px;
+}
+
+.review-item .reply-section.open {
+    display: flex;
+}
+
+.review-item .reply-section input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(218, 218, 218);
+    outline: none;
+}
+
+.review-item .reply-section button {
+    background-color: var(--btn-color);
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+
+.review-item .reply-section button:hover {
+    background-color: rgb(15, 124, 15);
+}
+
+.nested-reviews {
+    padding-left: 50px;
+    margin-top: 15px;
+}
+
+/* ====================================== MEDIA ====================================*/
+
+
+@media screen and (max-width: 740px) {
+    .review-item .review-content-top .review-top-right p {
+        font-size: 14px;
+    }
+
+    .review-item .review-content-top .review-top-right button {
+        font-size: 14px;
+    }
+
+    .review-item .review-content p {
+        font-size: 12px;
+    }
+
+    .review-item .review-content-top h3 {
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (max-width: 640px) {
+    .review-item .review-item-inner .review-photo img {
+        width: 80px;
+    }
+
+    .review-item .review-content-top .review-top-right p {
+        font-size: 12px;
+    }
+
+    .review-item .review-content-top .review-top-right button {
+        font-size: 12px;
+    }
+
+    .review-item .review-content p {
+        font-size: 10px;
+    }
+
+    .review-item .review-content-top h3 {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .review-item .review-item-inner .review-photo img {
+        width: 80px;
+    }
+
+    .review-item .review-content-top .review-top-right p {
+        font-size: 11px;
+    }
+
+    .review-item .review-content-top .review-top-right button {
+        font-size: 11px;
+    }
+
+    .review-item .review-content p {
+        font-size: 10px;
+    }
+
+    .review-item .review-content-top h3 {
+        font-size: 13px;
+    }
+
+}
+
+@media screen and (max-width: 540px) {
+    .review-item .review-content-top {
+        flex-direction: column;
+    }
+
+    .nested-reviews {
+        padding-left: 30px;
+    }
+
+    .review-item .review-content-top .review-top-right p {
+        font-size: 11px;
+    }
+
+    .review-item .review-content-top .review-top-right button {
+        font-size: 11px;
+    }
+
+    .review-item .review-content-top .review-top-right {
+        gap: 5px;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .review-item .review-item-inner .review-photo img{
+        width: 70px;
+    }
+
+    .nested-reviews {
+        padding-left: 20px;
+    }
+}

@@ -30,6 +30,10 @@
     color: black;
 }
 
+.faq-layout-inner .left .faq-menu a.active{
+    color: var(--btn-color);
+}
+
 /* ============================= MEDIA ==============================*/
 
 @media screen and (max-width: 1280px) {

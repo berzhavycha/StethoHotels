@@ -1,13 +1,19 @@
 import React, { useEffect, useRef, useState } from 'react'
-import './SliderHeader.css'
-import { slides } from '../../../../data'
+import { useNavigate } from 'react-router-dom'
+
 import { useDropdownContext } from '../../../../context/Dropdown/DropdownProvider'
+import { availableCities, slides } from '../../../../data'
+import './SliderHeader.css'
 
 const SliderHeader = () => {
-
-    const sliderHeaderRef = useRef()
     const [currentSlide, setCurrentSlide] = useState(slides[0])
-    const {closeDropdown} = useDropdownContext()
+    const [searchCity, setSearchCity] = useState('')
+    const [matchedCities, setMatchedCities] = useState([])
+    const [isShowCityList, setIsShowCityList] = useState(false)
+    const sliderHeaderRef = useRef()
+
+    const navigate = useNavigate()
+    const { closeDropdown } = useDropdownContext()
 
     const nextSlide = () => {
         setCurrentSlide(slide => {
@@ -23,30 +29,79 @@ const SliderHeader = () => {
         })
     }
 
-    // закривання dropdown, коли мишка покидає dropdown
     const handleMouseOver = (e) => {
-        if(!e.target.classList.contains('dropdown-menu')){
+        if (!e.target.classList.contains('dropdown-menu')) {
             closeDropdown()
         }
     }
 
-    // змінюю фонове зображення кожен раз, коли змінюється state слайду
     useEffect(() => {
         sliderHeaderRef.current.style.background = `url(${currentSlide.imageUrl})`
     }, [currentSlide])
 
+    useEffect(() => {
+        setMatchedCities(availableCities.filter(city => city?.toLowerCase()?.startsWith(searchCity?.toLowerCase())))
+    }, [searchCity])
+    
+
+    const searchHotel = () => {
+        if (!searchCity) return
+
+        navigate(`/hotels?searchCity=${searchCity}`)
+    }
 
     return (
-        <section ref={sliderHeaderRef} className='slider-header' onMouseOver={handleMouseOver}>
+        <section
+            ref={sliderHeaderRef}
+            className='slider-header'
+            onMouseOver={handleMouseOver}
+            onClick={(e) => {
+                if (!e.target.closest('.cities-list') && !e.target.closest('.row')) {
+                    setIsShowCityList(false)
+                }
+            }}
+        >
             <div className="slider-header-inner container">
                 <div className="form-container">
                     <h2>Enjoy your holiday</h2>
                     <h4>Search and Book Hotel</h4>
                     <form>
-                        <input type="text" placeholder='Search City' className="row" />
+                        <div className="search-city-input">
+                            <input
+                                type="text"
+                                placeholder='Search City'
+                                className="row"
+                                value={searchCity}
+                                onChange={e => setSearchCity(e.target.value)}
+                                onFocus={() => setIsShowCityList(true)}
+                            />
+                            {isShowCityList &&
+                                <div className="cities-list">
+                                    {matchedCities?.map((city, index) => {
+                                        return (
+                                            <p onClick={() => {
+                                                setIsShowCityList(false)
+                                                setSearchCity(city)
+                                            }}
+                                                key={index}
+                                            >
+                                                {city}
+                                            </p>
+                                        )
+                                    })}
+                                </div>
+                            }
+                        </div>
                         <div className="input-flex">
                             <div className="left">
-                                <input type="date" placeholder='Check In' />
+                                <div className="date-input">
+                                    <input
+                                        onFocus={e => e.target.type = 'date'}
+                                        type='text'
+                                        placeholder='Check Out'
+                                    />
+                                    <div className="calendar-icon"><i className="fa-solid fa-calendar"></i></div>
+                                </div>
                                 <select>
                                     <option value="">Adult(s)(18+)</option>
                                     <option value="1">1</option>
@@ -56,7 +111,14 @@ const SliderHeader = () => {
                                 </select>
                             </div>
                             <div className="right">
-                                <input type="date" placeholder='Check Out' />
+                                <div className="date-input">
+                                    <input
+                                        onFocus={e => e.target.type = 'date'}
+                                        type='text'
+                                        placeholder='Check Out'
+                                    />
+                                    <div className="calendar-icon"><i className="fa-solid fa-calendar"></i></div>
+                                </div>
                                 <select>
                                     <option value="">Children(0 - 17)</option>
                                     <option value="1">1</option>
@@ -73,7 +135,7 @@ const SliderHeader = () => {
                             <option value="3">3</option>
                             <option value="4">4</option>
                         </select>
-                        <button>Search</button>
+                        <button onClick={searchHotel}>Search</button>
                     </form>
                 </div>
             </div>

@@ -1,7 +1,8 @@
 import React from 'react'
+import { Link, useLocation } from 'react-router-dom'
+
 import SectionHeader from '.././../../../common/SectioHeader/SectionHeader'
 import { cities } from '../../../../data'
-import { Link, useLocation } from 'react-router-dom'
 import './CitiesComponent.css'
 
 const CitiesComponent = () => {

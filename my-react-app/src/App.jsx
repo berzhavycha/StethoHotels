@@ -1,4 +1,4 @@
-import { useEffect, useState, useLayoutEffect } from 'react'
+import { useEffect } from 'react'
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider, useLocation, Outlet } from 'react-router-dom'
 import './App.css'
 import Layout from './common/Layout/Layout'
@@ -8,14 +8,18 @@ import { motion } from "framer-motion";
 import HeaderLayout from './common/HeaderLayout/HeaderLayout'
 import Gallery from './components/Gallery/Gallery'
 import Destinations from './components/Destinations/Destinations'
-import DestinationDetail, { loader as destinationDetailLoader } from './components/Destinations/DestinationDetail/DestinationDetail'
+import DestinationDetail from './components/Destinations/DestinationDetail/DestinationDetail'
 import BlogLayout, { loader as blogLayoutLoader } from './common/BlogLayout/BlogLayout'
 import Blog from './components/Blog/Blog'
-import BlogSingal, { loader as blogSingalLoader } from './components/BlogSingal/BlogSingal'
+import BlogSingal from './components/BlogSingal/BlogSingal'
 import Login from './components/Login/Login'
 import Register from './components/Register/Register'
 import AuthRequired from './common/AuthRequired/AuthRequired'
 import FaqLayout from './components/FaqLayout/FaqLayout'
+import HotelListing from './components/HotelListing/HotelListing'
+import HotelDetail from './components/HotelDetail/HotelDetail'
+import ContactUs from './components/ContactUs/ContactUs'
+import NotFound from './common/NotFound/NotFound'
 
 const PageLayout = ({ children }) => children;
 
@@ -37,7 +41,7 @@ const pageTransition = {
   duration: 0.5
 };
 
-const AnimationLayout = () => {
+export const AnimationLayout = () => {
   const { pathname } = useLocation();
 
 
@@ -63,6 +67,8 @@ const AnimationLayout = () => {
   );
 };
 
+
+
 const router = createBrowserRouter(createRoutesFromElements(
   <Route element={<AnimationLayout />}>
     <Route path='/' element={<Layout />}>
@@ -74,21 +80,30 @@ const router = createBrowserRouter(createRoutesFromElements(
         <Route
           path='destinations/:cityId'
           element={<DestinationDetail />}
-          loader={destinationDetailLoader}
         />
-        <Route path='blog' element={<BlogLayout />} loader={blogLayoutLoader}>
+        <Route
+          path='blog'
+          element={<BlogLayout />}
+          loader={blogLayoutLoader}
+          errorElement={<h1>Error</h1>}
+        >
           <Route index element={<Blog />} />
           <Route path=':blogId' element={<AuthRequired />}>
-            <Route index element={<BlogSingal />} loader={blogSingalLoader} />
+            <Route index element={<BlogSingal />} />
           </Route>
         </Route>
         <Route path='login' element={<Login />} />
         <Route path='register' element={<Register />} />
         <Route path='faq' element={<FaqLayout />} />
+        <Route path='hotels' element={<HotelListing />} />
+        <Route path='hotels/:hotelId' element={<HotelDetail />} />
+        <Route path='contactus' element={<ContactUs />} />
       </Route>
     </Route>
-  </Route >
-))
+    <Route path='*' element={<NotFound />} />
+  </Route>
+)
+)
 
 
 function App() {

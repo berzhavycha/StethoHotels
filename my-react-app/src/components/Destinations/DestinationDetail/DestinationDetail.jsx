@@ -1,42 +1,31 @@
-import React, { Suspense } from 'react'
-import { defer, useLoaderData, Await, Link } from 'react-router-dom'
-import { getSingleCity, delay } from '../../../data'
+import React from 'react'
+import { useGetCityQuery } from '../../../features/citiesSlice'
 import './DestiantionDetail.css'
 import Loading from '../../../common/Loading/Loading'
 import HelpBlock from '../../../common/HelpBlock/HelpBlock'
+import { useParams } from 'react-router-dom'
 
-export const loader = async ({ params }) => {
-    return defer({ city: delay(1000).then(() => getSingleCity(params.cityId, 'cities')) })
-}
 
 const DestinationDetail = () => {
+    const { cityId } = useParams()
+    const { data: loadedCity, isLoading } = useGetCityQuery({id: cityId})
 
-    const cityPromise = useLoaderData()
+    if (isLoading) return <Loading />
 
     return (
         <section className='destination-detail'>
             <div className="destination-detail-inner container">
                 <div className="left">
-                    <Suspense fallback={<Loading />} >
-                        <Await resolve={cityPromise.city}>
-                            {(loadedCity) => {
-                                return (
-                                    <>
-                                        <img className='main-image' src={loadedCity.mainImg} />
-                                        <p>{loadedCity.text}</p>
-                                        <h1>What is {loadedCity.name} City?</h1>
-                                        <p>{loadedCity.beforeImg}</p>
-                                        <div className="images">
-                                            {loadedCity.images.map((item, index) => {
-                                                return <img key={index} src={item} />
-                                            })}
-                                        </div>
-                                        <p>{loadedCity.afterImg}</p>
-                                    </>
-                                )
-                            }}
-                        </Await>
-                    </Suspense>
+                    <img className='main-image' src={loadedCity.mainImg} />
+                    <p>{loadedCity.text}</p>
+                    <h1>What is {loadedCity.name} City?</h1>
+                    <p>{loadedCity.beforeImg}</p>
+                    <div className="images">
+                        {loadedCity.images.map((item, index) => {
+                            return <img key={index} src={item} />
+                        })}
+                    </div>
+                    <p>{loadedCity.afterImg}</p>
                 </div>
                 <div className="right">
                     <HelpBlock />

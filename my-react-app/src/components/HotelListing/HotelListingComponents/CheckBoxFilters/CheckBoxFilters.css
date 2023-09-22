@@ -1,0 +1,41 @@
+.stars .star-row-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+    font-size: 14px;
+    padding-top: 10px;
+    width: 11vw;
+}
+
+.stars .stars-row-amount{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.star-options span{
+    color: gray;
+}
+
+.filter-item .star-option{
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    font-weight: 300;
+    margin: 0 10px;
+    cursor: pointer;
+    color: gray;
+}
+
+.filter-item .star-option:first-child{
+    margin-left: 0;
+}
+
+@media screen and (max-width: 990px) {
+    .stars .star-row-container{
+        width: 100%;
+    }
+}

@@ -46,10 +46,14 @@ const Companies = () => {
         <section className='companies-section'>
             <div className="container companies-section-inner">
                 <Slider {...settings}>
-                    {companies.map(item => {
+                    {companies.map((item, index) => {
                         return (
-                            <div className="photo">
-                                <img src={item.imageUrl} key={item.id} onMouseLeave={e => replaceUrl(e, item.imageUrl)} onMouseOver={(e) => replaceUrl(e, item.replaceUrl)} />
+                            <div className="photo" key={index}>
+                                <img
+                                    src={item.imageUrl}
+                                    key={item.id}
+                                    onMouseLeave={e => replaceUrl(e, item.imageUrl)}
+                                    onMouseOver={(e) => replaceUrl(e, item.replaceUrl)} />
                             </div>
                         )
 

@@ -9,7 +9,7 @@ const BottomNavbar = () => {
         <div className="container" onMouseOver={closeDropdown}>
             <section className='bottom-navbar'>
                 <Link className="logo" to='/'>
-                    <img src='../../../public/Images/logo.png' alt="img" />
+                    <img src='../../../public/Images/logo.png' alt="logoImg" />
                 </Link>
                 <div className="bottom-navbar-info">
                     <div className="block-info">

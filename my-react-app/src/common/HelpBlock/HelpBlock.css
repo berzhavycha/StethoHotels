@@ -3,6 +3,7 @@
     background-color: var(--btn-color);
     color: white;
     margin-bottom: 30px;
+    width: 100%;
 }
 
 .help-block h1 {

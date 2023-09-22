@@ -5,12 +5,12 @@ import './Blog.css'
 
 const Blog = () => {
 
-    const { blogs } = useOutletContext()
+    const { blogsIds } = useOutletContext()
 
     return (
         <section className='blog-page'>
-            {blogs.map((item, index) => {
-                return <BlogComponent item={item} key={index}/>
+            {blogsIds?.map((id, index) => {
+                return <BlogComponent id={id} key={index}/>
             })}
         </section>
     )
