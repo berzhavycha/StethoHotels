@@ -62,12 +62,13 @@
           }
         },
         {
-          "text": "e",
-          "author": 1,
-          "date": "22.09.2023",
+          "imageUrl": "../../../public/Images/profile/profile1.jpg",
+          "text": "w",
+          "author": "hVc5KTCxUsAingb3CUbzo",
+          "date": "25.09.2023",
           "stars": 4,
-          "parentId": null,
-          "id": "MeJHpYZ7qjbXUFWoUSyFQ",
+          "parentId": 2,
+          "id": "72H1Vl5pgQ7MtKh-IJqFa",
           "reactions": {
             "thumbsUp": 0,
             "dislike": 0,
@@ -77,12 +78,13 @@
           }
         },
         {
-          "text": "broo",
-          "author": 1,
-          "date": "22.09.2023",
+          "imageUrl": "../../../public/Images/profile/profile1.jpg",
+          "text": "w",
+          "author": "hVc5KTCxUsAingb3CUbzo",
+          "date": "25.09.2023",
           "stars": 4,
-          "parentId": null,
-          "id": "aGu7sgdVnc9jDWfRadPkk",
+          "parentId": "72H1Vl5pgQ7MtKh-IJqFa",
+          "id": "cfrpFHpa8-Gkieby9QJlc",
           "reactions": {
             "thumbsUp": 0,
             "dislike": 0,
@@ -111,7 +113,7 @@
           "id": 1,
           "imageUrl": "https://raw.githubusercontent.com/aberzhavych/StethoProject/main/profile6.jpg",
           "text": "Lorem ipsum dolor sit amet consectetur ipiscing elit amet consectetur piscing elitsada consectetur adipiscing elit sed et eletum. orem ipsum dolor sit amet consecteturdfhdg adipiscing elit amet consectetur piscing elit amet consectetur.",
-          "author": 5,
+          "author": 1,
           "date": "01.02.2023",
           "stars": 5,
           "parentId": null,
@@ -215,6 +217,22 @@
             "thumbsUp": 1,
             "dislike": 1,
             "angry": 1,
+            "fire": 0,
+            "coffee": 0
+          }
+        },
+        {
+          "imageUrl": "../../../public/Images/profile/profile1.jpg",
+          "text": "new",
+          "author": "3DhafcLv2B_AAOTvddzZE",
+          "date": "25.09.2023",
+          "stars": 4,
+          "parentId": null,
+          "id": "7CISCjrbxltMLnoEytQKE",
+          "reactions": {
+            "thumbsUp": 0,
+            "dislike": 0,
+            "angry": 0,
             "fire": 0,
             "coffee": 0
           }
@@ -346,6 +364,54 @@
             "fire": 0,
             "coffee": 0
           }
+        },
+        {
+          "imageUrl": "../../../public/Images/profile/profile1.jpg",
+          "text": "comment\n",
+          "author": "hVc5KTCxUsAingb3CUbzo",
+          "date": "25.09.2023",
+          "stars": 4,
+          "parentId": null,
+          "id": "4eZPp_lIAJdP1Fr67DkPu",
+          "reactions": {
+            "thumbsUp": 0,
+            "dislike": 0,
+            "angry": 0,
+            "fire": 0,
+            "coffee": 0
+          }
+        },
+        {
+          "imageUrl": "../../../public/Images/profile/profile1.jpg",
+          "text": "cod",
+          "author": "hVc5KTCxUsAingb3CUbzo",
+          "date": "25.09.2023",
+          "stars": 4,
+          "parentId": "4eZPp_lIAJdP1Fr67DkPu",
+          "id": "OhwLdT_Jhc54uWjEWr2H8",
+          "reactions": {
+            "thumbsUp": 0,
+            "dislike": 0,
+            "angry": 0,
+            "fire": 0,
+            "coffee": 0
+          }
+        },
+        {
+          "imageUrl": "../../../public/Images/profile/profile1.jpg",
+          "text": "word one",
+          "author": "hVc5KTCxUsAingb3CUbzo",
+          "date": "25.09.2023",
+          "stars": 4,
+          "parentId": null,
+          "id": "1GrbqH0eOBntVT9Osa96e",
+          "reactions": {
+            "thumbsUp": 0,
+            "dislike": 0,
+            "angry": 0,
+            "fire": 0,
+            "coffee": 0
+          }
         }
       ],
       "postDate": 1689811200000
@@ -430,6 +496,20 @@
       "imageUrl": "../../../public/Images/profile/profile1.jpg",
       "password": "bombamoscow1!",
       "id": 1
+    },
+    {
+      "fullName": "AndrewBerzh",
+      "email": "andrewberzh@gmail.com",
+      "imageUrl": "../../../public/Images/profile/profile1.jpg",
+      "password": "bombamoscow1!",
+      "id": "HMVdkg51nW8dDrt2IGtxa"
+    },
+    {
+      "fullName": "NewGuy",
+      "email": "newGuy@gmail.com",
+      "imageUrl": "../../../public/Images/profile/profile1.jpg",
+      "password": "bombamoscow1!",
+      "id": "hVc5KTCxUsAingb3CUbzo"
     }
   ],
   "hotels": [

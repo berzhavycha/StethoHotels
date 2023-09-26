@@ -4,7 +4,7 @@ import './BlogSingal.css'
 import CommentItem from './BlogSingalComponents/CommentItem/CommentItem'
 import { useParams } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-import { selectBlogById, useAddCommentMutation } from '../../features/blogsSlice'
+import { selectBlogById, useUpdateCommentsMutation } from '../../features/blogsSlice'
 import { nanoid } from '@reduxjs/toolkit'
 import useUserContext from '../../context/User/UserProvider'
 
@@ -15,7 +15,7 @@ const BlogSingal = () => {
 
     const { user } = useUserContext()
 
-    const [addComment] = useAddCommentMutation()
+    const [addComment] = useUpdateCommentsMutation()
 
     const topLevelComments = useMemo(() => {
         return loadedBlog?.comments.filter(comment => !comment.parentId) || []
@@ -35,7 +35,7 @@ const BlogSingal = () => {
         const newDate = new Date()
 
         const newComment = {
-            imageUrl: user.photoURL,
+            imageUrl: user.imageUrl,
             text: commentText,
             author: user.id,
             date: `${checkExcerptDate(newDate.getDate())}.${checkExcerptDate(newDate.getMonth() + 1)}.${checkExcerptDate(newDate.getFullYear())}`,

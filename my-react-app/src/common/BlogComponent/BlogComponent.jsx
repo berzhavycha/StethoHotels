@@ -6,7 +6,6 @@ import { useSelector } from 'react-redux'
 import { selectBlogById, useGetBlogsQuery } from '../../features/blogsSlice'
 
 const BlogComponent = ({ id }) => {
-    console.log(id)
     const item = useSelector(state => selectBlogById(state, id))
    
     const location = useLocation()
@@ -20,7 +19,7 @@ const BlogComponent = ({ id }) => {
     const date = `${months[+dateParts[1] - 1]} ${dateParts[0]}, ${dateParts[2]}`
 
     return (
-        <Link to={pathname} state={{ page: "Blog Singal" }} className='blog-item'>
+        <Link data-testid='blog' to={pathname} state={{ page: "Blog Singal" }} className='blog-item'>
             <div className="blog-item-content">
                 <div className="blog-image">
                     <img src={item.imageUrl} />

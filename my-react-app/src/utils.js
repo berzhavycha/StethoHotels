@@ -11,7 +11,7 @@ import About from './components/About/About'
 import HeaderLayout from './common/HeaderLayout/HeaderLayout'
 import Gallery from './components/Gallery/Gallery'
 import Destinations from './components/Destinations/Destinations'
-import DestinationDetail, { loader as destinationDetailLoader } from './components/Destinations/DestinationDetail/DestinationDetail'
+import DestinationDetail from './components/Destinations/DestinationDetail/DestinationDetail'
 import BlogLayout, { loader as blogLayoutLoader } from './common/BlogLayout/BlogLayout'
 import Blog from './components/Blog/Blog'
 import BlogSingal from './components/BlogSingal/BlogSingal'
@@ -19,12 +19,13 @@ import Login from './components/Login/Login'
 import Register from './components/Register/Register'
 import AuthRequired from './common/AuthRequired/AuthRequired'
 import FaqLayout from './components/FaqLayout/FaqLayout'
-import HotelListing, { loader as hotelListingLoader } from './components/HotelListing/HotelListing'
-import HotelDetail, { loader as hotelDetailLoader } from './components/HotelDetail/HotelDetail'
+import HotelListing from './components/HotelListing/HotelListing'
+import HotelDetail from './components/HotelDetail/HotelDetail'
 import ContactUs from './components/ContactUs/ContactUs'
 import NotFound from './common/NotFound/NotFound'
 import HotelsFilterProvider from './context/HotelsFilter/HotelsFilterProvider'
 import { UserProvider } from './context/User/UserProvider'
+import Loading from './common/Loading/Loading'
 
 
 export const renderWithWrapper = (initialEntries = ['/'], store) => {
@@ -40,7 +41,6 @@ export const renderWithWrapper = (initialEntries = ['/'], store) => {
                     <Route
                         path='destinations/:cityId'
                         element={<DestinationDetail />}
-                        loader={destinationDetailLoader}
                     />
                     <Route
                         path='blog'
@@ -56,8 +56,8 @@ export const renderWithWrapper = (initialEntries = ['/'], store) => {
                     <Route path='login' element={<Login />} />
                     <Route path='register' element={<Register />} />
                     <Route path='faq' element={<FaqLayout />} />
-                    <Route path='hotels' element={<HotelListing />} loader={hotelListingLoader} />
-                    <Route path='hotels/:hotelId' element={<HotelDetail />} loader={hotelDetailLoader} />
+                    <Route path='hotels' element={<HotelListing />} />
+                    <Route path='hotels/:hotelId' element={<HotelDetail />} />
                     <Route path='contactus' element={<ContactUs />} />
                 </Route>
             </Route>
@@ -72,7 +72,7 @@ export const renderWithWrapper = (initialEntries = ['/'], store) => {
             <DropdownProvider>
                 <UserProvider>
                     <HotelsFilterProvider>
-                        <RouterProvider router={router} />
+                        <RouterProvider router={router} fallbackElement={<Loading />} />
                     </HotelsFilterProvider>
                 </UserProvider>
             </DropdownProvider>
@@ -92,11 +92,13 @@ export function renderWithProviders(
         store, ...render(
             <Provider store={store}>
                 <MemoryRouter>
-                    <HotelsFilterProvider>
-                        <DropdownProvider>
-                            {ui}
-                        </DropdownProvider>
-                    </HotelsFilterProvider>
+                    <UserProvider>
+                        <HotelsFilterProvider>
+                            <DropdownProvider>
+                                {ui}
+                            </DropdownProvider>
+                        </HotelsFilterProvider>
+                    </UserProvider>
                 </MemoryRouter>
             </Provider>
         )

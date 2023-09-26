@@ -18,9 +18,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <UserProvider>
       <DropdownProvider>
         <HotelsFilterProvider>
-          {/* <PersistGate loading={null} persistor={persistor}> */}
-          <App />
-          {/* </PersistGate> */}
+          <PersistGate loading={null} persistor={persistor}>
+            <App />
+          </PersistGate>
         </HotelsFilterProvider>
       </DropdownProvider>
     </UserProvider>

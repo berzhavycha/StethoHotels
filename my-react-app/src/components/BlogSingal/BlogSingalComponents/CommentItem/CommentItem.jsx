@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react'
 import { months } from '../../../../data'
 import './CommentItem.css'
-import { selectBlogById, useAddCommentMutation } from '../../../../features/blogsSlice'
+import { selectBlogById, useUpdateCommentsMutation } from '../../../../features/blogsSlice'
 import { nanoid } from '@reduxjs/toolkit'
 import { useParams } from 'react-router-dom'
 import { useSelector } from 'react-redux'
@@ -11,14 +11,18 @@ import useUserContext from '../../../../context/User/UserProvider'
 import { useGetUsersQuery } from '../../../../features/userSlice'
 
 const CommentItem = memo(({ comment }) => {
+    const [isUserComment, setIsUserComment] = useState(false)
+    const [isEditing, setIsEditing] = useState(false)
+
     const { user } = useUserContext()
+
     const { author } = useGetUsersQuery(undefined, {
         selectFromResult: ({ data }) => ({
             author: data?.entities[comment?.author]
         })
     })
 
-    const [addComment] = useAddCommentMutation()
+    const [updateComments] = useUpdateCommentsMutation()
 
     const { blogId } = useParams()
     const loadedBlog = useSelector(state => selectBlogById(state, blogId))
@@ -48,26 +52,72 @@ const CommentItem = memo(({ comment }) => {
     }
 
     const onComment = () => {
-        const newDate = new Date()
+        if (isEditing) {
 
-        const newComment = {
-            imageUrl: user.photoURL,
-            text: commentText,
-            author: user.id,
-            date: `${checkExcerptDate(newDate.getDate())}.${checkExcerptDate(newDate.getMonth() + 1)}.${checkExcerptDate(newDate.getFullYear())}`,
-            stars: 4,
-            parentId: comment.id ?? null,
-            id: nanoid()
+            const editedComments = loadedBlog.comments.map(item => {
+                if(item.id === comment.id){
+                    return {
+                        ...item,
+                        text: commentText
+                    }
+                }
+
+                return item
+            })
+
+            updateComments({ comments: editedComments, blogId: loadedBlog.id })
+            setIsEditing(false)
+        } else {
+            const newDate = new Date()
+
+            const newComment = {
+                imageUrl: user.imageUrl,
+                text: commentText,
+                author: user.id,
+                date: `${checkExcerptDate(newDate.getDate())}.${checkExcerptDate(newDate.getMonth() + 1)}.${checkExcerptDate(newDate.getFullYear())}`,
+                stars: 4,
+                parentId: comment.id ?? null,
+                id: nanoid()
+            }
+
+            updateComments({ comments: [...loadedBlog.comments, newComment], blogId: loadedBlog.id })
         }
 
-        addComment([...loadedBlog.comments, newComment])
+        setIsReplying(false)
         setCommentText('')
     }
 
+    const handleMouseEnterComment = () => {
+        if (comment.author === user.id) {
+            setIsUserComment(true)
+        }
+    }
+
+    const handleMouseLeaveComment = () => {
+        if (comment.author === user.id) {
+            setIsUserComment(false)
+        }
+    }
+
+    const deleteComment = () => {
+        const remainingComments = loadedBlog.comments.filter(item => item.id !== comment.id)
+        updateComments({ comments: remainingComments, blogId: loadedBlog.id })
+    }
+
+    const editComment = () => {
+        setCommentText(comment.text)
+        setIsReplying(true)
+        setIsEditing(true)
+    }
 
     return (
-        <div className="comment-wrapper" data-testid='comment-item'>
-            <div className='comment-item'>
+        <div
+            className="comment-wrapper" data-testid='comment-item'>
+            <div
+                className='comment-item'
+                onMouseEnter={handleMouseEnterComment}
+                onMouseLeave={handleMouseLeaveComment}
+            >
                 <div className="profile-photo">
                     <img src={author?.imageUrl} />
                 </div>
@@ -75,6 +125,14 @@ const CommentItem = memo(({ comment }) => {
                     <div className="comment-top">
                         <div className="left">
                             <span className='author'>{author?.fullName}</span> - <span className='date'>{date}</span> :
+                        </div>
+                        <div className="right">
+                            {isUserComment &&
+                                <>
+                                    <button onClick={deleteComment} className='delete-btn'><i class="fa-solid fa-trash"></i></button>
+                                    <button onClick={editComment} className='edit-btn'><i class="fa-solid fa-pen-to-square"></i></button>
+                                </>
+                            }
                         </div>
                     </div>
                     <p>{comment?.text}</p>
@@ -94,7 +152,7 @@ const CommentItem = memo(({ comment }) => {
                             onChange={e => setCommentText(e.target.value)}
                             value={commentText}
                         />
-                        <button onClick={() => onComment()}>Comment</button>
+                        <button onClick={onComment}>{isEditing ? 'Edit' : 'Comment'}</button>
                     </div>
                 </div>
             </div>

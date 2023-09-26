@@ -37,7 +37,7 @@ export const extendedApiSlice = apiSlice.injectEndpoints({
             },
             providesTags: ['Blogs']
         }),
-        addComment: builder.mutation({
+        updateComments: builder.mutation({
             query: ({ comments, blogId }) => ({
                 url: `/blogs/${blogId}`,
                 method: "PATCH",
@@ -70,7 +70,7 @@ export const extendedApiSlice = apiSlice.injectEndpoints({
 
 export const {
     useGetBlogsQuery,
-    useAddCommentMutation,
+    useUpdateCommentsMutation,
     useAddReactionMutation
 } = extendedApiSlice
 

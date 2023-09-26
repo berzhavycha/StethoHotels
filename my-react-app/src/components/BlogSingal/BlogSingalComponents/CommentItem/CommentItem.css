@@ -25,6 +25,28 @@
     margin-bottom: 15px;
 }
 
+.comment-container .comment-top .right{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    gap: 15px;
+}
+
+.comment-container .comment-top .right button{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.delete-btn{
+    color: rgb(241, 78, 78);
+}
+
+.edit-btn{
+    color: rgb(213, 213, 0);
+}
+
 .comment-top .author {
     font-weight: 500;
 }

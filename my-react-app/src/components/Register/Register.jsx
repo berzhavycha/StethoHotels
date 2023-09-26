@@ -67,18 +67,20 @@ const Register = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
+        const userId = nanoid()
+
         addUser({
             fullName: values.fullname,
             email: values.email,
             imageUrl: '../../../public/Images/profile/profile1.jpg',
             password: values.password,
-            id: nanoid()
+            id: userId
         })
         signUpUser({
             fullName: values.fullname,
             email: values.email,
             imageUrl: '../../../public/Images/profile/profile1.jpg',
-            id: nanoid()
+            id: userId
         })
         setIsRegistered(true)
 

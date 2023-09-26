@@ -11,7 +11,7 @@ import { useEffect } from 'react'
 import { useMemo } from 'react'
 
 
-export const loader = async ({ request }) => {
+export const loader = ({ request }) => {
     const response = store.dispatch(apiSlice.endpoints.getBlogs.initiate())
     return defer({ blogs: response })
 
@@ -85,29 +85,25 @@ const BlogLayout = () => {
                             const recentPost = sortBlogsByDate(Object.values(loadedBlogs.data.entities))
 
 
-                            let filterPosts = useMemo(() => {
+                            let filteredPostsIds = useMemo(() => {
+                                let filteredPosts = filterArrayByParams(loadedBlogs.data.entities, 'category')
+                                filteredPosts = filterArrayByParams(filteredPosts, 'tag')
 
-                                const categoryFilter = filterArrayByParams(loadedBlogs.data.entities, 'category')
-                                return filterArrayByParams(categoryFilter, 'tag')
+                                if (!search) return Object.keys(filteredPosts)
 
-                            }, [searchParams.get('category'), searchParams.get('tag')])
-
-
-                            filterPosts = useMemo(() => {
-                                if (!search) return Object.keys(filterPosts)
-
-                                let idsArr = Object.keys(filterPosts)
-                                    .filter(id => filterPosts[id].title.toLowerCase().startsWith(search.toLowerCase()))
+                                let idsArr = Object.keys(filteredPosts)
+                                    .filter(id => filteredPosts[id].title.toLowerCase().startsWith(search.toLowerCase()))
 
                                 return idsArr
-                            }, [search])
 
+                            }, [searchParams.get('category'), searchParams.get('tag'), search])
+
+                            console.log(filteredPostsIds)
 
                             useEffect(() => {
-                                if (!Object.keys(filterPosts).length) setEmptySearch(true)
+                                if (!Object.keys(filteredPostsIds).length) setEmptySearch(true)
                                 else setEmptySearch(false)
-                            }, [filterPosts])
-
+                            }, [filteredPostsIds])
 
 
                             return (
@@ -116,7 +112,7 @@ const BlogLayout = () => {
                                         {emptySearch ?
                                             <NotFound />
                                             :
-                                            <Outlet context={{ blogsIds: filterPosts }} />
+                                            <Outlet context={{ blogsIds: filteredPostsIds }} />
                                         }
                                     </div>
                                     <div className="layout-article">
@@ -125,9 +121,6 @@ const BlogLayout = () => {
                                                 name='title'
                                                 placeholder='Search...'
                                                 type="search"
-                                                // onChange={e => {
-                                                //     submit(e.currentTarget.form)
-                                                // }}
                                                 onChange={e => setSearch(e.target.value)}
                                             />
                                             <button><i className="fa-solid fa-magnifying-glass"></i></button>
