@@ -1,5 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+
+import Newsletter from './FooterComponents/Newsletter'
+import RecentPosts from './FooterComponents/RecentPosts'
+import SocialIcons from './FooterComponents/SocialIcons'
+
 import './Footer.css'
 
 const Footer = () => {
@@ -13,54 +18,22 @@ const Footer = () => {
                             <br /><br />
                             Lorem ipsum dolor sit amet sectetur adipiscing elit amet consectetur scing elit amet.
                         </p>
-                        <div className="socials">
-                            <i className="fa-brands fa-instagram"></i>
-                            <i className="fa-brands fa-facebook"></i>
-                            <i className="fa-brands fa-twitter"></i>
-                            <i className="fa-brands fa-linkedin"></i>
-                        </div>
+                        <SocialIcons />
                     </div>
                     <div className="navigation">
                         <h1 className="footer-title">navigation</h1>
                         <nav>
-                            <Link>Home</Link>
-                            <Link>About Us</Link>
-                            <Link>Blog</Link>
-                            <Link>Faq</Link>
-                            <Link>Contact</Link>
+                            <Link to={'/'}>Home</Link>
+                            <Link to={'/about'}>About Us</Link>
+                            <Link to={'/blogs'}>Blog</Link>
+                            <Link to={'/faq'}>Faq</Link>
+                            <Link to={'contactus'}>Contact</Link>
                         </nav>
                     </div>
                 </div>
                 <div className="right">
-                    <div className="posts">
-                        <h1 className="footer-title">recent posts</h1>
-                        <div className="posts-container">
-                            <div className="post-item">
-                                <p className="text">
-                                    Lorem ipsum dolor sit amet sectetur adipiscing elit amet
-                                </p>
-                                <p className="date"><i class="fa-regular fa-calendar-days"></i> 22 July, 2023</p>
-                            </div>
-                            <div className="post-item">
-                                <p className="text">
-                                    Lorem ipsum dolor sit amet sectetur adipiscing elit amet
-                                </p>
-                                <p className="date"><i class="fa-regular fa-calendar-days"></i> 22 July, 2023</p>
-                            </div>
-                            <div className="post-item">
-                                <p className="text">
-                                    Lorem ipsum dolor sit amet sectetur adipiscing elit amet
-                                </p>
-                                <p className="date"><i class="fa-regular fa-calendar-days"></i> 22 July, 2023</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="newsletter">
-                        <h1 className="footer-title">newsletter</h1>
-                        <p className='footer-text'>Lorem ipsum dolor sit amet sectetur adipiscing elit amet consectetur scing elit sed et eletum</p>
-                        <input type="text" placeholder='Email Adress...' />
-                        <button>subscribe</button>
-                    </div>
+                    <RecentPosts />
+                    <Newsletter />
                 </div>
             </div>
             <p className='copyright'>© 2023 All Rights Reserved.</p>

@@ -1,31 +1,19 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import './Gallery.css'
+
 import { gallery } from '../../data'
 
-const Gallery = () => {
+import './Gallery.css'
 
+
+const Gallery = () => {
     const [isSliderOpen, setIsSliderOpen] = useState(false)
     const [currentSlide, setCurrentSlide] = useState(null)
-    const [isRightWall, setIsRightWall] = useState(false)
-    const [isLeftWall, setIsLeftWall] = useState(false)
 
-    useEffect(() => {
-        if (currentSlide === gallery.length - 1) {
-            setIsRightWall(true)
-        } else {
-            setIsRightWall(false)
-        }
-
-        if (currentSlide === 0) {
-            setIsLeftWall(true)
-        } else {
-            setIsLeftWall(false)
-        }
-
-    }, [currentSlide])
+    const isRightWall = currentSlide === (gallery.length - 1)
+    const isLeftWall = currentSlide === 0
 
     const openSlider = (id) => {
         const index = gallery.findIndex(item => item.id === id);
@@ -60,11 +48,8 @@ const Gallery = () => {
                 <div className={`prev-gallery-slick-arrow ${isLeftWall && 'final-slide'}`}> <i className="fa-solid fa-arrow-left"></i> </div>
             </div>
         ),
-        afterChange: (currentSlide) => {
-            setCurrentSlide(currentSlide)
-        }
-    };
-
+        afterChange: (currentSlide) => setCurrentSlide(currentSlide)
+    }
 
     return (
         <section className="gallery-section">
@@ -85,7 +70,6 @@ const Gallery = () => {
                     )
                 })}
             </div>
-
             <div className={`gallery-slider-section ${isSliderOpen && 'open-gallery'}`} onClick={closeSlider}>
                 <div className="gallary-slider-container">
                     {

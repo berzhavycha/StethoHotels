@@ -1,32 +1,33 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import './BlogComponent.css'
-import { months } from '../../data'
 import { useSelector } from 'react-redux'
-import { selectBlogById, useGetBlogsQuery } from '../../features/blogsSlice'
+
+import { months } from '../../data'
+import { selectBlogById } from '../../features/blogsSlice'
+
+import './BlogComponent.css'
+
+const formatDate = (dateString) => {
+    const [day, month, year] = dateString.split('.')
+    const monthName = months[+month - 1]
+    return `${monthName} ${day}, ${year}`
+}
 
 const BlogComponent = ({ id }) => {
-    const item = useSelector(state => selectBlogById(state, id))
-   
-    const location = useLocation()
-
-    let pathname = `${item.id}`
-    if (!location.pathname.includes('blog')) {
-        pathname = `/blog/${item.id}`
-    }
-
-    const dateParts = item.date.split('.')
-    const date = `${months[+dateParts[1] - 1]} ${dateParts[0]}, ${dateParts[2]}`
+    const item = useSelector((state) => selectBlogById(state, id));
+    const location = useLocation();
+    const blogPath = location.pathname.includes('blog') ? `${item.id}` : `/blog/${item.id}`;
+    const formattedDate = formatDate(item.date);
 
     return (
-        <Link data-testid='blog' to={pathname} state={{ page: "Blog Singal" }} className='blog-item'>
+        <Link data-testid='blog' to={blogPath} state={{ page: "Blog Singal" }} className='blog-item'>
             <div className="blog-item-content">
                 <div className="blog-image">
                     <img src={item.imageUrl} />
                 </div>
                 <div className="blog-info">
                     <div className="blog-info-top">
-                        <span className='time'>{date}</span>
+                        <span className='time'>{formattedDate}</span>
                         <span data-testid={item.type} className='type'>{item.type}</span>
                     </div>
                     <p className="blog-title">{item.title}</p>

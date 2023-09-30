@@ -1,9 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
 import { useDropdownContext } from '../../context/Dropdown/DropdownProvider'
-import {Link} from 'react-router-dom'
 
 const BottomNavbar = () => {
-    const {closeDropdown} = useDropdownContext()
+    const { closeDropdown } = useDropdownContext()
 
     return (
         <div className="container" onMouseOver={closeDropdown}>

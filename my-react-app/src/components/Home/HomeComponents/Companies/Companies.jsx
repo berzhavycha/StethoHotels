@@ -2,7 +2,9 @@ import React from 'react'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
 import { companies } from '../../../../data';
+
 import './Companies.css'
 
 const settings = {
@@ -38,10 +40,6 @@ const settings = {
 
 const Companies = () => {
 
-    const replaceUrl = (e, url) => {
-        e.currentTarget.src = url
-    }
-
     return (
         <section className='companies-section'>
             <div className="container companies-section-inner">
@@ -52,11 +50,12 @@ const Companies = () => {
                                 <img
                                     src={item.imageUrl}
                                     key={item.id}
-                                    onMouseLeave={e => replaceUrl(e, item.imageUrl)}
-                                    onMouseOver={(e) => replaceUrl(e, item.replaceUrl)} />
+                                    onMouseLeave={e => e.currentTarget.src = item.imageUrl}
+                                    onMouseOver={e => e.currentTarget.src = item.replaceUrl}
+                                    alt={`company${item.id}`}
+                                />
                             </div>
                         )
-
                     })}
                 </Slider>
             </div>

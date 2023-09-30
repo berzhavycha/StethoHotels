@@ -52,6 +52,12 @@ footer {
 .footer-inner .left .about-us .socials i {
     font-size: 20px;
     color: white;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+
+.footer-inner .left .about-us .socials i:hover {
+    color: var(--btn-color);
 }
 
 .footer-inner .left .navigation {
@@ -173,20 +179,20 @@ footer .copyright {
     .footer-inner .posts .posts-container .post-item .text {
         font-size: 12px;
     }
-    
+
     .footer-inner .posts .posts-container .post-item .date {
         font-size: 10px;
     }
-    
+
     .footer-inner .newsletter input {
         font-size: 12px;
     }
-    
+
     .footer-inner .newsletter button {
         padding: 10px;
         font-size: 12px;
     }
-    
+
     footer .copyright {
         font-size: 12px;
     }

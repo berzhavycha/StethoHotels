@@ -1,5 +1,6 @@
-import React, { createContext, useContext, useState } from 'react'
+import React, { createContext, useContext } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+
 import { signUp, logOut, logIn } from '../../features/userSlice'
 
 const userContext = createContext()

@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
-import './CheckBoxFilters.css'
+
 import { useHotelsFilterTypeContext } from '../../../../context/HotelsFilter/HotelsFilterProvider'
+
+import './CheckBoxFilters.css'
 
 const CheckBoxFilters = () => {
     const [isOpen, setIsOpen] = useState(true)
@@ -42,12 +44,12 @@ const CheckBoxFilters = () => {
         ]
 
         for (let j = 0; j < 5; j++) {
-            if (j < i) {
-                starsRow.push(<i class="fa-solid fa-star"></i>)
-            } else {
-                starsRow.push(<i class="fa-regular fa-star"></i>)
-            }
+            starsRow.push(j < i ? <i className="fa-solid fa-star"></i>
+                :
+                <i className="fa-regular fa-star"></i>
+            )
         }
+
         starsRow.push(<div className='stars-row-amount'>{`(${i})`}</div>)
         let starsRowContainer = <div className='star-row-container'>{starsRow}</div>
         stars.push(starsRowContainer)

@@ -3,30 +3,27 @@ import { useNavigate } from 'react-router-dom'
 
 import { useDropdownContext } from '../../../../context/Dropdown/DropdownProvider'
 import { availableCities, slides } from '../../../../data'
+
 import './SliderHeader.css'
 
 const SliderHeader = () => {
-    const [currentSlide, setCurrentSlide] = useState(slides[0])
+    const { closeDropdown } = useDropdownContext()
+
+    const [currentSlideIndex, setCurrentSlideIndex] = useState(0)
     const [searchCity, setSearchCity] = useState('')
     const [matchedCities, setMatchedCities] = useState([])
     const [isShowCityList, setIsShowCityList] = useState(false)
     const sliderHeaderRef = useRef()
-
     const navigate = useNavigate()
-    const { closeDropdown } = useDropdownContext()
+
+    const currentSlide = slides[currentSlideIndex]
 
     const nextSlide = () => {
-        setCurrentSlide(slide => {
-            const index = (slide.id + 1) % slides.length
-            return slides[index]
-        })
+        setCurrentSlideIndex(prev => (prev + 1) % slides.length)
     }
 
     const prevSlide = () => {
-        setCurrentSlide(slide => {
-            const index = (slide.id - 1 + slides.length) % slides.length
-            return slides[index]
-        })
+        setCurrentSlideIndex(prev => (prev - 1 + slides.length) % slides.length)
     }
 
     const handleMouseOver = (e) => {
@@ -42,7 +39,7 @@ const SliderHeader = () => {
     useEffect(() => {
         setMatchedCities(availableCities.filter(city => city?.toLowerCase()?.startsWith(searchCity?.toLowerCase())))
     }, [searchCity])
-    
+
 
     const searchHotel = () => {
         if (!searchCity) return

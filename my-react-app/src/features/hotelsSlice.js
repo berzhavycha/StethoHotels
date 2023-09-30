@@ -14,12 +14,22 @@ export const extendedApiSlice = apiSlice.injectEndpoints({
             query: () => '/hotels',
             transformResponse: (responseData) => {
                 return hotelsAdapter.setAll(initialState, responseData)
-            }
+            },
+            providesTags: ['Hotels'],
+            keepUnusedDataFor: 30
+        }),
+        updateReview: builder.mutation({
+            query: ({ hotelId, reviews }) => ({
+                url: `hotels/${hotelId}`,
+                method: 'PATCH',
+                body: { reviews }
+            }),
+            invalidatesTags: ['Hotels']
         })
     })
 })
 
-export const { useGetHotelsQuery } = extendedApiSlice
+export const { useGetHotelsQuery, useUpdateReviewMutation } = extendedApiSlice
 
 const selectHotelsResult = extendedApiSlice.endpoints.getHotels.select()
 

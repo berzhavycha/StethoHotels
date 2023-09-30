@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import './HotelItem.css'
+
 import { useSelector } from 'react-redux';
 import { selectHotelById } from '../../../../features/hotelsSlice';
+
+import './HotelItem.css'
 
 const settings = {
     infinite: true,
@@ -28,17 +30,14 @@ const settings = {
 
 
 const HotelItem = ({ id }) => {
-
     const hotel = useSelector(state => selectHotelById(state, id))
 
     const stars = []
     for (let i = 0; i < 5; i++) {
-        if (i < hotel.stars) {
-            stars.push(<i key={i} className="hotel-star fa-solid fa-star"></i>)
-        }
-        else {
-            stars.push(<i key={i} className="hotel-star fa-regular fa-star"></i>)
-        }
+        stars.push(i < hotel.stars ? <i key={i} className="hotel-star fa-solid fa-star"></i>
+            :
+            <i key={i} className="hotel-star fa-regular fa-star"></i>
+        )
     }
 
     const hotelAmenties = JSON.parse(hotel.amenties)

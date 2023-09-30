@@ -1,7 +1,30 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+
 import './ModalSearch.css'
 
 const ModalSearch = ({ isOpen, closeModal }) => {
+    const [modalSearchinputs, setModalSearchInputs] = useState({})
+    const navigate = useNavigate()
+
+    const handleInputChange = (e) => {
+        const { name, value } = e.target
+        setModalSearchInputs(prev => ({ ...prev, [name]: value }))
+    }
+
+    const searchHotels = () => {
+        let searchParamsString = '?'
+        let isFirstParam = true
+        for (let [key, value] of Object.entries(modalSearchinputs)) {
+            searchParamsString += isFirstParam ? `${key}=${value}` : `&${key}=${value}`
+
+            if(isFirstParam) isFirstParam = false
+        }
+        setModalSearchInputs({})
+        navigate(`/hotels${searchParamsString}`)
+        closeModal()
+    }
+
     return (
         <section className={`modal-search ${isOpen && 'open'}`}>
             <div className="modal-search-inner">
@@ -11,28 +34,19 @@ const ModalSearch = ({ isOpen, closeModal }) => {
                 </div>
                 <div className="search-inputs">
                     <div className="search-input-block">
-                        <input type="text" placeholder='Search City' />
+                        <input type="text" name='city' placeholder='Search City' onChange={handleInputChange} />
                     </div>
                     <div className="search-input-block">
-                        <input type="text" placeholder='Check In' />
-                    </div>
-                    <div className="search-input-block">
-                        <input type="text" placeholder='Check Out' />
-                    </div>
-                    <div className="search-input-block">
-                        <input type="text" placeholder='Hotel' />
-                    </div>
-                    <div className="search-input-block">
-                        <select>
+                        <select name='nearArea' onChange={handleInputChange}>
                             <option value="Near Area">Near Area</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
+                            <option value="south">South</option>
+                            <option value="downtown">Downtown</option>
+                            <option value="west">West</option>
+                            <option value="resort">Resort</option>
                         </select>
                     </div>
                     <div className="search-input-block">
-                        <select>
+                        <select name='hotelClass' onChange={handleInputChange}>
                             <option value="Hotel class">Hotel class</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -42,7 +56,7 @@ const ModalSearch = ({ isOpen, closeModal }) => {
                         </select>
                     </div>
                     <div className="search-input-block">
-                        <select>
+                        <select name='rooms' onChange={handleInputChange}>
                             <option value="Rooms">Rooms</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -51,8 +65,8 @@ const ModalSearch = ({ isOpen, closeModal }) => {
                         </select>
                     </div>
                     <div className="search-input-block">
-                        <select>
-                            <option value="Near Area">Adults(18+)</option>
+                        <select name='adults' onChange={handleInputChange}>
+                            <option value="Adults">Adults(18+)</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -60,15 +74,15 @@ const ModalSearch = ({ isOpen, closeModal }) => {
                         </select>
                     </div>
                     <div className="search-input-block">
-                        <select>
-                            <option value="Near Area">Children(0-17)</option>
+                        <select name='children' onChange={handleInputChange}>
+                            <option value="Children">Children(0-17)</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
                             <option value="4">4</option>
                         </select>
                     </div>
-                    <button>Search</button>
+                    <button onClick={searchHotels}>Search</button>
                 </div>
             </div>
         </section>

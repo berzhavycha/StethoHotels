@@ -1,5 +1,6 @@
 import React from 'react'
 import { Outlet, Navigate, useLocation } from 'react-router-dom'
+
 import useUserContext from '../../context/User/UserProvider'
 
 const AuthRequired = () => {

@@ -1,37 +1,29 @@
 import React, { useState } from 'react'
-import './AreaFilters.css'
+
 import { useHotelsFilterTypeContext } from '../../../../context/HotelsFilter/HotelsFilterProvider'
+
+import './AreaFilters.css'
 
 const AreaFilters = ({ loadedHotels }) => {
     const [isOpen, setIsOpen] = useState(true)
     const [isSelectedAll, setIsSelectedAll] = useState(false)
     const { filterType, setFilterType } = useHotelsFilterTypeContext()
 
-    let hotelsAreas
-    if (loadedHotels) {
-        hotelsAreas = loadedHotels?.ids.map(id => loadedHotels?.entities[id].area)
-            .reduce((acc, item) => {
-                if (!acc.includes(item)) {
-                    acc.push(item)
-                }
-
-                return acc
-            }, [])
+    const getUniqueAreas = () => {
+        if (!loadedHotels) return []
+        return [...new Set(loadedHotels.ids.map(id => loadedHotels.entities[id].area))]
     }
 
-    const selectOption = (e) => {
-        const selectedArea = e.target.parentElement.lastChild.textContent.toLowerCase()
-
-
-        if (e.target.checked) {
+    const selectOption = (selectedArea, isChecked) => {
+        if (isChecked) {
             setFilterType(prev => ({ ...prev, area: [...prev.area, selectedArea] }))
-
         } else {
             const area = filterType.stars.filter(item => item !== selectedArea)
             setFilterType(prev => ({ ...prev, area }))
         }
     }
 
+    const areas = getUniqueAreas()
 
     return (
         <div className="filter-item">
@@ -45,12 +37,12 @@ const AreaFilters = ({ loadedHotels }) => {
                     <span>|</span>
                     <button className='star-option' onClick={() => setIsSelectedAll(false)}>Clear</button>
                     <div className="areas">
-                        {hotelsAreas?.map((area, index) => {
-                            return <div className="area-block">
+                        {areas?.map((area, index) => {
+                            return <div className="area-block" key={index}>
                                 {isSelectedAll ?
                                     <input type="checkbox" checked={isSelectedAll} data-testid={area} />
                                     :
-                                    <input type="checkbox" onChange={selectOption} data-testid={area} />
+                                    <input type="checkbox" onChange={(e) => selectOption(area, e.target.checked)} data-testid={area} />
                                 }
                                 <p>{area?.[0].toUpperCase() + area?.slice(1)}</p>
                             </div>

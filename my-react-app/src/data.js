@@ -1,61 +1,3 @@
-
-// Utils funcitons
-
-// get all items from firestore by its collection name
-export const getItems = async (collectionName, id) => {
-    try {
-        const querySnapshot = await getDocs(collection(db, collectionName))
-        const dataArr = querySnapshot.docs.map(doc => ({
-            ...doc.data(),
-            id: doc.id
-        }))
-        return id ? dataArr.find(item => item.id == id) : dataArr
-    } catch (error) {
-        console.log(error)
-        throw error
-    }
-}
-
-// search for items that i typed into input
-export const getSearchItems = async (collectionName, title) => {
-    try {
-        const querySnapshot = await getDocs(collection(db, collectionName));
-        const dataArr = querySnapshot.docs.map(doc => ({
-            ...doc.data(),
-            id: doc.id
-        }));
-
-        const filteredItems = dataArr.filter(item => item.title.toLowerCase().startsWith(title.toLowerCase()));
-
-        return filteredItems;
-    } catch (error) {
-        console.error("An error occurred:", error);
-        throw error;
-    }
-}
-
-
-
-// get item from firestore by its id and collection name
-export const getSingleCity = async (id, collectionName) => {
-    try {
-        const docRef = doc(db, collectionName, id);
-        const citySnapshot = await getDoc(docRef);
-
-        if (citySnapshot.exists()) {
-            return {
-                ...citySnapshot.data(),
-                id: citySnapshot.id
-            };
-        } else {
-            throw new Error(`City with ID ${id} not found in collection ${collectionName}`);
-        }
-    } catch (error) {
-        throw error;
-    }
-}
-
-// get item from firestore by its id and collection name
 export const getReducedData = (arr, prop) => {
     if (!Array.isArray(arr)) {
         throw new Error('The first argument must be an array.');
@@ -104,10 +46,16 @@ export const changeDateForm = (string) => {
     return `${year}-${month}-${day}`
 }
 
-// delay function to show react spinner
+const checkDate = (number) => number > 10 ? number : `0${number}`
+
+export const formatDate = (date) => {
+    return `${checkDate(date.getDate())}.${checkDate(date.getMonth())}.${checkDate(date.getFullYear())}`
+}
+
 export function delay(time) {
     return new Promise(resolve => setTimeout(resolve, time));
 }
+
 
 // Other data
 
@@ -158,7 +106,7 @@ export const slides = [
 
 export const hotels = [
     {
-        id: 1,
+        id: 10,
         src: '../public/Images/popular1.jpg',
         alt: "Image 1",
         title: "Ansan Hotel",
@@ -167,7 +115,7 @@ export const hotels = [
         location: 'Thailand'
     },
     {
-        id: 2,
+        id: 6,
         src: '../public/Images/popular2.jpg',
         alt: "Image 2",
         title: "Fawlty Towers",
@@ -176,7 +124,7 @@ export const hotels = [
         location: 'Vietnam'
     },
     {
-        id: 3,
+        id: 7,
         src: '../public/Images/popular3.jpg',
         alt: "Image 3",
         title: "Hotel Valle",
@@ -185,7 +133,7 @@ export const hotels = [
         location: 'Italy'
     },
     {
-        id: 4,
+        id: 8,
         src: '../public/Images/popular4.jpg',
         alt: "Image 4",
         title: "Hotel Las Trojes",
@@ -194,7 +142,7 @@ export const hotels = [
         location: 'Mexico'
     },
     {
-        id: 5,
+        id: 9,
         src: '../public/Images/popular5.jpg',
         alt: "Image 5",
         title: "Rosen Shingle Creek",
@@ -358,18 +306,20 @@ export const companies = [
 export const tabs = [
     {
         id: 1,
+        title: 'Awesome Design',
         text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet. Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.'
     },
     {
         id: 2,
+        title: 'Full Devices',
         text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet. Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet. Lorem ipsum dolor sit amet consectetur. '
     },
     {
         id: 3,
+        title: 'User Experience',
         text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet. Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet. Adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.'
     }
 ]
-
 
 export const gallery = [
     {

@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
 import { Form, useNavigate, useSearchParams } from 'react-router-dom'
-import './Register.css'
-import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { nanoid } from '@reduxjs/toolkit';
+
 import FormInput from '../../common/FormInput/FormInput';
 import SuccessfulForm from '../../common/SuccessfulForm/SuccessfulForm';
 import useUserContext from '../../context/User/UserProvider';
 import { useAddUserMutation } from '../../features/userSlice';
 import Logout from '../../common/Logout/Logout';
-import { nanoid } from '@reduxjs/toolkit';
+
+import './Register.css'
 
 const Register = () => {
     const [values, setValues] = useState({
@@ -19,7 +20,7 @@ const Register = () => {
 
     const { user, signUpUser } = useUserContext()
     const [isRegistered, setIsRegistered] = useState(false)
-    const [searchParams, setSearchParams] = useSearchParams()
+    const [searchParams] = useSearchParams()
     const navigate = useNavigate()
 
     const [addUser] = useAddUserMutation()
@@ -82,10 +83,19 @@ const Register = () => {
             imageUrl: '../../../public/Images/profile/profile1.jpg',
             id: userId
         })
+
         setIsRegistered(true)
+        setValues({
+            fullname: "",
+            email: "",
+            password: "",
+            confirmPassword: "",
+        })
 
         if (searchParams.get('path')) {
             return navigate(`${searchParams.get('path')}`)
+        } else {
+            return navigate("/")
         }
     };
 

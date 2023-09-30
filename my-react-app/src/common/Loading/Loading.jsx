@@ -1,5 +1,6 @@
 import React from 'react'
-import {BeatLoader} from 'react-spinners'
+import { BeatLoader } from 'react-spinners'
+
 import './Loading.css'
 
 const Loading = () => {

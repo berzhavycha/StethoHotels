@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
-import './Price.css'
+
 import { useHotelsFilterTypeContext } from '../../../../context/HotelsFilter/HotelsFilterProvider'
+
+import './Price.css'
 
 const Price = () => {
     const [isOpen, setIsOpen] = useState(true)

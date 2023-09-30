@@ -14,7 +14,6 @@ const DropdownProvider = ({ children }) => {
     const page = dropdown.find(item => item.link === link)
     setPage(page)
     setLocation(coords)
-
     setDropdownOpen(true)
   }
 

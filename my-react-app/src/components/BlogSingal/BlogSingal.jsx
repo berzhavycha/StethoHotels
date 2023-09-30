@@ -1,51 +1,52 @@
 import React, { useState, useMemo } from 'react'
-import { months } from '../../data'
-import './BlogSingal.css'
-import CommentItem from './BlogSingalComponents/CommentItem/CommentItem'
-import { useParams } from 'react-router-dom'
-import { useSelector } from 'react-redux'
-import { selectBlogById, useUpdateCommentsMutation } from '../../features/blogsSlice'
 import { nanoid } from '@reduxjs/toolkit'
+import { useSelector } from 'react-redux'
+import { useNavigate, useParams } from 'react-router-dom'
+
+import { formatDate, months } from '../../data'
+import CommentItem from './BlogSingalComponents/CommentItem/CommentItem'
+import { selectBlogById, useUpdateCommentsMutation } from '../../features/blogsSlice'
 import useUserContext from '../../context/User/UserProvider'
 
+import './BlogSingal.css'
 
 const BlogSingal = () => {
     const { blogId } = useParams()
     const loadedBlog = useSelector(state => selectBlogById(state, blogId))
-
+    const [commentText, setCommentText] = useState('')
     const { user } = useUserContext()
-
     const [addComment] = useUpdateCommentsMutation()
+    const navigate = useNavigate()
 
     const topLevelComments = useMemo(() => {
         return loadedBlog?.comments.filter(comment => !comment.parentId) || []
     }, [loadedBlog?.comments])
 
-    const [commentText, setCommentText] = useState('')
 
     const dateParts = loadedBlog?.date.split('.')
     const date = `${months[+dateParts?.[1] - 1]} ${dateParts?.[0]}, ${dateParts?.[2]}`
 
-    const checkExcerptDate = (num) => {
-        return num < 10 ? `0${num}` : num
-    }
+    const onComment = async () => {
+        if(!user.id) navigate(`/login?message=You should login first!&path=/blog/${blogId}`)
 
+        try {
+            const newDate = new Date()
 
-    const onComment = () => {
-        const newDate = new Date()
+            const newComment = {
+                imageUrl: user.imageUrl,
+                text: commentText,
+                author: user.id,
+                date: formatDate(newDate),
+                stars: 4,
+                parentId: null,
+                id: nanoid()
+            }
 
-        const newComment = {
-            imageUrl: user.imageUrl,
-            text: commentText,
-            author: user.id,
-            date: `${checkExcerptDate(newDate.getDate())}.${checkExcerptDate(newDate.getMonth() + 1)}.${checkExcerptDate(newDate.getFullYear())}`,
-            stars: 4,
-            parentId: null,
-            id: nanoid()
+            await addComment({ comments: [...loadedBlog.comments, newComment], blogId: loadedBlog.id }).unwrap()
+            setCommentText('')
+        } catch (error) {
+            console.log("ERROR: " + error.message)
         }
-
-        addComment({ comments: [...loadedBlog.comments, newComment], blogId: loadedBlog.id })
-        setCommentText('')
     }
 
     return (
@@ -100,8 +101,9 @@ const BlogSingal = () => {
                             placeholder='Your comment'
                             onChange={e => setCommentText(e.target.value)}
                             value={commentText}
+                            data-testid='comment-input'
                         />
-                        <button onClick={() => onComment()}>Comment</button>
+                        <button onClick={() => onComment()} data-testid='comment-btn'>Comment</button>
                     </div>
                 </div>
             </section>

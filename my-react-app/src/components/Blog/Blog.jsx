@@ -1,6 +1,8 @@
 import React from 'react'
 import { useOutletContext } from 'react-router-dom'
+
 import BlogComponent from '../../common/BlogComponent/BlogComponent'
+
 import './Blog.css'
 
 const Blog = () => {

@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
+
 import { tabs } from '../../../../data'
+
 import './Features.css'
 
 const Features = () => {
@@ -13,13 +15,20 @@ const Features = () => {
     return (
         <section className='features'>
             <div className="features-inner container">
-                <img src="../../../../../public/Images/feature-img-1.jpg" />
+                <img src="../../../../../public/Images/feature-img-1.jpg" alt="Feature" />
                 <div className="right">
                     <h1>Our <span className='green'>Features</span></h1>
                     <div className="features-tabs">
-                        <button data-index={1} className={currentTab.id === 1 ? 'active' : ''} onClick={() => handleTabClick(1)}><i className="fa-regular fa-gem"></i>  Awesome Design</button>
-                        <button data-index={2} className={currentTab.id === 2 ? 'active' : ''} onClick={() => handleTabClick(2)}><i className="fa-solid fa-desktop"></i>  Full Devices</button>
-                        <button data-index={3} className={currentTab.id === 3 ? 'active' : ''} onClick={() => handleTabClick(3)}><i className="fa-solid fa-users"></i>  User Experience</button>
+                        {tabs.map(tab => (
+                            <button
+                                key={tab.id}
+                                data-index={tab.id}
+                                className={currentTab.id === tab.id ? 'active' : ''}
+                                onClick={() => handleTabClick(tab.id)}
+                            >
+                                <i className={tab.icon}></i> {tab.title}
+                            </button>
+                        ))}
                     </div>
                     <p className="features-tabs-content">
                         {currentTab.text}

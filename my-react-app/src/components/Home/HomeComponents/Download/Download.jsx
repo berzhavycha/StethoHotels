@@ -2,9 +2,11 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 import { checks } from '../../../../data'
+
 import './Download.css'
 
 const Download = () => {
+
     return (
         <section className='download-section'>
             <div className="download-section-inner container">
@@ -22,12 +24,12 @@ const Download = () => {
                         })}
                     </div>
                     <div className="download-links">
-                        <Link><img src='../../../../../public/Images/appstore-button.png' /></Link>
-                        <Link><img src='../../../../../public/Images/google-play-button.png' /></Link>
+                        <Link><img src='../../../../../public/Images/appstore-button.png' alt='appstore' /></Link>
+                        <Link><img src='../../../../../public/Images/google-play-button.png' alt='google-play' /></Link>
                     </div>
                 </div>
                 <div className="right">
-                    <img src='../../../../../public/Images/app-image-1.png' />
+                    <img src='../../../../../public/Images/app-image-1.png' alt='app-shot' />
                 </div>
             </div>
         </section>

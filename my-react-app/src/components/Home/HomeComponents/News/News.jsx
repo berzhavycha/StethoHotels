@@ -6,6 +6,7 @@ import BlogComponent from '../../../../common/BlogComponent/BlogComponent'
 import { selectBlogsIds, useGetBlogsQuery } from '../../../../features/blogsSlice'
 
 import './News.css'
+
 const News = () => {
     const { } = useGetBlogsQuery()
     const blogsIds = useSelector(selectBlogsIds)

@@ -71,7 +71,7 @@ describe('Login', () => {
 
         await userEvent.click(screen.getByRole('button', { name: 'Sign In' }))
 
-        const logoutText = await screen.findByText(/You have already logged in/i)
+        const logoutText = await screen.findByText(/enjoy your holiday/i)
         expect(logoutText).toBeInTheDocument()
     })
 

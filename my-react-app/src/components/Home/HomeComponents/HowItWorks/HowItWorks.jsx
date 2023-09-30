@@ -2,6 +2,7 @@ import React from 'react'
 
 import SectionHeader from '../../../../common/SectioHeader/SectionHeader'
 import { howItWorks } from '../../../../data'
+
 import './HowItWorks.css'
 
 const HowItWorks = () => {
@@ -12,7 +13,7 @@ const HowItWorks = () => {
                 {howItWorks.map((item) => {
                     return (
                         <div key={item.id} className="works-item">
-                            <img src={item.imageUrl} />
+                            <img src={item.imageUrl} alt='htw-img'/>
                             <h2>{item.title}</h2>
                             <p>{item.text}</p>
                         </div>

@@ -1,4 +1,5 @@
 import React from 'react'
+
 import SliderHeader from './HomeComponents/SliderHeader/SliderHeader'
 import About from './HomeComponents/About/About'
 import HotelSlider from './HomeComponents/HotelSlider/HotelSlider'

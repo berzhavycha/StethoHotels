@@ -1,4 +1,5 @@
 import React from 'react'
+
 import './SuccessfullForm.css'
 
 const SuccessfulForm = ({text}) => {

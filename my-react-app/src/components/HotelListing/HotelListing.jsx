@@ -1,17 +1,18 @@
 import React, { useMemo } from 'react'
+import { useSearchParams } from 'react-router-dom'
+
 import HotelFilters from './HotelListingComponents/HotelFilters/HotelFilters'
-import './HotelListing.css'
 import Price from './HotelListingComponents/Price/Price'
 import CheckBoxFilters from './HotelListingComponents/CheckBoxFilters/CheckBoxFilters'
 import AreaFilters from './HotelListingComponents/AreaFilters/AreaFilters'
 import HotelsContainer from './HotelListingComponents/HotelsContainer/HotelsContainer'
-import { useSearchParams } from 'react-router-dom'
 import Loading from '../../common/Loading/Loading'
 import HelpBlock from '../../common/HelpBlock/HelpBlock'
 import { useGetHotelsQuery } from '../../features/hotelsSlice'
 import NotFound from '../../common/NotFound/NotFound'
 import { useHotelsFilterTypeContext } from '../../context/HotelsFilter/HotelsFilterProvider'
 
+import './HotelListing.css'
 
 const HotelListing = () => {
     const { data: loadedHotels, isLoading, isError } = useGetHotelsQuery()
@@ -27,6 +28,42 @@ const HotelListing = () => {
             hotels = loadedHotels?.ids.filter(id => loadedHotels.entities[id].location.startsWith(searchParams.get('searchCity')))
         }
 
+        let modalSearchObj = Object.fromEntries(searchParams.toString().split('&').map(param => param.split('=')))
+
+        if (modalSearchObj.city) {
+            hotels = loadedHotels?.ids.filter(id => loadedHotels.entities[id].location.startsWith(modalSearchObj.city))
+        }
+
+        if (modalSearchObj.nearArea) {
+            hotels = hotels.filter(id => {
+                if (loadedHotels.entities[id].area === modalSearchObj.nearArea) {
+                    return true
+                }
+
+                return false
+            })
+        }
+
+        if (modalSearchObj.hotelClass) {
+            hotels = hotels.filter(id => {
+                if (loadedHotels.entities[id].stars === modalSearchObj.hotelClass) {
+                    return true
+                }
+
+                return false
+            })
+        }
+
+        if (modalSearchObj.rooms) {
+            hotels = hotels.filter(id => {
+                const hotelRoomsAmount = JSON.parse(loadedHotels.entities[id].rooms).length
+                if (hotelRoomsAmount === modalSearchObj.rooms) {
+                    return true
+                }
+
+                return false
+            })
+        }
 
         if (filterType.price) {
             const bottomLine = filterType.price.split('-')[0]

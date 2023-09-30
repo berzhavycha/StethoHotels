@@ -92,7 +92,7 @@ describe('Register', () => {
 
         await userEvent.click(screen.getByRole('button', { name: 'Create an Account' }))
 
-        const successfulTest = await screen.findByText(/You have already logged in/i)
+        const successfulTest = await screen.findByText(/enjoy your holiday/i)
         expect(successfulTest).toBeInTheDocument()
     })
 

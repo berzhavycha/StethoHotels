@@ -3,6 +3,7 @@ import userEvent from '@testing-library/user-event'
 
 import { useDropdownContext } from '../../context/Dropdown/DropdownProvider'
 import { renderWithWrapper } from '../../utils'
+import { store } from '../../app/store'
 
 jest.mock('../../context/Dropdown/DropdownProvider.jsx', () => ({
     __esModule: true,
@@ -31,7 +32,7 @@ jest.mock('../../context/Dropdown/DropdownProvider.jsx', () => ({
 describe('Navbar', () => {
     describe('TopNavbar', () => {
         beforeEach(() => {
-            renderWithWrapper(['/'])
+            renderWithWrapper(['/'], store)
         })
 
         test('should render navbar', () => {
@@ -55,7 +56,7 @@ describe('Navbar', () => {
     describe('BottomNavbar', () => {
 
         test('should navigate to home page when i click logo', async () => {
-            renderWithWrapper(['/about'])
+            renderWithWrapper(['/about'], store)
 
 
             expect(screen.getAllByRole('heading', { level: 1, name: /about/i })[0]).toBeInTheDocument()
@@ -68,7 +69,7 @@ describe('Navbar', () => {
     describe('Dropdown', () => {
 
         test('should navigate when user clicks a link on a dropdown menu', async () => {
-            renderWithWrapper(['/about'])
+            renderWithWrapper(['/about'], store)
 
             expect(screen.getAllByRole('link', { name: /about/i })[0]).toHaveClass('active')
             expect(screen.getAllByRole('heading', { level: 1, name: /about us/i })[0]).toBeInTheDocument()

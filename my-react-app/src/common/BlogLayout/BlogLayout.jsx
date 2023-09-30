@@ -1,30 +1,24 @@
-import React, { Suspense, useState } from 'react'
+import React, { Suspense, useState, useMemo, useEffect } from 'react'
 import { Outlet, defer, Await, useLoaderData, Link, useSearchParams, Form } from 'react-router-dom'
+
 import { getReducedData } from '../../data'
 import Loading from '../Loading/Loading'
-import './BlogLayout.css'
 import NotFound from '../NotFound/NotFound'
-// import { setupStore } from '../../app/store'
 import { store } from '../../app/store'
 import { apiSlice } from '../../api/apiSlice'
-import { useEffect } from 'react'
-import { useMemo } from 'react'
+
+import './BlogLayout.css'
 
 
-export const loader = ({ request }) => {
+export const loader = () => {
     const response = store.dispatch(apiSlice.endpoints.getBlogs.initiate())
     return defer({ blogs: response })
-
-    // if (title) {
-    //     return defer({ blogs: getSearchItems('blogs', title) })
-    // }
-    // return defer({ blogs: getItems('blogs') })
 }
 
 
 const BlogLayout = () => {
     const blogsPromise = useLoaderData()
-    const [searchParams, setSearchParams] = useSearchParams()
+    const [searchParams] = useSearchParams()
     const [emptySearch, setEmptySearch] = useState(false)
     const [search, setSearch] = useState('')
 
@@ -97,8 +91,6 @@ const BlogLayout = () => {
                                 return idsArr
 
                             }, [searchParams.get('category'), searchParams.get('tag'), search])
-
-                            console.log(filteredPostsIds)
 
                             useEffect(() => {
                                 if (!Object.keys(filteredPostsIds).length) setEmptySearch(true)

@@ -1,34 +1,30 @@
-import React, { useMemo, useState } from 'react'
-import { months } from '../../../../data'
-import './CommentItem.css'
-import { selectBlogById, useUpdateCommentsMutation } from '../../../../features/blogsSlice'
-import { nanoid } from '@reduxjs/toolkit'
+import React, { useMemo, useState, memo } from 'react'
 import { useParams } from 'react-router-dom'
+import { nanoid } from '@reduxjs/toolkit'
 import { useSelector } from 'react-redux'
-import { memo } from 'react'
+
+import { formatDate, months } from '../../../../data'
+import { selectBlogById, useUpdateCommentsMutation } from '../../../../features/blogsSlice'
 import ReactionButtons from '../ReactionButtons/ReactionButtons'
 import useUserContext from '../../../../context/User/UserProvider'
 import { useGetUsersQuery } from '../../../../features/userSlice'
 
+import './CommentItem.css'
+
 const CommentItem = memo(({ comment }) => {
     const [isUserComment, setIsUserComment] = useState(false)
     const [isEditing, setIsEditing] = useState(false)
-
     const { user } = useUserContext()
-
+    const [updateComments] = useUpdateCommentsMutation()
+    const { blogId } = useParams()
+    const loadedBlog = useSelector(state => selectBlogById(state, blogId))
+    const [isReplying, setIsReplying] = useState(false)
+    const [commentText, setCommentText] = useState('')
     const { author } = useGetUsersQuery(undefined, {
         selectFromResult: ({ data }) => ({
             author: data?.entities[comment?.author]
         })
     })
-
-    const [updateComments] = useUpdateCommentsMutation()
-
-    const { blogId } = useParams()
-    const loadedBlog = useSelector(state => selectBlogById(state, blogId))
-
-    const [isReplying, setIsReplying] = useState(false)
-    const [commentText, setCommentText] = useState('')
 
     const nestedComments = useMemo(() => {
         return loadedBlog?.comments?.filter(item => item.parentId === comment.id) || []
@@ -39,52 +35,52 @@ const CommentItem = memo(({ comment }) => {
 
     const stars = []
     for (let i = 0; i < 5; i++) {
-        if (i < comment?.stars) {
-            stars.push(<div><i key={i} className="fa-solid fa-star"></i></div>)
-        }
-        else {
-            stars.push(<div><i key={i} className="fa-regular fa-star"></i></div>)
-        }
+        stars.push(i < comment?.stars ? <div><i key={i} className="fa-solid fa-star"></i></div>
+            :
+            <div><i key={i} className="fa-regular fa-star"></i></div>
+        )
     }
 
-    const checkExcerptDate = (num) => {
-        return num < 10 ? `0${num}` : num
-    }
+    const onComment = async () => {
+        if (!user.id) navigate(`/login?message=You should login first!&path=/blog/${blogId}`)
 
-    const onComment = () => {
-        if (isEditing) {
+        try {
+            if (isEditing) {
 
-            const editedComments = loadedBlog.comments.map(item => {
-                if(item.id === comment.id){
-                    return {
-                        ...item,
-                        text: commentText
+                const editedComments = loadedBlog.comments.map(item => {
+                    if (item.id === comment.id) {
+                        return {
+                            ...item,
+                            text: commentText
+                        }
                     }
+
+                    return item
+                })
+
+                await updateComments({ comments: editedComments, blogId: loadedBlog.id }).unwrap()
+                setIsEditing(false)
+            } else {
+                const newDate = new Date()
+
+                const newComment = {
+                    imageUrl: user.imageUrl,
+                    text: commentText,
+                    author: user.id,
+                    date: formatDate(newDate),
+                    stars: 4,
+                    parentId: comment.id ?? null,
+                    id: nanoid()
                 }
 
-                return item
-            })
-
-            updateComments({ comments: editedComments, blogId: loadedBlog.id })
-            setIsEditing(false)
-        } else {
-            const newDate = new Date()
-
-            const newComment = {
-                imageUrl: user.imageUrl,
-                text: commentText,
-                author: user.id,
-                date: `${checkExcerptDate(newDate.getDate())}.${checkExcerptDate(newDate.getMonth() + 1)}.${checkExcerptDate(newDate.getFullYear())}`,
-                stars: 4,
-                parentId: comment.id ?? null,
-                id: nanoid()
+                await updateComments({ comments: [...loadedBlog.comments, newComment], blogId: loadedBlog.id }).unwrap()
             }
 
-            updateComments({ comments: [...loadedBlog.comments, newComment], blogId: loadedBlog.id })
+            setIsReplying(false)
+            setCommentText('')
+        } catch (error) {
+            console.error('ERROR: ' + error)
         }
-
-        setIsReplying(false)
-        setCommentText('')
     }
 
     const handleMouseEnterComment = () => {
@@ -99,9 +95,13 @@ const CommentItem = memo(({ comment }) => {
         }
     }
 
-    const deleteComment = () => {
-        const remainingComments = loadedBlog.comments.filter(item => item.id !== comment.id)
-        updateComments({ comments: remainingComments, blogId: loadedBlog.id })
+    const deleteComment = async () => {
+        try {
+            const remainingComments = loadedBlog.comments.filter(item => item.id !== comment.id)
+            await updateComments({ comments: remainingComments, blogId: loadedBlog.id }).unwrap()
+        } catch (error) {
+            console.error('ERROR: ' + error.message)
+        }
     }
 
     const editComment = () => {
@@ -129,8 +129,8 @@ const CommentItem = memo(({ comment }) => {
                         <div className="right">
                             {isUserComment &&
                                 <>
-                                    <button onClick={deleteComment} className='delete-btn'><i class="fa-solid fa-trash"></i></button>
-                                    <button onClick={editComment} className='edit-btn'><i class="fa-solid fa-pen-to-square"></i></button>
+                                    <button onClick={deleteComment} className='delete-btn'><i className="fa-solid fa-trash"></i></button>
+                                    <button onClick={editComment} className='edit-btn'><i className="fa-solid fa-pen-to-square"></i></button>
                                 </>
                             }
                         </div>

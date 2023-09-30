@@ -1,5 +1,41 @@
 import React, { useState } from 'react'
+
+import InputElement from './InputElement'
+
 import './ContactUs.css'
+
+const contactUsInputs = [
+    {
+        id: 'firstName',
+        type: "text",
+        isRequired: true
+    },
+    {
+        id: 'lastName',
+        type: "text",
+        isRequired: true
+    },
+    {
+        id: 'phoneNumber',
+        type: "text",
+        isRequired: true
+    },
+    {
+        id: 'email',
+        type: "text",
+        isRequired: true
+    },
+    {
+        id: 'subject',
+        type: "text",
+        isRequired: false
+    },
+    {
+        id: 'company',
+        type: 'text',
+        isRequired: false
+    }
+]
 
 const ContactUs = () => {
     const [formData, setFormData] = useState({
@@ -11,7 +47,6 @@ const ContactUs = () => {
         company: '',
         message: ''
     })
-
     const [formError, setFormError] = useState({})
 
     const validateField = (fieldName, value) => {
@@ -66,10 +101,23 @@ const ContactUs = () => {
             updatedFormError[fieldName] = validateField(fieldName, formData[fieldName]);
         }
 
-        setFormError(updatedFormError);
+        setFormError(updatedFormError)
+        setFormData({
+            firstName: '',
+            lastName: '',
+            phoneNumber: '',
+            email: '',
+            subject: '',
+            company: '',
+            message: ''
+        })
     };
 
 
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+    }
 
     return (
         <section className='contact-section'>
@@ -79,76 +127,17 @@ const ContactUs = () => {
                     <p>Fill out the form below, we will get back you soon.</p>
                     <form onSubmit={handleSubmit}>
                         <div className="form-inputs">
-                            <div className="form-block">
-                                <label htmlFor="firstName">First Name <span className='red'>*</span></label>
-                                <input
-                                    type="text"
-                                    id='firstName'
-                                    value={formData.firstName}
-                                    data-testid='firstName'
-                                    name='firstName'
-                                    onChange={e => setFormData({ ...formData, [e.target.name]: e.target.value })}
+                            {contactUsInputs.map(input => (
+                                <InputElement
+                                    id={input.id}
+                                    type={input.type}
+                                    isRequired={input.isRequired}
+                                    formData={formData}
+                                    formError={formError}
+                                    handleInputChange={handleInputChange}
                                 />
-                                {formError?.firstName && <span data-testid={'error-message'} className="red">{formError.firstName}</span>}
-                            </div>
-                            <div className="form-block">
-                                <label htmlFor="lastName">Last Name <span className='red'>*</span></label>
-                                <input
-                                    type="text"
-                                    id='lastName'
-                                    value={formData.lastName}
-                                    data-testid='lastName'
-                                    name='lastName'
-                                    onChange={e => setFormData({ ...formData, [e.target.name]: e.target.value })}
-                                />
-                                {formError?.lastName && <span data-testid={'error-message'} className="red">{formError.lastName}</span>}
-                            </div>
-                            <div className="form-block">
-                                <label htmlFor="phoneNumber">Phone Number <span className='red'>*</span></label>
-                                <input
-                                    type="text"
-                                    id='phoneNumber'
-                                    value={formData.phoneNumber}
-                                    name='phoneNumber'
-                                    data-testid='phoneNumber'
-                                    onChange={e => setFormData({ ...formData, [e.target.name]: e.target.value })}
-                                />
-                                {formError?.phoneNumber && <span data-testid={'error-message'} className="red">{formError.phoneNumber}</span>}
-                            </div>
-                            <div className="form-block">
-                                <label htmlFor="email">Email <span className='red'>*</span></label>
-                                <input
-                                    type="text"
-                                    id='email'
-                                    value={formData.email}
-                                    data-testid='email'
-                                    name='email'
-                                    onChange={e => setFormData({ ...formData, [e.target.name]: e.target.value })}
-                                />
-                                {formError?.email && <span data-testid={'error-message'} className="red">{formError.email}</span>}
-                            </div>
-                            <div className="form-block">
-                                <label htmlFor="subject">Subject</label>
-                                <input
-                                    type="text"
-                                    id='subject'
-                                    value={formData.subject}
-                                    data-testid='subject'
-                                    name='subject'
-                                    onChange={e => setFormData({ ...formData, [e.target.name]: e.target.value })}
-                                />
-                            </div>
-                            <div className="form-block">
-                                <label htmlFor="company">Your company</label>
-                                <input
-                                    type="text"
-                                    id='company'
-                                    value={formData.company}
-                                    name='company'
-                                    data-testid='company'
-                                    onChange={e => setFormData({ ...formData, [e.target.name]: e.target.value })}
-                                />
-                            </div>
+                            ))
+                            }
                             <div className="text">
                                 <label htmlFor="message">Your Message <span className="red">*</span></label>
                                 <textarea
@@ -156,7 +145,7 @@ const ContactUs = () => {
                                     value={formData.message}
                                     name='message'
                                     data-testid='message'
-                                    onChange={e => setFormData({ ...formData, [e.target.name]: e.target.value })}
+                                    onChange={handleInputChange}
                                 >
                                 </textarea>
                                 {formError?.message && <span data-testid={'error-message'} className="red">{formError.message}</span>}

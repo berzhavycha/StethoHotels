@@ -1,6 +1,8 @@
 import React from 'react'
-import './Accordion.css'
+
 import AccordionItem from './AccordionItem'
+
+import './Accordion.css'
 
 const Accordion = ({ item }) => {
 

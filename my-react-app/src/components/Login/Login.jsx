@@ -1,11 +1,12 @@
-import React, { useMemo, useState } from 'react'
+import React, { useState } from 'react'
 import { Form, Link, useLocation, useNavigate, useSearchParams } from 'react-router-dom'
-import './Login.css'
+
 import FormInput from '../../common/FormInput/FormInput'
-import SuccessfulForm from '../../common/SuccessfulForm/SuccessfulForm'
 import useUserContext from '../../context/User/UserProvider'
 import Logout from '../../common/Logout/Logout'
 import { useGetUsersQuery } from '../../features/userSlice'
+
+import './Login.css'
 
 
 const Login = () => {
@@ -13,9 +14,8 @@ const Login = () => {
         email: "",
         password: "",
     });
-
     const [error, setError] = useState(false)
-    const [searchParams, setSearchParams] = useSearchParams()
+    const [searchParams] = useSearchParams()
     const navigate = useNavigate()
     const location = useLocation()
     const { user, logInUser } = useUserContext()
@@ -47,18 +47,21 @@ const Login = () => {
         e.preventDefault();
 
         const userId = users.ids.find(id => users.entities[id].password === values.password && users.entities[id].email === values.email)
-              
-        if (!user) {
+
+        if (!userId) {
             setError(true)
+            return
         }
 
+        setError(false)
         logInUser(users.entities[userId])
+        setValues({ email: '', password: '' })
 
         if (searchParams.get('path')) {
             return navigate(`${searchParams.get('path')}`)
+        } else {
+            navigate('/');
         }
-
-        setValues({email: '', password: ''})
 
     };
 

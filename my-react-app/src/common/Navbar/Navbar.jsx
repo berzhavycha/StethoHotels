@@ -1,8 +1,10 @@
 import React from 'react'
+
 import TopNavbar from './TopNavbar'
-import './Navbar.css';
-import BottomNavbar from './BottomNavbar';
-import Dropdown from './Dropdown';
+import BottomNavbar from './BottomNavbar'
+import Dropdown from './Dropdown'
+
+import './Navbar.css'
 
 const Navbar = () => {
     return (

@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider, useLocation, Outlet } from 'react-router-dom'
-import './App.css'
+
 import Layout from './common/Layout/Layout'
 import Home from './components/Home/Home'
 import About from './components/About/About'
@@ -20,6 +20,8 @@ import HotelListing from './components/HotelListing/HotelListing'
 import HotelDetail from './components/HotelDetail/HotelDetail'
 import ContactUs from './components/ContactUs/ContactUs'
 import NotFound from './common/NotFound/NotFound'
+
+import './App.css'
 
 const PageLayout = ({ children }) => children;
 

@@ -1,10 +1,11 @@
 import React from 'react'
-import { useGetCityQuery } from '../../../features/citiesSlice'
-import './DestiantionDetail.css'
-import Loading from '../../../common/Loading/Loading'
-import HelpBlock from '../../../common/HelpBlock/HelpBlock'
 import { useParams } from 'react-router-dom'
 
+import { useGetCityQuery } from '../../../features/citiesSlice'
+import Loading from '../../../common/Loading/Loading'
+import HelpBlock from '../../../common/HelpBlock/HelpBlock'
+
+import './DestiantionDetail.css'
 
 const DestinationDetail = () => {
     const { cityId } = useParams()
@@ -16,7 +17,7 @@ const DestinationDetail = () => {
         <section className='destination-detail'>
             <div className="destination-detail-inner container">
                 <div className="left">
-                    <img className='main-image' src={loadedCity.mainImg} />
+                    <img className='main-image' src={loadedCity.mainImg} alt='destination'/>
                     <p>{loadedCity.text}</p>
                     <h1>What is {loadedCity.name} City?</h1>
                     <p>{loadedCity.beforeImg}</p>

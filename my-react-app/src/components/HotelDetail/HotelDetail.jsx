@@ -1,11 +1,9 @@
 import React, { Suspense, useState } from 'react'
-import { Await, defer, useLoaderData, useParams } from 'react-router-dom'
-import { getItems } from '../../data'
-import Loading from '../../common/Loading/Loading'
+import { useParams } from 'react-router-dom'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import './HotelDetail.css'
+
 import TabContent from './TabContent';
 import HotelReviews from './HotelReviews/HotelReviews';
 import HotelOverview from './HotelOverview';
@@ -13,9 +11,9 @@ import HotelAmenties from './HotelAmenties';
 import HotelRooms from './HotelRooms';
 import HelpBlock from '../../common/HelpBlock/HelpBlock'
 import HotelFilters from '../HotelListing/HotelListingComponents/HotelFilters/HotelFilters'
-import { useSelector } from 'react-redux';
-import { selectHotelById, useGetHotelsQuery } from '../../features/hotelsSlice';
+import { useGetHotelsQuery } from '../../features/hotelsSlice';
 
+import './HotelDetail.css'
 
 const settings = {
     infinite: true,
@@ -37,19 +35,24 @@ const settings = {
 };
 
 
+const tabButtons = [
+    { id: 'overview', label: 'Overview' },
+    { id: 'amenties', label: 'Amenties' },
+    { id: 'rooms', label: 'Rooms' },
+    { id: 'reviews', label: 'Reviews' }
+]
+
 const HotelDetail = () => {
-    // const hotelPromise = useLoaderData()
     const { hotelId } = useParams()
-    
-    const {hotel, isLoading, isError} = useGetHotelsQuery(undefined, {
-        selectFromResult: ({data, isLoading, isError}) => ({
+    const { hotel } = useGetHotelsQuery(undefined, {
+        selectFromResult: ({ data, isLoading, isError }) => ({
             hotel: data?.entities[hotelId],
             isError,
             isLoading
         })
     })
-    const [currentTab, setCurrentTab] = useState('overview')
 
+    const [currentTab, setCurrentTab] = useState('overview')
 
     return (
         <section className='hotel-detail'>
@@ -68,44 +71,25 @@ const HotelDetail = () => {
                     </div>
                     <div className="hotel-details-info">
                         <div className="hotel-details-navbar">
-                            <button
-                                className={`${currentTab === 'overview' && 'active'}`}
-                                onClick={() => setCurrentTab('overview')}
-                            >
-                                Overviews
-                            </button>
-                            <button
-                                className={`${currentTab === 'amenties' && 'active'}`}
-                                onClick={() => setCurrentTab('amenties')}
-                            >
-                                Amenties
-                            </button>
-                            <button
-                                className={`${currentTab === 'rooms' && 'active'}`}
-                                onClick={() => setCurrentTab('rooms')}
-                            >
-                                Rooms
-                            </button>
-                            <button
-                                className={`${currentTab === 'reviews' && 'active'}`}
-                                onClick={() => setCurrentTab('reviews')}
-                            >
-                                Reviews
-                            </button>
+                            {tabButtons.map(({ id, label }) => (
+                                <button
+                                    key={id}
+                                    className={`${currentTab === id && 'active'}`}
+                                    onClick={() => setCurrentTab(id)}
+                                >
+                                    {label}
+                                </button>
+                            ))}
                         </div>
                         <div className="hotels-details-content">
-                            <TabContent id={'overview'} currentTab={currentTab}>
-                                <HotelOverview hotel={hotel} />
-                            </TabContent>
-                            <TabContent id={'amenties'} currentTab={currentTab}>
-                                <HotelAmenties hotel={hotel} />
-                            </TabContent>
-                            <TabContent id={'rooms'} currentTab={currentTab}>
-                                <HotelRooms hotel={hotel} />
-                            </TabContent>
-                            <TabContent id={'reviews'} currentTab={currentTab} >
-                                <HotelReviews hotel={hotel} />
-                            </TabContent>
+                            {tabButtons.map(({ id }) => (
+                                <TabContent key={id} id={id} currentTab={currentTab}>
+                                    {id === 'overview' && <HotelOverview hotel={hotel} />}
+                                    {id === 'amenties' && <HotelAmenties hotel={hotel} />}
+                                    {id === 'rooms' && <HotelRooms hotel={hotel} />}
+                                    {id === 'reviews' && <HotelReviews hotel={hotel} />}
+                                </TabContent>
+                            ))}
                         </div>
                     </div>
                 </div>
